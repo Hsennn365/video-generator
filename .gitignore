@@ -1,0 +1,42 @@
+# Claude local files
+.claude/
+
+# Secrets
+config.py
+.env
+.env.*
+secrets.json
+credentials.json
+token.json
+
+# Project data / generated content
+topics.csv
+output/
+temp/
+music/
+
+# Generated media
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.mp3
+*.wav
+*.m4a
+*.webm
+*.jpg
+*.jpeg
+*.png
+*.webp
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
