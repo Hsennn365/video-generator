@@ -31,6 +31,15 @@ from modules.script import (
     generate_script,
     generate_series_script_package,
     generate_thumbnail_prompt,
+    get_asset_prefix,
+    get_script_path,
+    get_series_package_path,
+    _is_series_topic,
+)
+from modules.research import (
+    ensure_series_research,
+    research_path_for_series,
+    load_series_research,
 )
 from modules.voiceover import generate_voiceover, get_available_voices
 from modules.images import generate_image, generate_thumbnail_image, prepare_scene_image_prompts
@@ -39,6 +48,11 @@ from modules.assembly import assemble_video
 from modules.publisher import publish_all
 from modules.tracker import init_logs, log_video, update_performance, print_performance_summary
 from config import TOPICS_FILE, TEMP_DIR, OUTPUT_DIR
+
+try:
+    from config import GENERATE_THUMBNAIL
+except ImportError:
+    GENERATE_THUMBNAIL = True
 
 
 # -----------------------------
@@ -578,13 +592,71 @@ def _merge_short_image_intervals(image_paths: list, min_duration: float = 3.0) -
 
     return smoothed
 
+def _is_assembly_only(
+    *,
+    rebuild_assembly: bool,
+    rebuild_all: bool,
+    rebuild_script: bool,
+    rebuild_series_scripts: bool,
+    rebuild_audio: bool,
+    rebuild_captions: bool,
+    rebuild_images: bool,
+    rebuild_thumbnail: bool,
+    rebuild_research: bool,
+) -> bool:
+    """True when only re-rendering assembly from existing cached assets."""
+    if rebuild_all or not rebuild_assembly:
+        return False
+    return not any(
+        [
+            rebuild_script,
+            rebuild_series_scripts,
+            rebuild_audio,
+            rebuild_captions,
+            rebuild_images,
+            rebuild_thumbnail,
+            rebuild_research,
+        ]
+    )
+
+
+def _validate_assembly_assets(
+    script_path: str,
+    audio_path: str,
+    captions_path: str,
+    script: dict,
+    prefix: str,
+) -> None:
+    """Fail fast with exact missing paths for assembly-only runs."""
+    missing: list[str] = []
+
+    if not os.path.isfile(script_path):
+        missing.append(script_path)
+    if not os.path.isfile(audio_path):
+        missing.append(audio_path)
+    if not os.path.isfile(captions_path):
+        missing.append(captions_path)
+
+    for scene in script.get("scenes", []):
+        scene_num = int(scene.get("scene_number", 0))
+        scene_image_path = os.path.join(TEMP_DIR, f"{prefix}scene_{scene_num:02d}.jpg")
+        if not os.path.isfile(scene_image_path):
+            missing.append(scene_image_path)
+
+    if missing:
+        lines = "\n  - ".join(missing)
+        raise FileNotFoundError(
+            f"Assembly-only mode cannot continue. Missing required file(s):\n  - {lines}"
+        )
+
+
 def _find_latest_video_for_topic(topic_id: str) -> str | None:
     """Find the newest locally rendered video for --post."""
     output_dir = Path(OUTPUT_DIR)
     if not output_dir.exists():
         return None
 
-    matches = list(output_dir.glob(f"topic_{topic_id}_*.mp4"))
+    matches = list(output_dir.glob(f"{prefix}*.mp4"))
     if not matches:
         return None
 
@@ -608,14 +680,19 @@ def run_pipeline(
     rebuild_thumbnail: bool = False,
     rebuild_assembly: bool = False,
     rebuild_all: bool = False,
+    rebuild_research: bool = False,
     post_only: bool = False,
+    build_series: bool = False,
+    episode_num: int | None = None,
 ):
     """Run the video generation pipeline for a single topic."""
 
     print(f"\n{'=' * 60}")
     print(f"🎬 TOPIC: {topic['title']}")
-    if topic.get("series") and topic.get("part", "0") != "0":
-        print(f"   Series: {topic['series']} — Part {topic['part']}")
+    if _is_series_topic(topic):
+        print(f"   Series mode enabled")
+        if episode_num:
+            print(f"   Processing Episode {episode_num}")
     print(f"{'=' * 60}\n")
 
     start_time = datetime.now()
@@ -624,11 +701,45 @@ def run_pipeline(
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     os.makedirs(TEMP_DIR, exist_ok=True)
 
-    script_path = os.path.join(OUTPUT_DIR, f"topic_{topic_id}_script.json")
-    audio_path = os.path.join(TEMP_DIR, f"topic_{topic_id}_voiceover.mp3")
-    captions_path = os.path.join(TEMP_DIR, f"topic_{topic_id}_captions.json")
-    thumbnail_path = os.path.join(TEMP_DIR, f"topic_{topic_id}_thumbnail.jpg")
-    meta_path = os.path.join(TEMP_DIR, f"topic_{topic_id}_cache_meta.json")
+    # Series Validation
+    if _is_series_topic(topic):
+        if rebuild_script:
+            print("⚠️  --rebuild-script is blocked for series. Use --build-series to ensure continuity.")
+            return
+
+        if build_series:
+            print("\n✍️  Building series script package...")
+            from modules.script import generate_series_script_package
+            # Need to determine overwrite_all behavior. Using rebuild_series_scripts if set, else False
+            generate_series_script_package(topic, overwrite_all=rebuild_series_scripts, rebuild_research=rebuild_research)
+            print("\n✅ Series build complete.")
+            return
+
+        if not episode_num:
+            print("⚠️  For series, you must specify either --build-series (to write scripts) or --episode X (to render video).")
+            return
+
+        # NEW: Validate episode_num against resolved_episode_count
+        package_path = get_series_package_path(topic)
+        if os.path.isfile(package_path):
+            try:
+                with open(package_path, "r", encoding="utf-8") as f:
+                    package_data = json.load(f)
+                    resolved = package_data.get("resolved_episode_count")
+                    if resolved and episode_num > resolved:
+                        print(f"❌ Episode {episode_num} does not exist. This series currently has {resolved} episodes.")
+                        print("   Rebuild the series or choose an episode between 1 and {resolved}.")
+                        return
+            except Exception as e:
+                print(f"⚠️  Warning reading series package: {e}")
+
+    script_path = get_script_path(topic, episode_num)
+    prefix = get_asset_prefix(topic, episode_num)
+    
+    audio_path = os.path.join(TEMP_DIR, f"{prefix}voiceover.mp3")
+    captions_path = os.path.join(TEMP_DIR, f"{prefix}captions.json")
+    thumbnail_path = os.path.join(TEMP_DIR, f"{prefix}thumbnail.jpg")
+    meta_path = os.path.join(TEMP_DIR, f"{prefix}cache_meta.json")
 
     try:
         # ----------------------------------------
@@ -697,29 +808,48 @@ def run_pipeline(
         if rebuild_thumbnail:
             _delete_file(thumbnail_path)
 
+        assembly_only = _is_assembly_only(
+            rebuild_assembly=rebuild_assembly,
+            rebuild_all=rebuild_all,
+            rebuild_script=rebuild_script,
+            rebuild_series_scripts=rebuild_series_scripts,
+            rebuild_audio=rebuild_audio,
+            rebuild_captions=rebuild_captions,
+            rebuild_images=rebuild_images,
+            rebuild_thumbnail=rebuild_thumbnail,
+            rebuild_research=rebuild_research,
+        )
+
+        if assembly_only:
+            print("♻️  Assembly-only mode: reusing existing assets")
+            print("   (no script / voiceover / captions / image regeneration)")
+
         # ----------------------------------------
         # STEP 1: Generate/load script
         # ----------------------------------------
-        if os.path.isfile(script_path) and not rebuild_series_scripts:
-            print("⚡ Script loaded from cache")
-            script = _load_json(script_path)
-        else:
-            if (
-                rebuild_series_scripts
-                and topic.get("series")
-                and topic.get("part", "0") != "0"
-            ):
-                print("🧩 STEP 1/6: Generating connected series script package...")
-                script = generate_series_script_package(
-                    topic,
-                    overwrite_all=False,
-                )
-                print(f"   Connected script selected: {script_path}")
+        if _is_series_topic(topic):
+            if os.path.isfile(script_path):
+                print("⚡ Script loaded from cache")
+                script = _load_json(script_path)
+                if not script:
+                    raise Exception(f"Failed to load existing script from {script_path}")
             else:
-                print("📝 STEP 1/6: Generating script...")
+                print(f"\n❌ Episode script not found. Run python main.py --topic-id {topic_id} --build-series first.")
+                return
+        else:
+            if os.path.isfile(script_path) and not rebuild_script:
+                print("⚡ Script loaded from cache")
+                script = _load_json(script_path)
+                if not script:
+                    raise Exception(f"Failed to load existing script from {script_path}")
+            else:
+                print("\n✍️  STEP 1/6: Generating script...")
                 script = generate_script(topic)
                 _save_json(script_path, script)
                 print(f"   Script saved: {script_path}")
+
+        if assembly_only:
+            _validate_assembly_assets(script_path, audio_path, captions_path, script, prefix)
 
         narration = script.get("full_narration", "")
         narration_hash = _hash_text(narration)
@@ -727,7 +857,7 @@ def run_pipeline(
         cached_hash = cache_meta.get("narration_hash")
 
         # 1. Automatic cache safety by hash: script changed -> old audio/captions are invalid.
-        if cached_hash and cached_hash != narration_hash:
+        if not assembly_only and cached_hash and cached_hash != narration_hash:
             print("⚠️  Script narration changed since the last run (hash mismatch).")
             print("   Invalidating cached voiceover, captions and cache_meta.")
             _delete_file(audio_path)
@@ -745,7 +875,7 @@ def run_pipeline(
         audio_mtime = _file_mtime(audio_path)
         captions_mtime = _file_mtime(captions_path)
 
-        if audio_mtime and script_mtime > audio_mtime + 1:
+        if not assembly_only and audio_mtime and script_mtime > audio_mtime + 1:
             print("⚠️  Script is newer than the cached voiceover.")
             print("   Forcing voiceover + captions regeneration.")
             _delete_file(audio_path)
@@ -755,7 +885,12 @@ def run_pipeline(
             rebuild_audio = True
             rebuild_captions = True
             rebuild_assembly = True
-        elif captions_mtime and audio_mtime > captions_mtime + 1 and not rebuild_audio:
+        elif (
+            not assembly_only
+            and captions_mtime
+            and audio_mtime > captions_mtime + 1
+            and not rebuild_audio
+        ):
             print("⚠️  Voiceover is newer than the cached captions.")
             print("   Forcing captions regeneration.")
             _delete_file(captions_path)
@@ -766,7 +901,8 @@ def run_pipeline(
         # cached captions actually start with the current narration. Stale captions
         # from an earlier script of the same topic are caught here.
         if (
-            os.path.isfile(captions_path)
+            not assembly_only
+            and os.path.isfile(captions_path)
             and not rebuild_captions
         ):
             cached_words_for_check = _load_json(captions_path, default=[])
@@ -783,14 +919,16 @@ def run_pipeline(
         # ----------------------------------------
         # STEP 2: Generate/load voiceover
         # ----------------------------------------
-        if os.path.isfile(audio_path) and not rebuild_audio:
+        if assembly_only or (os.path.isfile(audio_path) and not rebuild_audio):
+            if not os.path.isfile(audio_path):
+                raise FileNotFoundError(f"Assembly-only mode: voiceover missing: {audio_path}")
             print("⚡ Voiceover loaded from cache "
                   "(script hash matches and audio is at least as new as script)")
         else:
             print("\n🎙️  STEP 2/6: Generating voiceover...")
             audio_path = generate_voiceover(
                 narration=narration,
-                output_filename=f"topic_{topic_id}_voiceover.mp3",
+                output_filename=f"{prefix}voiceover.mp3",
             )
             # Audio just changed -> any cached captions belong to the previous audio.
             if os.path.isfile(captions_path):
@@ -812,34 +950,38 @@ def run_pipeline(
         image_paths = []
 
         scenes_for_images = script.get("scenes", [])
-        should_prepare_prompts = rebuild_images
-        if not should_prepare_prompts:
+        should_prepare_prompts = rebuild_images and not assembly_only
+        if not should_prepare_prompts and not assembly_only:
             for _scene in scenes_for_images:
                 _scene_num = int(_scene["scene_number"])
                 _scene_image_path = os.path.join(
                     TEMP_DIR,
-                    f"topic_{topic_id}_scene_{_scene_num:02d}.jpg"
+                    f"{prefix}scene_{_scene_num:02d}.jpg"
                 )
                 if not os.path.isfile(_scene_image_path):
                     should_prepare_prompts = True
                     break
 
         if should_prepare_prompts:
-            prepare_scene_image_prompts(script, topic_id, force=rebuild_images)
+            prepare_scene_image_prompts(script, prefix, force=rebuild_images)
 
         for scene in scenes_for_images:
             scene_num = int(scene["scene_number"])
             scene_image_path = os.path.join(
                 TEMP_DIR,
-                f"topic_{topic_id}_scene_{scene_num:02d}.jpg"
+                f"{prefix}scene_{scene_num:02d}.jpg"
             )
 
-            if os.path.isfile(scene_image_path) and not rebuild_images:
+            if assembly_only or (os.path.isfile(scene_image_path) and not rebuild_images):
+                if not os.path.isfile(scene_image_path):
+                    raise FileNotFoundError(
+                        f"Assembly-only mode: scene image missing: {scene_image_path}"
+                    )
                 print(f"⚡ Scene {scene_num} image loaded from cache")
                 path = scene_image_path
             else:
                 try:
-                    path = generate_image(scene, scene_num, topic_id, script)
+                    path = generate_image(scene, scene_num, prefix, script, force=rebuild_images)
                     time.sleep(0.5)
                 except Exception as e:
                     print(f"  ❌ Scene {scene_num} failed after all retry attempts: {e}")
@@ -859,12 +1001,14 @@ def run_pipeline(
         # ----------------------------------------
         # STEP 4: Generate/load captions
         # ----------------------------------------
-        if os.path.isfile(captions_path) and not rebuild_captions:
+        if assembly_only or (os.path.isfile(captions_path) and not rebuild_captions):
+            if not os.path.isfile(captions_path):
+                raise FileNotFoundError(f"Assembly-only mode: captions missing: {captions_path}")
             print("⚡ Captions loaded from cache (passed ordered content check)")
             words = _load_json(captions_path, default=[])
         else:
             print("\n📄 STEP 4/6: Generating captions...")
-            words = generate_captions(audio_path, topic_id)
+            words = generate_captions(audio_path, prefix)
 
         # Final defensive check: even captions we just generated must align with
         # the current narration. If they do not, the audio itself is wrong and we
@@ -892,12 +1036,15 @@ def run_pipeline(
         # ----------------------------------------
         # STEP 5: Generate/load thumbnail
         # ----------------------------------------
-        if os.path.isfile(thumbnail_path) and not rebuild_thumbnail:
+        skip_thumbnail = assembly_only and not GENERATE_THUMBNAIL
+        if skip_thumbnail:
+            print("⚡ Thumbnail skipped (assembly-only, GENERATE_THUMBNAIL=False)")
+        elif os.path.isfile(thumbnail_path) and not rebuild_thumbnail:
             print("⚡ Thumbnail loaded from cache")
         else:
             print("\n🖼️  STEP 5/6: Generating thumbnail...")
             thumbnail_prompt = generate_thumbnail_prompt(script)
-            thumbnail_path = generate_thumbnail_image(thumbnail_prompt, topic_id)
+            thumbnail_path = generate_thumbnail_image(thumbnail_prompt, prefix)
 
         # ----------------------------------------
         # STEP 6: Assemble video
@@ -911,7 +1058,7 @@ def run_pipeline(
             image_paths=image_paths,
             audio_path=audio_path,
             captions=captions,
-            topic_id=topic_id,
+            prefix=prefix,
             thumbnail_path=thumbnail_path,
             video_duration=video_duration,
         )
@@ -956,6 +1103,8 @@ def run_pipeline(
 
 def main():
     parser = argparse.ArgumentParser(description="Ash & Empires Video Generator")
+    parser.add_argument("--build-series", action="store_true", help="Generate all episode scripts for a series")
+    parser.add_argument("--episode", type=int, help="Episode number to process for a series")
     parser.add_argument("--topic-id", type=str, help="Generate specific topic by ID")
     parser.add_argument("--preview", action="store_true", help="Generate but don't post")
     parser.add_argument("--post", action="store_true", help="Post previously generated local video")
@@ -978,6 +1127,16 @@ def main():
     parser.add_argument("--rebuild-thumbnail", action="store_true", help="Regenerate thumbnail")
     parser.add_argument("--rebuild-assembly", action="store_true", help="Re-render the video using cached assets")
     parser.add_argument("--rebuild-all", action="store_true", help="Regenerate everything from scratch")
+    parser.add_argument(
+        "--rebuild-research",
+        action="store_true",
+        help="Regenerate the series research story bible (does not automatically rebuild video assets)",
+    )
+    parser.add_argument(
+        "--research-only",
+        action="store_true",
+        help="Generate or load series research for the topic then exit without producing scripts, audio, or video",
+    )
 
     args = parser.parse_args()
 
@@ -1012,6 +1171,28 @@ def main():
             print("✅ All topics completed! Add more to topics.csv")
             return
 
+    # --research-only: generate/load research then exit.
+    if args.research_only:
+        series_name = str(topic.get("series", "") or "").strip()
+        if not series_name or topic.get("part", "0") == "0":
+            print("⚠️  --research-only requires a series topic (series column must be set and part != 0).")
+            return
+        from modules.script import _load_series_topics
+        series_topics_list = _load_series_topics(series_name)
+        research = ensure_series_research(
+            series_name,
+            series_topics_list,
+            rebuild=args.rebuild_research,
+        )
+        path = research_path_for_series(series_name)
+        print(f"\n📚 Research ready: {path}")
+        if research:
+            print(f"   Series:  {research.get('series', series_name)}")
+            print(f"   Updated: {research.get('research_last_updated', 'unknown')}")
+            print(f"   Timeline events: {len(research.get('historical_timeline', []))}")
+            print(f"   Must-not-imply rules: {len(research.get('must_not_imply_facts', []))}")
+        return
+
     run_pipeline(
         topic,
         preview_only=args.preview,
@@ -1024,7 +1205,10 @@ def main():
         rebuild_thumbnail=args.rebuild_thumbnail,
         rebuild_assembly=args.rebuild_assembly,
         rebuild_all=args.rebuild_all,
+        rebuild_research=args.rebuild_research,
         post_only=args.post,
+        build_series=args.build_series,
+        episode_num=args.episode,
     )
 
 

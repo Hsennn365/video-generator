@@ -1,0 +1,125 @@
+{
+  "title": "Carthage Rises, Rome Plots",
+  "hook": "Part 8. Carthage’s streets are alive again, but Rome’s envy becomes dread.",
+  "full_narration": "Part 8. Carthage’s streets are alive again, but Rome’s envy becomes dread. Gold spills through the markets—merchants bargain beneath the old city walls. [[pause:0.4]] Roman traders linger in the shadows, counting coins, watching every ship. Across the sea, word spreads—Carthage grows rich, and Rome feels the chill. [[voice:tense]] In the Senate, old rivals gather, faces hard, voices sharpened by fear. Cato the Elder stands, his fist pounding the marble, demanding Carthage’s destruction. [[pause:0.6]] Some senators hesitate, haunted by memories of Hannibal’s campaign. But fear twists the chamber—Carthage’s strength becomes a shadow on every Roman mind. Carthaginian leaders meet in secret, wary of the storm building across the water. [[voice:low]] Rome’s merchants whisper—Can Carthage be trusted, or will old wars return? The Senate’s debate turns bitter—words become threats, threats become promises. Rome’s leaders search for a reason—any reason—to strike first. The next war is coming. [[pause:0.8]] Follow for part 9.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "timestamp_start": 0.0,
+      "timestamp_end": 5.83,
+      "narration_segment": "Part 8. Carthage’s streets are alive again, but Rome’s envy becomes dread.",
+      "image_prompt": "Carthaginian city street, crowds of people in flowing tunics, lively trade, ancient North African market stalls, Roman merchants in darker robes standing apart, Punic architecture and city walls, late afternoon shadows, suspenseful mood, vertical 9:16, dark graphic-novel realism. Must show: busy Carthaginian street, Roman traders watching. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Carthaginian markets bustle as Roman traders watch from the shadows."
+    },
+    {
+      "scene_number": 2,
+      "timestamp_start": 5.83,
+      "timestamp_end": 11.67,
+      "narration_segment": "Gold spills through the markets—merchants bargain beneath the old city walls.",
+      "image_prompt": "Carthaginian market, gold coins changing hands, merchants in linen robes negotiating, ancient stone walls in background, baskets of goods, dramatic shadows, warm but tense lighting, vertical 9:16, graphic-novel style. Must show: coins, merchants, city walls. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Merchants exchange gold and goods beneath Carthage’s ancient walls."
+    },
+    {
+      "scene_number": 3,
+      "timestamp_start": 11.67,
+      "timestamp_end": 17.5,
+      "narration_segment": "Roman traders linger in the shadows, counting coins, watching every ship.",
+      "image_prompt": "Roman traders in dark cloaks standing in shadows, counting coins, gazing at Carthaginian harbor, ships unloading goods, evening light, anxious mood, vertical 9:16, dark graphic-novel realism. Must show: Roman traders, ships, harbor. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Roman merchants quietly observe Carthaginian ships unloading in the dusk."
+    },
+    {
+      "scene_number": 4,
+      "timestamp_start": 17.5,
+      "timestamp_end": 23.33,
+      "narration_segment": "Across the sea, word spreads—Carthage grows rich, and Rome feels the chill.",
+      "image_prompt": "Map-style view from Carthage to Rome, ghostly messenger ships crossing the Mediterranean, Roman city skyline in distant haze, cold blue shadows, tense atmosphere, vertical 9:16, graphic-novel style. Must show: sea route, symbolic ships, Rome in distance. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Rumors of Carthage’s wealth drift across the sea toward Rome."
+    },
+    {
+      "scene_number": 5,
+      "timestamp_start": 23.33,
+      "timestamp_end": 29.17,
+      "narration_segment": "In the Senate, old rivals gather, faces hard, voices sharpened by fear.",
+      "image_prompt": "Roman Senate interior, marble columns, stern senators in togas gathered in tense debate, shadows cast across faces, ancient architecture, dramatic low lighting, vertical 9:16, graphic-novel realism. Must show: Roman senators, tense debate. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Roman senators assemble, their expressions grim and determined."
+    },
+    {
+      "scene_number": 6,
+      "timestamp_start": 29.17,
+      "timestamp_end": 35.0,
+      "narration_segment": "Cato the Elder stands, his fist pounding the marble, demanding Carthage’s destruction.",
+      "image_prompt": "Cato the Elder, elderly Roman senator in white toga, standing and striking the marble bench with his fist, intense expression, other senators watching, somber candlelight, vertical 9:16, graphic-novel style. Must show: Cato, fist on marble, senators. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Cato the Elder demands action against Carthage in a fiery speech."
+    },
+    {
+      "scene_number": 7,
+      "timestamp_start": 35.0,
+      "timestamp_end": 40.83,
+      "narration_segment": "Some senators hesitate, haunted by memories of Hannibal’s campaign.",
+      "image_prompt": "Close-up on worried Roman senators, faces tense, faint shadow of Hannibal’s silhouette on wall behind, candlelit gloom, ancient wooden benches, vertical 9:16, dark graphic-novel realism. Must show: anxious senators, Hannibal’s shadow. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Some senators remember Hannibal’s terror and hesitate."
+    },
+    {
+      "scene_number": 8,
+      "timestamp_start": 40.83,
+      "timestamp_end": 46.67,
+      "narration_segment": "But fear twists the chamber—Carthage’s strength becomes a shadow on every Roman mind.",
+      "image_prompt": "Roman Senate hall, looming shadow of Carthaginian warship cast on wall, senators in anxious postures, room darkened by fear, chilling blue light, vertical 9:16, graphic-novel effect. Must show: senators, looming shadow. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Fear spreads as Carthage’s power haunts the Senate chamber."
+    },
+    {
+      "scene_number": 9,
+      "timestamp_start": 46.67,
+      "timestamp_end": 52.5,
+      "narration_segment": "Carthaginian leaders meet in secret, wary of the storm building across the water.",
+      "image_prompt": "Carthaginian leaders in dark robes, meeting at night around a low table, maps and coins visible, torchlight flickers, window shows distant sea, tense and secretive mood, vertical 9:16, graphic-novel style. Must show: Carthaginian leaders, maps, torchlight. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Carthaginian leaders gather in secret, fearing Rome’s intentions."
+    },
+    {
+      "scene_number": 10,
+      "timestamp_start": 52.5,
+      "timestamp_end": 58.33,
+      "narration_segment": "Rome’s merchants whisper—Can Carthage be trusted, or will old wars return?",
+      "image_prompt": "Small group of Roman merchants in shadowy corner, whispering, glancing nervously, Carthage’s harbor faintly visible through doorway, low lamplight, suspenseful tone, vertical 9:16, graphic-novel effect. Must show: Roman merchants, Carthaginian harbor. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Roman merchants quietly debate the threat of Carthage’s return."
+    },
+    {
+      "scene_number": 11,
+      "timestamp_start": 58.33,
+      "timestamp_end": 64.17,
+      "narration_segment": "The Senate’s debate turns bitter—words become threats, threats become promises.",
+      "image_prompt": "Roman Senate, senators in heated argument, some pointing accusingly, darkened chamber, tension thick, ancient decor, vertical 9:16, graphic-novel realism. Must show: arguing senators, tense atmosphere. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Senators’ arguments turn harsh, tensions nearing a breaking point."
+    },
+    {
+      "scene_number": 12,
+      "timestamp_start": 64.17,
+      "timestamp_end": 70,
+      "narration_segment": "Rome’s leaders search for a reason—any reason—to strike first. The next war is coming. Follow for part 9.",
+      "image_prompt": "Roman senators in shadow, plotting with dark intent, Carthage’s silhouette looming ghostlike in background, cold dawn light through Senate arches, dramatic vertical 9:16, graphic-novel style. Must show: plotting senators, Carthage’s silhouette. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Roman leaders conspire in darkness as Carthage’s fate hangs in the balance."
+    }
+  ],
+  "hashtags": [
+    "carthage",
+    "rome",
+    "ancienthistory",
+    "thirdpunicwar",
+    "darkhistory",
+    "graphicnovel",
+    "cinematic",
+    "empire",
+    "politics",
+    "suspense"
+  ],
+  "youtube_description": "As Carthage’s markets roar back to life, Rome’s envy curdles into fear. Roman merchants watch uneasily as gold flows and ships return. In the shadows of the Senate, old enemies gather—Cato the Elder demands Carthage’s end, while some senators are haunted by memories of Hannibal. But fear spreads like wildfire. Secret meetings in Carthage, whispered warnings in Roman streets, and bitter debates reveal a world teetering on the edge. Rome’s leaders search desperately for a reason to strike before Carthage can rise again. A new war is coming. Witness the darkness before the storm in Part 8 of The Fall of Carthage. Follow for part 9.",
+  "cta": "Follow for part 9.",
+  "topic_id": "1",
+  "series": "The Fall of Carthage",
+  "part": 8,
+  "timeline_event_ids": [
+    "E08",
+    "E09"
+  ],
+  "research_hash": "92ee38a4bb43972a"
+}

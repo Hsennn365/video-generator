@@ -1,0 +1,132 @@
+{
+  "title": "Cannae: Hannibal’s Perfect Trap",
+  "hook": "Part 3. How many victories can one invader win before Rome finally breaks?",
+  "full_narration": "Part 3. How many victories can one invader win before Rome finally breaks? After Trebbia, Hannibal drives his exhausted army through central Italy. [[pause:0.4]] In 217 BCE, fog covers Lake Trasimene as Flaminius follows. Hannibal waits in the hills, and the Roman column enters blind. [[voice:tense]] The trap closes; Rome hears another army vanish on Italian soil. Then Fabius Maximus rises, choosing delay over glorious destruction. [[pause:0.6]] For one year, Rome argues: patience, or one decisive battle. In 216 BCE at Cannae, Rome brings its huge army south. Hannibal bends his center, wraps the flanks, and crushes Roman hope. [[voice:low]] But he cannot storm Rome: walls, exhaustion, and no siege train stop him. Capua defects; southern towns waver, and Philip V of Macedon reaches toward Hannibal. Hannibal gains allies, not surrender; Rome prepares to hunt them. [[pause:0.8]] Follow for part 4.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "timestamp_start": 0.0,
+      "timestamp_end": 5.83,
+      "narration_segment": "Part 3. How many victories can one invader win before Rome finally breaks?",
+      "image_prompt": "Exact subject: Hannibal Barca standing on a dark Italian ridge after early victories, looking toward distant Rome. Exact action: Hannibal studies the horizon while weary Carthaginian soldiers wait behind him. Historical period/location: Second Punic War, central Italy, 217 BCE. Visible objects: war elephants in shadow, spears, round shields, cloaks, distant hills, faint Roman road. Clothing/architecture: Carthaginian armor, Iberian and Numidian gear, no modern structures. Mood and lighting: ominous dawn, cold mist, cinematic tension. Camera framing: low-angle medium-wide shot, vertical 9:16 composition. Style: dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Hannibal facing distant Rome with an exhausted army behind him. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Hannibal stands over central Italy as Rome waits in the distance."
+    },
+    {
+      "scene_number": 2,
+      "timestamp_start": 5.83,
+      "timestamp_end": 11.67,
+      "narration_segment": "After Trebbia, Hannibal drives his exhausted army through central Italy.",
+      "image_prompt": "Exact subject: Hannibal's exhausted Carthaginian army marching through central Italy after Trebbia. Exact action: soldiers push forward through muddy fields and cold mist. Historical period/location: Second Punic War, central Italy, 217 BCE. Visible objects: pack animals, spears, worn shields, cloaks, carts, rough road, winter trees. Clothing/architecture: Carthaginian, Iberian, Gallic, and Numidian military clothing, leather armor, bronze helmets, rural Italian landscape. Mood and lighting: bleak, gray, weary, suspenseful. Camera framing: wide tracking shot from slightly above, vertical 9:16 composition. Style: dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: a tired ancient army still marching under Hannibal's command. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Hannibal forces his tired army deeper into central Italy."
+    },
+    {
+      "scene_number": 3,
+      "timestamp_start": 11.67,
+      "timestamp_end": 17.5,
+      "narration_segment": "In 217 BCE, fog covers Lake Trasimene as Flaminius follows.",
+      "image_prompt": "Exact subject: Gaius Flaminius leading Roman soldiers beside Lake Trasimene in fog. Exact action: Flaminius rides forward while his Roman column follows along the lakeside road. Historical period/location: Lake Trasimene, Italy, 217 BCE. Visible objects: lake water, heavy fog, Roman standards, shields, helmets, narrow road, dark hills. Clothing/architecture: Roman consul in red cloak and bronze armor, legionaries in Republican Roman equipment, no buildings except distant rural huts. Mood and lighting: cold morning fog, threatening silence, low visibility. Camera framing: medium-wide side view, vertical 9:16 composition. Style: dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Flaminius following the lakeside path into fog. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Flaminius leads Rome into the fog along Lake Trasimene."
+    },
+    {
+      "scene_number": 4,
+      "timestamp_start": 17.5,
+      "timestamp_end": 23.33,
+      "narration_segment": "Hannibal waits in the hills, and the Roman column enters blind.",
+      "image_prompt": "Exact subject: Hannibal and hidden Carthaginian troops concealed in hills above a Roman column. Exact action: Hannibal crouches and watches as Roman soldiers march below unaware. Historical period/location: hills above Lake Trasimene, Italy, 217 BCE. Visible objects: trees, rocky slopes, spears, oval shields, Roman standards below, fog drifting through the valley. Clothing/architecture: Carthaginian commander cloak, mixed Iberian and Numidian armor, Roman Republican military gear below. Mood and lighting: shadowed ambush, tense, muted dawn light. Camera framing: over-the-shoulder high-angle shot from Hannibal's position, vertical 9:16 composition. Style: dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: hidden Carthaginians watching a blind Roman column below. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Hannibal’s hidden army waits above the trapped Roman road."
+    },
+    {
+      "scene_number": 5,
+      "timestamp_start": 23.33,
+      "timestamp_end": 29.17,
+      "narration_segment": "The trap closes; Rome hears another army vanish on Italian soil.",
+      "image_prompt": "Exact subject: Roman column surrounded by shadowed Carthaginian forces at Lake Trasimene. Exact action: Carthaginian soldiers emerge from fog on the hills as Romans stop in confusion. Historical period/location: Lake Trasimene, Italy, 217 BCE. Visible objects: fog, lake shore, Roman shields raised defensively, Carthaginian spears, standards partly hidden, dark hills. Clothing/architecture: Roman Republican armor, Carthaginian and allied armor, no modern objects, no city buildings. Mood and lighting: chaotic but non-graphic, smoky fog, dim morning, dread. Camera framing: wide cinematic shot from above the lakeside road, vertical 9:16 composition. Style: dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: the ambush closing around the Roman army without explicit injury. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "The ambush at Trasimene closes around Flaminius’s army."
+    },
+    {
+      "scene_number": 6,
+      "timestamp_start": 29.17,
+      "timestamp_end": 35.0,
+      "narration_segment": "Then Fabius Maximus rises, choosing delay over glorious destruction.",
+      "image_prompt": "Exact subject: Fabius Maximus standing in the Roman Senate. Exact action: Fabius raises one hand calmly while senators argue around him. Historical period/location: Rome, 217 BCE, Roman Senate house. Visible objects: stone benches, scrolls, wax tablets, senators in white togas, shadowed columns. Clothing/architecture: Republican Roman togas with colored borders, austere Roman interior architecture. Mood and lighting: tense political darkness, shafts of light, controlled restraint. Camera framing: centered medium shot of Fabius, vertical 9:16 composition. Style: dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Fabius Maximus calmly choosing caution amid panic. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Fabius Maximus answers disaster with delay, not glory."
+    },
+    {
+      "scene_number": 7,
+      "timestamp_start": 35.0,
+      "timestamp_end": 40.83,
+      "narration_segment": "For one year, Rome argues: patience, or one decisive battle.",
+      "image_prompt": "Exact subject: divided Roman leaders debating strategy over a campaign map. Exact action: one group points to cautious routes while another points toward a battlefield marker. Historical period/location: Rome, 217 to 216 BCE, Republican command chamber. Visible objects: parchment map of Italy, wooden table, oil lamps, Roman helmets, small carved army markers, wax tablets. Clothing/architecture: Roman senators and officers in togas and military cloaks, stone walls, columns. Mood and lighting: tense, divided, candlelit, claustrophobic. Camera framing: overhead three-quarter shot of the table and arguing hands, vertical 9:16 composition. Style: dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Rome split between delay and decisive battle. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Rome spends the year torn between caution and revenge."
+    },
+    {
+      "scene_number": 8,
+      "timestamp_start": 40.83,
+      "timestamp_end": 46.67,
+      "narration_segment": "In 216 BCE at Cannae, Rome brings its huge army south.",
+      "image_prompt": "Exact subject: massive Roman army marching toward Cannae. Exact action: dense ranks of legionaries advance south across open Apulian plains. Historical period/location: Cannae, southern Italy, 216 BCE. Visible objects: Roman standards, rectangular shields, helmets, spears, dust, open fields, distant low hills. Clothing/architecture: Republican Roman legionary armor and red cloaks, rural Italian landscape with no modern structures. Mood and lighting: hot, dusty, foreboding, grand scale. Camera framing: very wide shot showing army depth, vertical 9:16 composition. Style: dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Rome’s huge army moving toward Cannae. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Rome marches south with overwhelming force toward Cannae."
+    },
+    {
+      "scene_number": 9,
+      "timestamp_start": 46.67,
+      "timestamp_end": 52.5,
+      "narration_segment": "Hannibal bends his center, wraps the flanks, and crushes Roman hope.",
+      "image_prompt": "Exact subject: Hannibal directing the double-envelopment formation at Cannae. Exact action: the Carthaginian center bends backward while cavalry and infantry close around Roman formations. Historical period/location: Battle of Cannae, southern Italy, 216 BCE. Visible objects: curved battle lines, dust clouds, shields, spears, cavalry on the wings, Roman standards trapped in the center. Clothing/architecture: Carthaginian, Iberian, Gallic, Numidian, and Roman Republican military gear, open battlefield. Mood and lighting: dark dust, overwhelming pressure, cinematic dread, non-graphic. Camera framing: high-angle battlefield composition, vertical 9:16 composition. Style: dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Hannibal’s curved formation closing around the Roman army without explicit injury. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "At Cannae, Hannibal’s formation closes like a trap."
+    },
+    {
+      "scene_number": 10,
+      "timestamp_start": 52.5,
+      "timestamp_end": 58.33,
+      "narration_segment": "But he cannot storm Rome: walls, exhaustion, and no siege train stop him.",
+      "image_prompt": "Exact subject: Hannibal and weary officers looking toward Rome’s distant walls. Exact action: Hannibal stands beside tired soldiers and empty supply carts, unable to advance into a siege. Historical period/location: road toward Rome, Italy, after Cannae, 216 BCE. Visible objects: distant fortified Roman walls, closed gates, exhausted horses, damaged carts, spears stacked low, dusty cloaks. Clothing/architecture: Carthaginian and allied armor, Republican Roman walls in distance, ancient stone fortifications. Mood and lighting: heavy twilight, frustration, limits, silence. Camera framing: wide rear view of Hannibal facing distant walls, vertical 9:16 composition. Style: dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Rome protected by walls while Hannibal lacks siege support. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Rome’s walls and Hannibal’s limits keep the capital standing."
+    },
+    {
+      "scene_number": 11,
+      "timestamp_start": 58.33,
+      "timestamp_end": 64.17,
+      "narration_segment": "Capua defects; southern towns waver, and Philip V of Macedon reaches toward Hannibal.",
+      "image_prompt": "Exact subject: Capuan envoys and a Macedonian messenger symbolically reaching toward Hannibal. Exact action: Capuan nobles offer alliance while a distant Macedonian envoy holds a sealed tablet. Historical period/location: southern Italy and Macedonian alliance context, 216 to 215 BCE. Visible objects: Capuan city gate, olive branches, sealed tablet, shields, cloaks, distant ship silhouette suggesting Macedon. Clothing/architecture: wealthy Capuan robes, Carthaginian armor, Macedonian cloak and helmet, ancient Italian city architecture. Mood and lighting: secretive, torchlit, political danger. Camera framing: medium-wide diplomatic scene at a city gate, vertical 9:16 composition. Style: dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Capua defecting and Philip V of Macedon aligning through envoys. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Capua and Macedon begin reaching toward Hannibal after Cannae."
+    },
+    {
+      "scene_number": 12,
+      "timestamp_start": 64.17,
+      "timestamp_end": 70,
+      "narration_segment": "Hannibal gains allies, not surrender; Rome prepares to hunt them. Follow for part 4.",
+      "image_prompt": "Exact subject: Roman commanders preparing to target Hannibal’s new allies while Hannibal stands apart in shadow. Exact action: Roman officers place markers on Capua and southern towns as Hannibal watches distant allied fires. Historical period/location: Italy after Cannae, 216 to 215 BCE. Visible objects: map table, wooden city markers, oil lamps, Roman helmets, distant campfires, dark hills. Clothing/architecture: Republican Roman officers in armor and cloaks, Hannibal in Carthaginian cloak, ancient military command tent. Mood and lighting: cold strategic menace, torchlit darkness, coming counterattack. Camera framing: split-depth composition with Roman map foreground and Hannibal shadowed in background, vertical 9:16 composition. Style: dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Rome preparing to hunt Hannibal’s allies while Hannibal has allies but no Roman surrender. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Hannibal has new allies, but Rome turns toward them next."
+    }
+  ],
+  "hashtags": [
+    "Carthage",
+    "Hannibal",
+    "Rome",
+    "Cannae",
+    "SecondPunicWar",
+    "AncientHistory",
+    "RomanHistory",
+    "MilitaryHistory",
+    "HistoryShorts",
+    "AshAndEmpires"
+  ],
+  "youtube_description": "Part 3 of The Fall of Carthage follows Hannibal after Trebbia, as he pushes deeper into central Italy and sets another trap at Lake Trasimene. Rome turns to Fabius Maximus and his strategy of delay, but patience cannot survive forever. In 216 BCE, Rome risks everything at Cannae, where Hannibal wins his greatest battlefield victory. Yet even after Cannae, Rome does not fall. Its walls, Hannibal’s exhausted army, and the lack of siege support keep the capital standing. Meanwhile, Capua defects, southern Italy wavers, and Philip V of Macedon aligns with Hannibal.",
+  "cta": "Follow for part 4.",
+  "topic_id": "1",
+  "series": "The Fall of Carthage",
+  "part": 3,
+  "episode_number": 3,
+  "resolved_episode_count": 7,
+  "episode_count_mode": "dynamic",
+  "timeline_event_ids": [
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18"
+  ],
+  "research_hash": "6a66e741fce1b884"
+}

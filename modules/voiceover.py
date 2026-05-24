@@ -60,7 +60,7 @@ def _voice_settings_for_mode(mode: str) -> dict:
 
     stability = float(base.get("stability", 0.42))
     style = float(base.get("style", 0.70))
-    speed = float(base.get("speed", 0.83))
+    speed = float(base.get("speed", 0.91))
 
     if mode == "low":
         base["stability"] = _clamp(stability + 0.10, 0.0, 1.0)

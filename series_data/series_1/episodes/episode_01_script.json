@@ -1,0 +1,132 @@
+{
+  "title": "The Oath After Defeat",
+  "hook": "Part 1. How does a defeated city raise the boy who nearly breaks Rome?",
+  "full_narration": "Part 1. How does a defeated city raise the boy who nearly breaks Rome? In 241 BCE, Rome ends the First Punic War and takes Sicily. [[pause:0.4]] Carthage comes home wounded, with empty coffers and unpaid soldiers waiting. Those soldiers revolt, and the Mercenary War shakes the weakened city. [[voice:tense]] Before Carthage can breathe, Rome seizes Sardinia and Corsica. The insult cuts deeper than defeat; it points Hamilcar Barca west. [[pause:0.6]] In 237 BCE, Hamilcar sails to Iberia to rebuild Carthaginian power. Silver mines, ports, and warriors become Carthage's new engine. At his side stands young Hannibal, watching Rome become a family curse. [[voice:low]] Tradition says the boy swears hostility to Rome before leaving Africa. Years later, Hamilcar dies, but Barcid power does not die with him. Hasdrubal the Fair holds Iberia together, as Hannibal's road begins. [[pause:0.8]] Follow for part 2.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "timestamp_start": 0.0,
+      "timestamp_end": 5.83,
+      "narration_segment": "Part 1. How does a defeated city raise the boy who nearly breaks Rome?",
+      "image_prompt": "Exact subject: young Hannibal Barca standing on a high stone terrace above Carthage, looking toward a dark Mediterranean horizon; exact action: the boy watches the wounded city below; historical period/location: Carthage, North Africa, late 3rd century BCE; visible objects: harbor masts, Punic stone walls, bronze braziers, distant warships in shadow; clothing/architecture: simple Carthaginian child tunic, Punic columns, flat-roofed buildings; mood and lighting: ominous dusk, smoky gold light, tense cinematic atmosphere; camera framing: low-angle medium shot behind the boy, vertical 9:16 composition; dark historical graphic-novel believability; no text, no watermark, no subtitles, no logos, no modern objects; Must show: young Hannibal, Carthage harbor, looming dark sky; Must not show: text, watermark, modern objects, gore, blood, nudity",
+      "scene_description": "Young Hannibal watches Carthage from above as the city sits under a dark horizon."
+    },
+    {
+      "scene_number": 2,
+      "timestamp_start": 5.83,
+      "timestamp_end": 11.67,
+      "narration_segment": "In 241 BCE, Rome ends the First Punic War and takes Sicily.",
+      "image_prompt": "Exact subject: Roman envoys and Carthaginian officials facing each other near a map of Sicily; exact action: Rome claims Sicily as Carthaginian officials lower their heads; historical period/location: western Mediterranean, 241 BCE; visible objects: parchment map of Sicily, wax tablets, Roman standards, Punic seal, stone table; clothing/architecture: Roman togas and armor, Carthaginian robes, marble chamber with Punic arches; mood and lighting: cold torchlight, defeated silence, political tension; camera framing: wide cinematic interior shot, vertical 9:16 composition; dark historical graphic-novel believability; no text, no watermark, no subtitles, no logos, no modern objects; Must show: Roman authority, Carthaginian defeat, Sicily map; Must not show: text, watermark, modern objects, gore, blood, nudity",
+      "scene_description": "Roman envoys claim Sicily while Carthaginian leaders absorb the defeat."
+    },
+    {
+      "scene_number": 3,
+      "timestamp_start": 11.67,
+      "timestamp_end": 17.5,
+      "narration_segment": "Carthage comes home wounded, with empty coffers and unpaid soldiers waiting.",
+      "image_prompt": "Exact subject: Carthaginian treasury officials and tired mercenary soldiers outside a locked treasury; exact action: soldiers wait in silence while officials hold empty coin chests; historical period/location: Carthage, 241 BCE; visible objects: open empty chests, bronze scales, spears, shields, sealed treasury doors; clothing/architecture: Punic robes, mercenary cloaks, North African stone courtyard, carved columns; mood and lighting: bleak morning haze, anxious stillness, heavy shadows; camera framing: medium-wide shot from courtyard level, vertical 9:16 composition; dark historical graphic-novel believability; no text, no watermark, no subtitles, no logos, no modern objects; Must show: unpaid soldiers, empty coffers, Carthaginian treasury; Must not show: text, watermark, modern objects, gore, blood, nudity",
+      "scene_description": "Unpaid soldiers wait outside the treasury as officials reveal empty chests."
+    },
+    {
+      "scene_number": 4,
+      "timestamp_start": 17.5,
+      "timestamp_end": 23.33,
+      "narration_segment": "Those soldiers revolt, and the Mercenary War shakes the weakened city.",
+      "image_prompt": "Exact subject: rebellious mercenary soldiers gathering outside Carthage's walls; exact action: soldiers raise shields and torches while the city gates close; historical period/location: near Carthage, 241-238 BCE Mercenary War; visible objects: torches, round shields, spears, closed wooden gates, Punic battlements; clothing/architecture: mixed mercenary armor, Carthaginian stone fortifications, desert road; mood and lighting: stormy twilight, fear, pressure, cinematic smoke; camera framing: wide exterior shot facing the walls, vertical 9:16 composition; dark historical graphic-novel believability; no text, no watermark, no subtitles, no logos, no modern objects; Must show: revolt outside Carthage, closed gates, tense soldiers; Must not show: text, watermark, modern objects, gore, blood, nudity",
+      "scene_description": "Rebel mercenaries gather at the gates as Carthage locks itself behind stone walls."
+    },
+    {
+      "scene_number": 5,
+      "timestamp_start": 23.33,
+      "timestamp_end": 29.17,
+      "narration_segment": "Before Carthage can breathe, Rome seizes Sardinia and Corsica.",
+      "image_prompt": "Exact subject: Roman soldiers landing on a rocky island coast; exact action: soldiers plant Roman standards beside a shoreline map showing Sardinia and Corsica shapes without writing; historical period/location: Sardinia and Corsica, 238-237 BCE; visible objects: Roman standards, wooden ships, shields, island rocks, rolled map with island outlines; clothing/architecture: Roman helmets and mail, simple coastal watchtower in ancient style; mood and lighting: harsh gray dawn, predatory calm, imperial pressure; camera framing: low-angle coastal wide shot, vertical 9:16 composition; dark historical graphic-novel believability; no text, no watermark, no subtitles, no logos, no modern objects; Must show: Roman seizure of islands, ships, standards; Must not show: text, watermark, modern objects, gore, blood, nudity",
+      "scene_description": "Roman forces step onto island shores while Carthage is still reeling."
+    },
+    {
+      "scene_number": 6,
+      "timestamp_start": 29.17,
+      "timestamp_end": 35.0,
+      "narration_segment": "The insult cuts deeper than defeat; it points Hamilcar Barca west.",
+      "image_prompt": "Exact subject: Hamilcar Barca standing alone in a Carthaginian command chamber; exact action: Hamilcar points west across a Mediterranean map; historical period/location: Carthage, late 230s BCE; visible objects: oil lamps, sea chart, dagger, bronze helmet, Punic war standard; clothing/architecture: Hamilcar in dark Carthaginian cloak and armor, Punic stone chamber, carved pillars; mood and lighting: low amber torchlight, restrained anger, strategic darkness; camera framing: tight medium shot over the map, vertical 9:16 composition; dark historical graphic-novel believability; no text, no watermark, no subtitles, no logos, no modern objects; Must show: Hamilcar Barca, westward gesture, strategy map; Must not show: text, watermark, modern objects, gore, blood, nudity",
+      "scene_description": "Hamilcar Barca turns defeat into direction, pointing west over a war map."
+    },
+    {
+      "scene_number": 7,
+      "timestamp_start": 35.0,
+      "timestamp_end": 40.83,
+      "narration_segment": "In 237 BCE, Hamilcar sails to Iberia to rebuild Carthaginian power.",
+      "image_prompt": "Exact subject: Hamilcar Barca aboard a Carthaginian ship leaving harbor; exact action: Hamilcar stands at the prow as sailors row toward Iberia; historical period/location: Mediterranean Sea from Carthage toward Iberia, 237 BCE; visible objects: Punic ship, square sail, oars, cargo crates, bronze weapons, distant coastline; clothing/architecture: Carthaginian naval clothing, Hamilcar's armor and cloak, ancient wooden vessel; mood and lighting: dark sunrise, determined movement, wind and salt haze; camera framing: cinematic prow shot from below, vertical 9:16 composition; dark historical graphic-novel believability; no text, no watermark, no subtitles, no logos, no modern objects; Must show: Hamilcar sailing west, Punic ship, open sea; Must not show: text, watermark, modern objects, gore, blood, nudity",
+      "scene_description": "Hamilcar sails west from Carthage, beginning the Barcid rebuilding project."
+    },
+    {
+      "scene_number": 8,
+      "timestamp_start": 40.83,
+      "timestamp_end": 46.67,
+      "narration_segment": "Silver mines, ports, and warriors become Carthage's new engine.",
+      "image_prompt": "Exact subject: Iberian silver mine, harbor, and armed local warriors under Carthaginian oversight; exact action: miners carry ore while ships load goods and warriors assemble nearby; historical period/location: Iberia, late 3rd century BCE; visible objects: silver ore baskets, mine entrance, harbor ships, spears, shields, trade crates; clothing/architecture: Iberian cloaks, Carthaginian officers in armor, rough stone mining structures, coastal docks; mood and lighting: smoky sunset, industrial power, rising ambition; camera framing: layered wide shot with mine foreground and harbor background, vertical 9:16 composition; dark historical graphic-novel believability; no text, no watermark, no subtitles, no logos, no modern objects; Must show: silver mine, port, warriors, Carthaginian rebuilding; Must not show: text, watermark, modern objects, gore, blood, nudity",
+      "scene_description": "Iberia becomes the source of Carthage's new wealth, ships, and soldiers."
+    },
+    {
+      "scene_number": 9,
+      "timestamp_start": 46.67,
+      "timestamp_end": 52.5,
+      "narration_segment": "At his side stands young Hannibal, watching Rome become a family curse.",
+      "image_prompt": "Exact subject: young Hannibal Barca standing beside Hamilcar Barca; exact action: Hannibal looks up at his father while a Roman eagle standard appears as a distant shadow; historical period/location: Carthaginian camp in Iberia, c. 237 BCE; visible objects: campaign tent, oil lamp, sword belt, Punic shield, distant Roman eagle silhouette; clothing/architecture: Hannibal in simple boy's tunic, Hamilcar in Carthaginian armor and cloak, canvas military camp; mood and lighting: firelit night, intimate tension, inherited hatred; camera framing: medium two-shot from the side, vertical 9:16 composition; dark historical graphic-novel believability; no text, no watermark, no subtitles, no logos, no modern objects; Must show: young Hannibal, Hamilcar, family tension, Roman symbol as shadow; Must not show: text, watermark, modern objects, gore, blood, nudity",
+      "scene_description": "Young Hannibal stands beside Hamilcar as Rome becomes a shadow over the family."
+    },
+    {
+      "scene_number": 10,
+      "timestamp_start": 52.5,
+      "timestamp_end": 58.33,
+      "narration_segment": "Tradition says the boy swears hostility to Rome before leaving Africa.",
+      "image_prompt": "Exact subject: young Hannibal Barca before a sacred Carthaginian altar; exact action: Hannibal raises one hand in oath while Hamilcar watches; historical period/location: Carthage, c. 237 BCE before departure to Iberia; visible objects: stone altar, bronze bowl, oil lamps, incense smoke, Punic ritual vessels; clothing/architecture: boy's tunic, Hamilcar's dark cloak, Punic temple columns, carved stone interior; mood and lighting: solemn candlelight, sacred darkness, suspenseful stillness; camera framing: close medium shot centered on Hannibal's raised hand, vertical 9:16 composition; dark historical graphic-novel believability; no text, no watermark, no subtitles, no logos, no modern objects; Must show: Hannibal oath scene, altar, Hamilcar observing; Must not show: text, watermark, modern objects, gore, blood, nudity",
+      "scene_description": "Hannibal raises his hand at an altar in the traditional oath against Rome."
+    },
+    {
+      "scene_number": 11,
+      "timestamp_start": 58.33,
+      "timestamp_end": 64.17,
+      "narration_segment": "Years later, Hamilcar dies, but Barcid power does not die with him.",
+      "image_prompt": "Exact subject: empty command chair and Hamilcar's cloak in an Iberian fortress; exact action: Carthaginian officers stand in silence around the abandoned seat; historical period/location: Iberia, 229 BCE; visible objects: command chair, folded cloak, bronze helmet, campaign map, oil lamps, fortress stones; clothing/architecture: Carthaginian officers in armor and dark cloaks, Iberian stone stronghold; mood and lighting: mournful torchlight, heavy silence, uncertain succession; camera framing: centered wide interior shot, vertical 9:16 composition; dark historical graphic-novel believability; no text, no watermark, no subtitles, no logos, no modern objects; Must show: Hamilcar's absence, Barcid command symbols, Iberian fortress; Must not show: text, watermark, modern objects, gore, blood, nudity",
+      "scene_description": "Hamilcar's empty command space signals his death, but the Barcid structure remains."
+    },
+    {
+      "scene_number": 12,
+      "timestamp_start": 64.17,
+      "timestamp_end": 70,
+      "narration_segment": "Hasdrubal the Fair holds Iberia together, as Hannibal's road begins. Follow for part 2.",
+      "image_prompt": "Exact subject: Hasdrubal the Fair standing before Carthaginian officers and young Hannibal in Iberia; exact action: Hasdrubal takes command beside a large Iberian map while Hannibal watches; historical period/location: Barcid Iberia, 229 BCE; visible objects: campaign map, Punic standards, silver ingots, helmets, fortress torches; clothing/architecture: Hasdrubal in refined Carthaginian armor and cloak, Hannibal in young noble clothing, Iberian fortress hall with stone arches; mood and lighting: tense torchlit succession, controlled power, ominous future; camera framing: dramatic wide shot with Hasdrubal centered and Hannibal in the foreground, vertical 9:16 composition; dark historical graphic-novel believability; no text, no watermark, no subtitles, no logos, no modern objects; Must show: Hasdrubal taking command, Hannibal watching, Iberia held together; Must not show: text, watermark, modern objects, gore, blood, nudity",
+      "scene_description": "Hasdrubal takes command in Iberia while Hannibal watches the road ahead open."
+    }
+  ],
+  "hashtags": [
+    "carthage",
+    "hannibal",
+    "rome",
+    "punicwars",
+    "hamilcar",
+    "hasdrubal",
+    "iberia",
+    "ancienthistory",
+    "historyshorts",
+    "empires"
+  ],
+  "youtube_description": "Carthage begins this story in humiliation. In 241 BCE, Rome ends the First Punic War and takes Sicily. Then unpaid soldiers revolt, the Mercenary War weakens the city, and Rome seizes Sardinia and Corsica while Carthage is still recovering. Out of that pressure rises Hamilcar Barca, who turns west to Iberia to rebuild Carthaginian power through silver, ports, and soldiers. Beside him stands young Hannibal, shaped by defeat and bound by the traditional oath against Rome. When Hamilcar dies, Hasdrubal the Fair keeps Barcid Spain alive, setting the stage for the next dangerous line.",
+  "cta": "Follow for part 2.",
+  "topic_id": "1",
+  "series": "The Fall of Carthage",
+  "part": 1,
+  "episode_number": 1,
+  "resolved_episode_count": 7,
+  "episode_count_mode": "dynamic",
+  "timeline_event_ids": [
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E05",
+    "E06"
+  ],
+  "research_hash": "6a66e741fce1b884"
+}

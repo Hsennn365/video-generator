@@ -15,6 +15,10 @@ output/
 temp/
 music/
 
+# Research story bibles — these ARE tracked (reusable source-of-truth data)
+!series_data/
+!series_data/**/*.json
+
 # Generated media
 *.mp4
 *.mov

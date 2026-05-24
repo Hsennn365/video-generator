@@ -1,0 +1,131 @@
+{
+  "title": "The Last Victory of Rome",
+  "hook": "Part 6. Can Rome’s greatest enemy still save Carthage at home?",
+  "full_narration": "Part 6. Can Rome’s greatest enemy still save Carthage at home? In 202 BCE, Hannibal faces Scipio on the plain of Zama. [[pause:0.4]] His war elephants surge forward, but Roman lanes open like traps. By sunset, Scipio defeats Hannibal, and Carthage’s last gamble collapses. [[voice:tense]] In 201 BCE, Carthage accepts peace under Rome’s hard shadow. Its fleet is surrendered, its wars forbidden, its tribute chained to decades. [[pause:0.6]] In Rome, Scipio receives honors and a new name: Africanus. The victor becomes legend, while Hannibal returns as something stranger. In 196 BCE, Hannibal becomes suffete, a statesman in a wounded city. [[voice:low]] He reforms Carthage’s finances, making payments possible and corruption dangerous. From 195 BCE, Roman pressure drives Hannibal from Carthage into exile. In 183 BCE, he dies in Bithynia, but Carthage keeps recovering. [[pause:0.8]] Follow for part 7.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "timestamp_start": 0.0,
+      "timestamp_end": 5.83,
+      "narration_segment": "Part 6. Can Rome’s greatest enemy still save Carthage at home?",
+      "image_prompt": "Exact subject: Hannibal Barca standing on a dark North African shoreline near Carthage after returning from Italy. Exact action: he looks toward the distant city walls as storm clouds gather. Historical period/location: 202 BCE, coast outside Carthage, North Africa. Visible objects: beached warship, worn campaign cloak, spear, distant Punic walls, torchlight. Clothing/architecture: Carthaginian general in dark cloak and bronze armor, Punic harbor architecture in distance. Mood and lighting: ominous twilight, cold blue shadows, dramatic rim light. Camera framing: low-angle medium shot, vertical 9:16 composition, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Hannibal alone facing Carthage. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Hannibal stands on the African coast, facing the city he has been recalled to defend."
+    },
+    {
+      "scene_number": 2,
+      "timestamp_start": 5.83,
+      "timestamp_end": 11.67,
+      "narration_segment": "In 202 BCE, Hannibal faces Scipio on the plain of Zama.",
+      "image_prompt": "Exact subject: Hannibal Barca and Scipio facing each other across the battlefield of Zama. Exact action: both commanders stand before their armies, separated by an empty plain. Historical period/location: 202 BCE, Zama, North Africa. Visible objects: Roman standards, Carthaginian banners, shields, spears, dust, distant cavalry. Clothing/architecture: Roman commander in red cloak and bronze cuirass, Carthaginian commander in dark armor and cloak, no buildings. Mood and lighting: tense dawn, dusty golden light, heavy shadows. Camera framing: wide cinematic battlefield shot, vertical 9:16 composition, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: two opposing armies waiting at Zama. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "The armies of Hannibal and Scipio face each other on the open plain of Zama."
+    },
+    {
+      "scene_number": 3,
+      "timestamp_start": 11.67,
+      "timestamp_end": 17.5,
+      "narration_segment": "His war elephants surge forward, but Roman lanes open like traps.",
+      "image_prompt": "Exact subject: Carthaginian war elephants charging toward Roman infantry formations. Exact action: elephants surge forward while Roman soldiers open organized lanes between shield lines. Historical period/location: 202 BCE, Battle of Zama, North Africa. Visible objects: elephants with towers, Roman shields, spears, standards, dust clouds. Clothing/architecture: Roman legionaries in helmets and segmented armor, Carthaginian handlers in tunics and leather gear. Mood and lighting: urgent, smoky dust, harsh sunlight cutting through shadows. Camera framing: dynamic high-angle battlefield view, vertical 9:16 composition, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: elephants moving through opened Roman lanes. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Roman formations open controlled lanes as Hannibal’s elephants charge into the trap."
+    },
+    {
+      "scene_number": 4,
+      "timestamp_start": 17.5,
+      "timestamp_end": 23.33,
+      "narration_segment": "By sunset, Scipio defeats Hannibal, and Carthage’s last gamble collapses.",
+      "image_prompt": "Exact subject: Scipio standing victorious on the field after Zama while Hannibal’s army withdraws in the distance. Exact action: Scipio lowers his sword as Carthaginian banners sink and soldiers retreat into dust. Historical period/location: 202 BCE, Zama, North Africa. Visible objects: Roman standards, abandoned shields, dust, fading sun, distant retreating figures. Clothing/architecture: Roman armor and red cloak, Carthaginian armor and dark cloaks in distance, open plain. Mood and lighting: bleak sunset, orange sky, long shadows, solemn victory. Camera framing: medium-wide cinematic shot from behind Scipio, vertical 9:16 composition, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Roman victory at Zama without graphic violence. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Scipio stands over the defeated field as Carthage’s hopes fade at sunset."
+    },
+    {
+      "scene_number": 5,
+      "timestamp_start": 23.33,
+      "timestamp_end": 29.17,
+      "narration_segment": "In 201 BCE, Carthage accepts peace under Rome’s hard shadow.",
+      "image_prompt": "Exact subject: Carthaginian envoys accepting Roman peace terms before seated Roman officials. Exact action: envoys bow their heads and present sealed tablets across a table. Historical period/location: 201 BCE, Carthage under Roman diplomatic pressure. Visible objects: wax tablets without readable writing, scrolls, bronze lamps, Punic columns, Roman standards. Clothing/architecture: Carthaginian nobles in white and purple robes, Roman officials in togas and armor, Punic council chamber architecture. Mood and lighting: dark interior, lamplight, oppressive shadows. Camera framing: frontal medium shot across treaty table, vertical 9:16 composition, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Carthage accepting peace terms. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Carthaginian leaders submit to Rome’s terms inside a shadowed council chamber."
+    },
+    {
+      "scene_number": 6,
+      "timestamp_start": 29.17,
+      "timestamp_end": 35.0,
+      "narration_segment": "Its fleet is surrendered, its wars forbidden, its tribute chained to decades.",
+      "image_prompt": "Exact subject: Carthaginian ships being surrendered in the harbor while officials count tribute chests. Exact action: sailors lower sails as Roman officers watch, and Carthaginian clerks stand beside coin chests. Historical period/location: 201 BCE, harbor of Carthage, North Africa. Visible objects: warships, ropes, lowered sails, coin chests, sealed tablets without readable writing, Roman standards. Clothing/architecture: Punic harbor walls, Carthaginian sailors in linen tunics, Roman officers in armor and cloaks. Mood and lighting: gray morning, mist, restrained despair. Camera framing: wide harbor shot from a raised pier, vertical 9:16 composition, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: surrendered fleet and tribute chests. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Carthage’s ships and wealth pass under Roman control as peace becomes a cage."
+    },
+    {
+      "scene_number": 7,
+      "timestamp_start": 35.0,
+      "timestamp_end": 40.83,
+      "narration_segment": "In Rome, Scipio receives honors and a new name: Africanus.",
+      "image_prompt": "Exact subject: Scipio being honored in Rome after victory over Carthage. Exact action: Roman senators raise laurel wreaths toward Scipio as citizens gather behind them. Historical period/location: 201 BCE, Roman Forum, Rome. Visible objects: laurel wreath, Roman standards, stone temples, marble steps, ceremonial armor. Clothing/architecture: Scipio in polished cuirass and red cloak, senators in white togas, Republican Roman architecture. Mood and lighting: triumphant but ominous, golden light with deep shadows. Camera framing: low-angle heroic medium shot, vertical 9:16 composition, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Scipio honored by Rome. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Rome transforms Scipio’s victory into public glory and political legend."
+    },
+    {
+      "scene_number": 8,
+      "timestamp_start": 40.83,
+      "timestamp_end": 46.67,
+      "narration_segment": "The victor becomes legend, while Hannibal returns as something stranger.",
+      "image_prompt": "Exact subject: split visual contrast of Scipio celebrated in Rome and Hannibal walking quietly through Carthage. Exact action: Scipio stands beneath laurel and torchlight while Hannibal moves through a shadowed street alone. Historical period/location: early 2nd century BCE, Rome and Carthage. Visible objects: Roman laurel, torches, Punic street stones, columns, cloaks. Clothing/architecture: Scipio in Roman armor, Hannibal in dark civilian cloak, Roman forum architecture and Punic city architecture. Mood and lighting: one side gold and ceremonial, one side blue and shadowed. Camera framing: cinematic vertical split composition, 9:16, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Scipio as legend and Hannibal returning quietly. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Scipio rises as a Roman legend while Hannibal returns to Carthage in silence."
+    },
+    {
+      "scene_number": 9,
+      "timestamp_start": 46.67,
+      "timestamp_end": 52.5,
+      "narration_segment": "In 196 BCE, Hannibal becomes suffete, a statesman in a wounded city.",
+      "image_prompt": "Exact subject: Hannibal as suffete inside the civic council of Carthage. Exact action: Hannibal stands before seated Carthaginian officials, speaking with controlled authority. Historical period/location: 196 BCE, Carthage, North Africa. Visible objects: council benches, bronze oil lamps, tablets without readable writing, coin scales, Punic columns. Clothing/architecture: Hannibal in dark statesman’s robe with simple military cloak, Carthaginian officials in linen and purple-trimmed robes, Punic civic hall. Mood and lighting: tense, candlelit, political shadows. Camera framing: medium shot from behind council members facing Hannibal, vertical 9:16 composition, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Hannibal acting as statesman in Carthage. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Hannibal stands not as a battlefield commander, but as a civic leader."
+    },
+    {
+      "scene_number": 10,
+      "timestamp_start": 52.5,
+      "timestamp_end": 58.33,
+      "narration_segment": "He reforms Carthage’s finances, making payments possible and corruption dangerous.",
+      "image_prompt": "Exact subject: Hannibal inspecting Carthaginian treasury records and coin chests. Exact action: Hannibal points to accounting tablets while officials look uneasy beside stacked silver coins. Historical period/location: 196 BCE, treasury office of Carthage. Visible objects: coin chests, balance scales, sealed tablets without readable writing, scrolls, bronze lamps, stone table. Clothing/architecture: Hannibal in dark civic robe, treasury officials in fine Punic robes, stone Punic interior. Mood and lighting: tense financial investigation, low amber lamplight, sharp shadows. Camera framing: close medium shot over the treasury table, vertical 9:16 composition, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: financial reform through coins, scales, and officials. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Hannibal confronts the city’s finances and turns reform into survival."
+    },
+    {
+      "scene_number": 11,
+      "timestamp_start": 58.33,
+      "timestamp_end": 64.17,
+      "narration_segment": "From 195 BCE, Roman pressure drives Hannibal from Carthage into exile.",
+      "image_prompt": "Exact subject: Hannibal secretly leaving Carthage by night under Roman political pressure. Exact action: Hannibal boards a small ship while shadowed officials and distant Roman envoys watch from the harbor. Historical period/location: 195 BCE, harbor of Carthage, North Africa. Visible objects: small ship, rope ladder, hooded cloak, torchlight, harbor walls, Roman envoy silhouettes. Clothing/architecture: Hannibal in dark travel cloak, Carthaginian sailors in linen tunics, Punic harbor architecture. Mood and lighting: secretive night, moonlight, torch shadows, suspenseful atmosphere. Camera framing: wide shot from behind dock pillars, vertical 9:16 composition, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Hannibal fleeing Carthage into exile. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Hannibal slips away from Carthage as Roman pressure closes around him."
+    },
+    {
+      "scene_number": 12,
+      "timestamp_start": 64.17,
+      "timestamp_end": 70,
+      "narration_segment": "In 183 BCE, he dies in Bithynia, but Carthage keeps recovering. Follow for part 7.",
+      "image_prompt": "Exact subject: aged Hannibal in exile in Bithynia while Carthage appears as a distant symbolic vision of rebuilding. Exact action: Hannibal sits alone by a dark window, looking toward a faint imagined harbor with merchant ships. Historical period/location: 183 BCE, Bithynia, Anatolia, with symbolic memory of Carthage. Visible objects: oil lamp, travel cloak, wooden table, distant hills, ghostly harbor silhouette, merchant ships. Clothing/architecture: elderly Hannibal in plain exile robe, Bithynian stone interior, eastern Mediterranean architecture. Mood and lighting: mournful twilight, dim lamp glow, quiet shadows. Camera framing: intimate medium shot, vertical 9:16 composition, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Hannibal in Bithynian exile and Carthage recovering symbolically. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Hannibal dies far from home, while Carthage quietly begins to recover without him."
+    }
+  ],
+  "hashtags": [
+    "carthage",
+    "hannibal",
+    "scipio",
+    "zama",
+    "romanempire",
+    "punicwars",
+    "ancienthistory",
+    "historyshorts",
+    "africanus",
+    "bithynia"
+  ],
+  "youtube_description": "Part 6 of The Fall of Carthage follows Hannibal’s final turn from battlefield legend to political survivor. In 202 BCE, he faces Scipio at Zama, where Rome wins the battle that decides the Second Punic War. Carthage survives, but only under harsh peace terms. Scipio becomes Africanus, while Hannibal becomes suffete and tries to repair his wounded city through financial reform. But Rome still fears him. Pressure forces him into exile, and he later dies far from Carthage in Bithynia. Yet the city he left behind begins to recover, and that recovery will awaken Rome’s old fear again.",
+  "cta": "Follow for part 7.",
+  "topic_id": "1",
+  "series": "The Fall of Carthage",
+  "part": 6,
+  "episode_number": 6,
+  "resolved_episode_count": 7,
+  "episode_count_mode": "dynamic",
+  "timeline_event_ids": [
+    "E32",
+    "E33",
+    "E34",
+    "E35",
+    "E36"
+  ],
+  "research_hash": "6a66e741fce1b884"
+}

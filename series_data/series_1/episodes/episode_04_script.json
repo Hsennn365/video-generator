@@ -1,0 +1,132 @@
+{
+  "title": "Rome Refuses to Die",
+  "hook": "Part 4. If Rome cannot defeat Hannibal directly, what does it destroy instead?",
+  "full_narration": "Part 4. If Rome cannot defeat Hannibal directly, what does it destroy instead? It stops chasing his army, and starts choking his friends. [[pause:0.4]] First comes Syracuse, where Greek walls face Roman siege towers. From 214 to 212 BCE, the harbor city tightens under siege. [[voice:tense]] Then Rome turns north to Capua, Hannibal’s most important Italian ally. Roman forces ring Capua, cutting roads, fields, and hope. [[pause:0.6]] In 211 BCE, Hannibal marches near Rome to pull them away. Rome does not surrender, and Capua’s siege lines do not break. Far away in Spain, the elder Scipio brothers die fighting Carthage. [[voice:low]] In 210 BCE, young Scipio, later Africanus, receives extraordinary command in Spain. He strikes New Carthage in 209 BCE, the Barcid treasure gate. The fortress falls; Hasdrubal’s road to Hannibal begins narrowing. [[pause:0.8]] Follow for part 5.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "timestamp_start": 0.0,
+      "timestamp_end": 5.83,
+      "narration_segment": "Part 4. If Rome cannot defeat Hannibal directly, what does it destroy instead?",
+      "image_prompt": "Exact subject: a grim Roman commander in a dim Roman Senate chamber during the Second Punic War, Rome, late 3rd century BCE. Exact action: he points at a blank wax map table showing small unlabeled city tokens around Italy while a dark elephant-shaped shadow falls across the floor. Visible objects: oil lamps, marble columns, wooden benches, bronze armor, wax tablets, city tokens without writing. Clothing/architecture: Roman toga, red military cloak, Republican Roman Senate interior. Mood and lighting: dark, suspenseful, torchlit, cinematic shadows. Camera framing: vertical 9:16 composition, medium close-up from low angle, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Roman commander, blank map table, city tokens, ominous elephant shadow. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "A Roman commander studies Hannibal’s unseen threat through a shadowed strategy table."
+    },
+    {
+      "scene_number": 2,
+      "timestamp_start": 5.83,
+      "timestamp_end": 11.67,
+      "narration_segment": "It stops chasing his army, and starts choking his friends.",
+      "image_prompt": "Exact subject: Roman officers planning strategy in a military tent in Italy during the Second Punic War. Exact action: they push aside a small elephant-shaped token and tighten cords around unlabeled ally-city tokens on a blank parchment map. Visible objects: wooden table, oil lamp, cords, bronze helmets, shields, blank parchment map, clay city markers. Clothing/architecture: Roman armor, red cloaks, leather tents, Republican army camp. Mood and lighting: tense, dark, smoky lamplight. Camera framing: vertical 9:16 composition, overhead close shot of hands and map, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Roman officers, elephant token pushed aside, cords tightening around city tokens. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Rome changes its strategy from chasing Hannibal to isolating his allies."
+    },
+    {
+      "scene_number": 3,
+      "timestamp_start": 11.67,
+      "timestamp_end": 17.5,
+      "narration_segment": "First comes Syracuse, where Greek walls face Roman siege towers.",
+      "image_prompt": "Exact subject: Syracuse under Roman siege in Sicily, 214-212 BCE. Exact action: Roman soldiers roll tall wooden siege towers toward massive Greek stone walls. Visible objects: siege towers, shields, spears, ladders, stone battlements, harbor cliffs in distance. Clothing/architecture: Roman legion armor, Greek city walls, Mediterranean coastal architecture. Mood and lighting: stormy dusk, dark clouds, tense siege atmosphere. Camera framing: vertical 9:16 composition, wide cinematic shot from ground level, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Syracuse walls, Roman siege towers, Roman soldiers advancing. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Roman siege towers loom before the ancient Greek walls of Syracuse."
+    },
+    {
+      "scene_number": 4,
+      "timestamp_start": 17.5,
+      "timestamp_end": 23.33,
+      "narration_segment": "From 214 to 212 BCE, the harbor city tightens under siege.",
+      "image_prompt": "Exact subject: Syracuse harbor city under siege in Sicily, 214-212 BCE. Exact action: Roman ships block the harbor while soldiers secure siege lines outside the walls. Visible objects: ancient warships, harbor chains, stone towers, closed gates, tents, watchfires, cliffs. Clothing/architecture: Roman sailors and legionaries, Greek harbor walls, Hellenistic coastal buildings. Mood and lighting: cold blue twilight, smoke haze, oppressive silence. Camera framing: vertical 9:16 composition, high wide view over harbor and city walls, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: blockaded harbor, Syracuse walls, Roman ships, siege camp. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Syracuse is shown trapped between Roman ships and siege camps."
+    },
+    {
+      "scene_number": 5,
+      "timestamp_start": 23.33,
+      "timestamp_end": 29.17,
+      "narration_segment": "Then Rome turns north to Capua, Hannibal’s most important Italian ally.",
+      "image_prompt": "Exact subject: Roman army approaching Capua in southern Italy, 212-211 BCE. Exact action: Roman columns march toward Capua’s walls through dark fields and wealthy estates. Visible objects: city walls, villas, vineyards, Roman standards, shields, supply carts, dusty road. Clothing/architecture: Roman legion armor, red cloaks, Italian city architecture, rural villas. Mood and lighting: brooding sunset, tense and inevitable. Camera framing: vertical 9:16 composition, long shot with the army leading the eye toward Capua, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Roman army, Capua walls, rich Italian fields, marching standards. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Roman forces move on Capua, Hannibal’s key ally in Italy."
+    },
+    {
+      "scene_number": 6,
+      "timestamp_start": 29.17,
+      "timestamp_end": 35.0,
+      "narration_segment": "Roman forces ring Capua, cutting roads, fields, and hope.",
+      "image_prompt": "Exact subject: Roman forces besieging Capua in Italy, 212-211 BCE. Exact action: Roman soldiers build earthworks and block roads around the city. Visible objects: trenches, wooden palisades, watchtowers, blocked roads, fields, city gate, shields, tents. Clothing/architecture: Roman legionary armor, siege camp structures, Italian stone walls. Mood and lighting: dark dawn mist, claustrophobic siege tension. Camera framing: vertical 9:16 composition, elevated wide shot showing the ring around Capua, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Capua encircled, Roman earthworks, blocked roads, fields cut off. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Capua is surrounded by Roman trenches, palisades, and blocked roads."
+    },
+    {
+      "scene_number": 7,
+      "timestamp_start": 35.0,
+      "timestamp_end": 40.83,
+      "narration_segment": "In 211 BCE, Hannibal marches near Rome to pull them away.",
+      "image_prompt": "Exact subject: Hannibal’s Carthaginian army marching near Rome in 211 BCE. Exact action: Hannibal rides at the head of a column toward distant Roman walls, using the march as a diversion. Visible objects: cavalry, infantry, war elephants in the far background, dust, spears, distant walls of Rome, dark road. Clothing/architecture: Carthaginian armor, cloaks, Iberian and North African soldiers, Republican Roman walls in distance. Mood and lighting: ominous twilight, threatening but restrained. Camera framing: vertical 9:16 composition, wide road-level shot with Rome distant on the horizon, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Hannibal, marching army, distant Rome walls, diversion movement. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Hannibal marches close to Rome, trying to draw the besiegers away from Capua."
+    },
+    {
+      "scene_number": 8,
+      "timestamp_start": 40.83,
+      "timestamp_end": 46.67,
+      "narration_segment": "Rome does not surrender, and Capua’s siege lines do not break.",
+      "image_prompt": "Exact subject: Roman siege lines outside Capua in 211 BCE. Exact action: Roman commanders hold their positions while a messenger gestures toward the distant road to Rome. Visible objects: palisades, trenches, watchfires, shields, command tent, sealed city gate, messenger horse. Clothing/architecture: Roman armor and cloaks, Italian city walls, wooden siege works. Mood and lighting: cold night, disciplined tension, defiant stillness. Camera framing: vertical 9:16 composition, medium-wide shot along unbroken siege lines, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Roman commanders, unbroken Capua siege lines, messenger pointing away, closed city gate. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "The Roman siege around Capua holds despite Hannibal’s move near Rome."
+    },
+    {
+      "scene_number": 9,
+      "timestamp_start": 46.67,
+      "timestamp_end": 52.5,
+      "narration_segment": "Far away in Spain, the elder Scipio brothers die fighting Carthage.",
+      "image_prompt": "Exact subject: aftermath of Roman defeat in Spain in 211 BCE involving the elder Scipio brothers. Exact action: Roman soldiers lower two covered command cloaks beside fallen standards while Carthaginian forces stand distant in shadow. Visible objects: covered cloaks, Roman standards, broken spear shafts, rocky Iberian hills, dim campfires. Clothing/architecture: Roman armor, Carthaginian helmets and cloaks, Iberian landscape. Mood and lighting: mournful dusk, dark and silent, no graphic injury. Camera framing: vertical 9:16 composition, solemn medium-wide shot, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: two covered Roman command cloaks, Roman soldiers, Iberian hills, distant Carthaginian silhouettes. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "In Spain, Rome’s elder Scipio commanders are lost against Carthaginian forces."
+    },
+    {
+      "scene_number": 10,
+      "timestamp_start": 52.5,
+      "timestamp_end": 58.33,
+      "narration_segment": "In 210 BCE, young Scipio, later Africanus, receives extraordinary command in Spain.",
+      "image_prompt": "Exact subject: young Scipio Africanus the Elder receiving command for Spain in 210 BCE. Exact action: Roman officials hand him a command staff and sealed scroll before a shadowed public assembly. Visible objects: command staff, sealed scroll, Roman standards, stone steps, bronze helmets, ships suggested in the distant harbor. Clothing/architecture: young Roman aristocrat in military cloak, senators in togas, Republican Roman public architecture. Mood and lighting: dramatic torchlight, desperate hope, heavy shadows. Camera framing: vertical 9:16 composition, heroic medium shot from low angle, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: young Scipio, Roman officials, command staff, sealed scroll. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Young Scipio receives the desperate Roman command for Spain."
+    },
+    {
+      "scene_number": 11,
+      "timestamp_start": 58.33,
+      "timestamp_end": 64.17,
+      "narration_segment": "He strikes New Carthage in 209 BCE, the Barcid treasure gate.",
+      "image_prompt": "Exact subject: Scipio attacking New Carthage in Iberia in 209 BCE. Exact action: Scipio leads Roman soldiers toward the coastal fortress walls at low tide. Visible objects: fortress walls, harbor, shallow lagoon, Roman shields, ladders, silver storage buildings suggested inside the city, ships. Clothing/architecture: Roman armor and red cloak, Punic-Iberian coastal fortress architecture, stone harbor towers. Mood and lighting: harsh dawn light, tense assault, dark cinematic atmosphere. Camera framing: vertical 9:16 composition, dynamic wide shot from behind Scipio toward the fortress, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Scipio, Roman troops, New Carthage fortress, harbor lagoon. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Scipio launches his strike against the Barcid stronghold of New Carthage."
+    },
+    {
+      "scene_number": 12,
+      "timestamp_start": 64.17,
+      "timestamp_end": 70,
+      "narration_segment": "The fortress falls; Hasdrubal’s road to Hannibal begins narrowing. Follow for part 5.",
+      "image_prompt": "Exact subject: New Carthage after its capture by Roman forces in 209 BCE. Exact action: Roman soldiers raise a standard over the fortress gate while a distant Carthaginian rider heads toward Iberian mountains. Visible objects: fortress gate, harbor below, Roman standard without markings, scattered shields, mountain road, dark clouds, ships. Clothing/architecture: Roman armor and cloaks, Punic-Iberian stone fortress, coastal harbor architecture. Mood and lighting: dark victorious dawn, ominous future, cinematic suspense. Camera framing: vertical 9:16 composition, high dramatic shot from the captured wall toward the mountain road, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: captured New Carthage fortress, Roman standard, distant mountain road, lone Carthaginian rider. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "New Carthage falls, narrowing the road between Hasdrubal and Hannibal."
+    }
+  ],
+  "hashtags": [
+    "Rome",
+    "Hannibal",
+    "SecondPunicWar",
+    "AncientHistory",
+    "RomanHistory",
+    "Carthage",
+    "ScipioAfricanus",
+    "Syracuse",
+    "Capua",
+    "HistoryShorts"
+  ],
+  "youtube_description": "",
+  "cta": "Follow for part 5.",
+  "topic_id": "1",
+  "series": "The Fall of Carthage",
+  "part": 4,
+  "episode_number": 4,
+  "resolved_episode_count": 7,
+  "episode_count_mode": "dynamic",
+  "timeline_event_ids": [
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24"
+  ],
+  "research_hash": "6a66e741fce1b884"
+}

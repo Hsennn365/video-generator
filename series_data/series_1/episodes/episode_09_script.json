@@ -1,0 +1,125 @@
+{
+  "title": "Rome Demands the End of Carthage",
+  "hook": "Part 9. Rome’s patience ends in the Senate—now only fire and steel remain.",
+  "full_narration": "Part 9. Rome’s patience ends in the Senate—now only fire and steel remain. In the marble halls of Rome, voices rise, cold and relentless. [[pause:0.4]] The Senate finds its reason—Carthage must die. Messengers cross the sea, bringing Rome’s demand to Carthage’s gates. [[voice:tense]] Panic sweeps the city—families gather what little hope remains. From every rooftop, the people watch Roman ships darken the horizon. [[pause:0.6]] Carthaginian defenders arm themselves, shadows flickering in torchlight. Scipio Aemilianus, young and unyielding, leads Rome’s legions across the waves. The Roman camps encircle Carthage—walls tightening like a fist. [[voice:low]] Night falls, and the city’s heart beats with dread. The siege begins—drums echo through the darkness, hope slipping away. Carthage’s defenders prepare for the final siege. The city’s fate will be written in the coming darkness. [[pause:0.8]] Follow for part 10.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "timestamp_start": 0.0,
+      "timestamp_end": 5.83,
+      "narration_segment": "Part 9. Rome’s patience ends in the Senate—now only fire and steel remain.",
+      "image_prompt": "Roman Senate chamber, senators in flowing togas stand in tense debate, marble columns and torchlight, shadows cast across stone floor, mood is grim and suspenseful, vertical 9:16 composition, dark graphic-novel realism. Must show: Roman senators, marble architecture, torches. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "The Roman Senate debates in shadow, tension thick in the air."
+    },
+    {
+      "scene_number": 2,
+      "timestamp_start": 5.83,
+      "timestamp_end": 11.67,
+      "narration_segment": "In the marble halls of Rome, voices rise, cold and relentless.",
+      "image_prompt": "Interior of Roman Senate, stone benches, senators gesturing forcefully, stern faces, marble statues loom in background, low warm lighting, camera angle low and wide, vertical 9:16, graphic-novel style. Must show: senators, marble hall, intense expressions. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Senators argue fiercely beneath looming marble statues."
+    },
+    {
+      "scene_number": 3,
+      "timestamp_start": 11.67,
+      "timestamp_end": 17.5,
+      "narration_segment": "The Senate finds its reason—Carthage must die.",
+      "image_prompt": "Close-up of Roman senator slamming fist on marble table, others watch with grim approval, torch shadows flicker, 2nd century BCE Roman clothing, vertical 9:16, dark dramatic lighting, graphic-novel realism. Must show: senator, marble table, torches. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "A Roman senator’s fist pounds the table as the Senate decides Carthage’s fate."
+    },
+    {
+      "scene_number": 4,
+      "timestamp_start": 17.5,
+      "timestamp_end": 23.33,
+      "narration_segment": "Messengers cross the sea, bringing Rome’s demand to Carthage’s gates.",
+      "image_prompt": "Roman messengers in cloaks ride a ship under stormy sky, Mediterranean waves, Carthage’s distant skyline ahead, tension in posture, vertical 9:16, moody lighting, graphic-novel style. Must show: Roman messengers, ancient ship, sea, Carthage skyline. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Roman messengers approach Carthage by ship under looming clouds."
+    },
+    {
+      "scene_number": 5,
+      "timestamp_start": 23.33,
+      "timestamp_end": 29.17,
+      "narration_segment": "Panic sweeps the city—families gather what little hope remains.",
+      "image_prompt": "Carthaginian families huddle in narrow stone streets, fear on faces, market stalls abandoned, torches flicker, ancient North African clothing, vertical 9:16, shadowy mood, graphic-novel realism. Must show: Carthaginian families, empty streets, torches. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Carthaginian families gather anxiously in darkened streets."
+    },
+    {
+      "scene_number": 6,
+      "timestamp_start": 29.17,
+      "timestamp_end": 35.0,
+      "narration_segment": "From every rooftop, the people watch Roman ships darken the horizon.",
+      "image_prompt": "Carthaginians on rooftops, eyes fixed on horizon, silhouettes of Roman warships approach at dusk, city below in anxious silence, vertical 9:16, cool twilight colors, graphic-novel style. Must show: Carthaginian rooftops, people watching, Roman ships. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Carthaginians watch Roman warships approach from their rooftops."
+    },
+    {
+      "scene_number": 7,
+      "timestamp_start": 35.0,
+      "timestamp_end": 40.83,
+      "narration_segment": "Carthaginian defenders arm themselves, shadows flickering in torchlight.",
+      "image_prompt": "Carthaginian soldiers in ancient armor, strapping on shields and helmets, torchlight casts long shadows in a stone armory, tense expressions, vertical 9:16, dark and dramatic, graphic-novel realism. Must show: Carthaginian soldiers, armor, torches. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Carthaginian defenders prepare weapons in a torchlit armory."
+    },
+    {
+      "scene_number": 8,
+      "timestamp_start": 40.83,
+      "timestamp_end": 46.67,
+      "narration_segment": "Scipio Aemilianus, young and unyielding, leads Rome’s legions across the waves.",
+      "image_prompt": "Scipio Aemilianus, stern young Roman general in red cloak and armor, stands at prow of Roman warship, legions behind him, Mediterranean sea stormy, vertical 9:16, heroic yet ominous mood, graphic-novel style. Must show: Scipio Aemilianus, Roman soldiers, warship, sea. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Scipio Aemilianus leads Roman soldiers across the sea toward Carthage."
+    },
+    {
+      "scene_number": 9,
+      "timestamp_start": 46.67,
+      "timestamp_end": 52.5,
+      "narration_segment": "The Roman camps encircle Carthage—walls tightening like a fist.",
+      "image_prompt": "Roman army camps lit by fire, wooden palisades and siege engines surround Carthage’s stone walls, city towers in background, night falling, vertical 9:16, tense and foreboding, graphic-novel realism. Must show: Roman camps, siege engines, Carthage walls. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Roman camps and siege engines encircle Carthage as night falls."
+    },
+    {
+      "scene_number": 10,
+      "timestamp_start": 52.5,
+      "timestamp_end": 58.33,
+      "narration_segment": "Night falls, and the city’s heart beats with dread.",
+      "image_prompt": "Carthage at night, city skyline under dark clouds, dim torchlight in windows, empty plazas, mood is tense and fearful, vertical 9:16, graphic-novel realism. Must show: Carthaginian cityscape, darkness, torchlight. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Carthage at night, silent and tense under looming darkness."
+    },
+    {
+      "scene_number": 11,
+      "timestamp_start": 58.33,
+      "timestamp_end": 64.17,
+      "narration_segment": "The siege begins—drums echo through the darkness, hope slipping away.",
+      "image_prompt": "Roman soldiers beat war drums outside Carthage’s walls, torches flare, defenders watch from battlements, deep shadows, vertical 9:16, somber and suspenseful, graphic-novel style. Must show: Roman soldiers with drums, Carthaginian walls, torchlight. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Roman war drums sound as the siege of Carthage begins."
+    },
+    {
+      "scene_number": 12,
+      "timestamp_start": 64.17,
+      "timestamp_end": 70,
+      "narration_segment": "Carthage’s defenders prepare for the final siege. The city’s fate will be written in the coming darkness. Follow for part 10.",
+      "image_prompt": "Carthaginian defenders on city walls, faces grim, city behind them shrouded in night, distant Roman camps glow with fire, mood is desperate and tense, vertical 9:16, graphic-novel realism. Must show: Carthaginian defenders, city walls, Roman camps, night. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Carthaginian defenders brace on the walls as darkness falls over the besieged city."
+    }
+  ],
+  "hashtags": [
+    "history",
+    "ancient",
+    "rome",
+    "carthage",
+    "thirdpunicwar",
+    "war",
+    "siege",
+    "empire",
+    "cinematic",
+    "drama"
+  ],
+  "youtube_description": "Rome’s patience has ended. In this episode, the Roman Senate finally finds its reason—Carthage must be destroyed. Messengers cross the sea, panic sweeps the city, and Carthage’s defenders brace for war. Scipio Aemilianus leads the Roman legions as the siege begins, surrounding the city in darkness. The Third Punic War erupts, and the fate of Carthage hangs by a thread. Watch as the final siege prepares to write the last chapter of a civilization. The end is coming. Follow for part 10.",
+  "cta": "Follow for part 10.",
+  "topic_id": "1",
+  "series": "The Fall of Carthage",
+  "part": 9,
+  "timeline_event_ids": [
+    "E09",
+    "E10"
+  ],
+  "research_hash": "92ee38a4bb43972a"
+}

@@ -96,7 +96,7 @@ def _normalize_words_to_ms_format(eleven_words: list) -> list:
     return out
 
 
-def generate_captions(audio_path: str, topic_id: str) -> list:
+def generate_captions(audio_path: str, prefix: str) -> list:
     """
     Transcribes audio with ElevenLabs Scribe and returns word-level timestamps.
     Word objects use start/end in milliseconds.
@@ -140,7 +140,7 @@ def generate_captions(audio_path: str, topic_id: str) -> list:
 
     print(f"  ✅ Captions generated: {len(words)} words")
 
-    captions_path = os.path.join(TEMP_DIR, f"topic_{topic_id}_captions.json")
+    captions_path = os.path.join(TEMP_DIR, f"{prefix}captions.json")
     with open(captions_path, "w", encoding="utf-8") as f:
         json.dump(words, f, indent=2, ensure_ascii=False)
 

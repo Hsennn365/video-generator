@@ -118,11 +118,17 @@ def upload_to_cdn(file_path: str) -> str:
 # Generate and post next pending topic
 python main.py
 
-# Generate a specific topic by ID
-python main.py --topic-id 3
+# Generate a standalone video by ID
+python main.py --topic-id 2
 
-# Generate but don't post (preview first)
-python main.py --preview
+# Generate a series (research, master timeline, and all episode scripts)
+python main.py --topic-id 1 --build-series
+
+# Rebuild series research
+python main.py --topic-id 1 --build-series --rebuild-research
+
+# Preview a specific episode of a series
+python main.py --topic-id 1 --episode 3 --preview
 
 # List all topics and their status
 python main.py --list
@@ -141,16 +147,18 @@ python main.py --voices
 
 ## Adding Topics
 
-Open `topics.csv` and add a new row:
+Open `topics.csv` and add a new row. The schema supports both single videos and full series.
 
+**For standalone videos:**
 ```
-id,title,series,part,description,status
-16,My New Topic,My Series Name,1,Brief description of what the video covers,pending
+id,type,title,series_slug,episode_count,description,status
+16,single,The Standalone Topic,,,1,Brief description,pending
 ```
 
-For standalone videos (not part of a series), leave `series` empty and set `part` to `0`:
+**For a full series:**
 ```
-16,My Standalone Topic,,0,Brief description,pending
+id,type,title,series_slug,episode_count,description,status
+1,series,The Fall of Carthage,the_fall_of_carthage,10,The full story of Carthage from Hannibal to destruction,pending
 ```
 
 ---
@@ -204,7 +212,8 @@ video-generator/
 │   ├── assembly.py      # Creatomate → final video
 │   ├── publisher.py     # Post to YT + TikTok + IG
 │   └── tracker.py       # Performance logging
-├── output/              # Generated videos (auto-created)
+├── output/              # Final rendered videos and images (ignored by Git)
+├── series_data/         # Source-of-truth series data and scripts (tracked by Git)
 ├── temp/                # Temporary files (auto-cleaned)
 └── logs/
     └── performance.csv  # Analytics tracking

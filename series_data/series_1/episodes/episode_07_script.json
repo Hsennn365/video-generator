@@ -1,0 +1,132 @@
+{
+  "title": "The City Rome Could Not Forgive",
+  "hook": "Part 7. Why did Rome destroy a city it had already defeated?",
+  "full_narration": "Part 7. Why did Rome destroy a city it had already defeated? For fifty years, Carthage rose quietly, rich from trade, still paying Rome. [[pause:0.4]] It had no empire, no great army, but its harbor breathed again. On the Numidian frontier, Masinissa pressed Carthaginian land again and again. [[voice:tense]] Rome watched as final judge, while treaty chains made self-defense dangerous. Around 153 BCE, Cato saw Carthage’s wealth and carried fear home. [[pause:0.6]] In Rome, he turned fruit, ships, and silver into a warning. In 151 BCE, Carthage finished its payments, then struck Masinissa without permission. Near Oroscopa, the gamble failed, and Rome received its excuse. [[voice:low]] In 149 BCE, the Third Punic War began against a trapped city. Carthage gave hostages and weapons, but Rome demanded the city move inland. Carthage resisted until 146 BCE; its ruins warned empires what fear remembers. [[pause:0.8]] Follow for the next dark history story.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "timestamp_start": 0.0,
+      "timestamp_end": 5.83,
+      "narration_segment": "Part 7. Why did Rome destroy a city it had already defeated?",
+      "image_prompt": "Exact subject: ancient Carthage on the North African coast after defeat, seen from above at dusk. Exact action: the city stands quiet under a dark sky as distant Roman ships watch from the sea. Historical period/location: 2nd century BCE, Carthage, North African coast. Visible objects: harbor walls, merchant docks, stone homes, temple roofs, anchored ships, sea mist. Clothing/architecture: Punic stone architecture, ancient harbor structures, distant Roman warships. Mood and lighting: dark, suspenseful, cinematic blue-gray dusk. Camera framing: wide aerial establishing shot, vertical 9:16 composition, dark historical graphic-novel believability. Must show: Carthage, coastline, harbor, Roman presence in the distance. Must not show: text, watermark, modern objects, gore, blood, nudity",
+      "scene_description": "Carthage sits under a dark sky while Roman ships linger offshore."
+    },
+    {
+      "scene_number": 2,
+      "timestamp_start": 5.83,
+      "timestamp_end": 11.67,
+      "narration_segment": "For fifty years, Carthage rose quietly, rich from trade, still paying Rome.",
+      "image_prompt": "Exact subject: Carthaginian merchants in a busy harbor. Exact action: merchants unload amphorae, cloth bales, and grain sacks while a Roman tax chest sits nearby. Historical period/location: 2nd century BCE, Carthage harbor. Visible objects: wooden merchant ships, amphorae, scales, coins, rope, crates, stone quays. Clothing/architecture: Punic tunics, cloaks, sandals, harbor warehouses, stone docks. Mood and lighting: shadowed prosperity, warm torchlight against early morning haze. Camera framing: medium-wide dockside shot, vertical 9:16 composition, dark historical graphic-novel believability. Must show: trade goods, Carthaginian merchants, payment chest, harbor activity. Must not show: text, watermark, modern objects, gore, blood, nudity",
+      "scene_description": "Carthage’s harbor returns to life as wealth moves through its docks."
+    },
+    {
+      "scene_number": 3,
+      "timestamp_start": 11.67,
+      "timestamp_end": 17.5,
+      "narration_segment": "It had no empire, no great army, but its harbor breathed again.",
+      "image_prompt": "Exact subject: a restrained but thriving Carthaginian harbor. Exact action: small merchant vessels glide through calm water while empty military slips remain unused. Historical period/location: 2nd century BCE, Carthage harbor. Visible objects: merchant ships, empty ship sheds, fishing boats, dock cranes, stone seawalls, baskets of goods. Clothing/architecture: Punic sailors in simple tunics, stone naval harbor architecture without war fleets. Mood and lighting: quiet revival, muted gold light under heavy clouds. Camera framing: wide harbor-level shot, vertical 9:16 composition, dark historical graphic-novel believability. Must show: active trade harbor, absence of large war fleet, Carthaginian architecture. Must not show: text, watermark, modern objects, gore, blood, nudity",
+      "scene_description": "The city lacks an empire, but its harbor lives again."
+    },
+    {
+      "scene_number": 4,
+      "timestamp_start": 17.5,
+      "timestamp_end": 23.33,
+      "narration_segment": "On the Numidian frontier, Masinissa pressed Carthaginian land again and again.",
+      "image_prompt": "Exact subject: King Masinissa on the Numidian frontier. Exact action: Masinissa rides forward with Numidian horsemen near disputed Carthaginian fields. Historical period/location: 2nd century BCE, Numidian frontier near Carthaginian territory. Visible objects: horses, spears, boundary stones, dry fields, watchtower, distant farms. Clothing/architecture: Numidian cavalry cloaks, leather gear, simple frontier watchtower, Punic rural buildings. Mood and lighting: tense frontier dusk, dusty air, long shadows. Camera framing: low-angle medium-wide shot, vertical 9:16 composition, dark historical graphic-novel believability. Must show: Masinissa, Numidian riders, pressured frontier land. Must not show: text, watermark, modern objects, gore, blood, nudity",
+      "scene_description": "Masinissa and his horsemen push against Carthaginian borderland."
+    },
+    {
+      "scene_number": 5,
+      "timestamp_start": 23.33,
+      "timestamp_end": 29.17,
+      "narration_segment": "Rome watched as final judge, while treaty chains made self-defense dangerous.",
+      "image_prompt": "Exact subject: Roman senators judging Carthaginian envoys. Exact action: Roman officials sit above silent Carthaginian envoys holding a sealed treaty scroll. Historical period/location: 2nd century BCE, Roman Senate chamber. Visible objects: marble benches, scrolls, wax seals, bronze lamps, shadows, treaty tablet. Clothing/architecture: Roman togas, Carthaginian robes, Republican Roman interior architecture. Mood and lighting: severe, oppressive, dim lamplight, deep shadows. Camera framing: dramatic high-angle shot over envoys toward senators, vertical 9:16 composition, dark historical graphic-novel believability. Must show: Roman judges, Carthaginian envoys, treaty restriction symbol. Must not show: text, watermark, modern objects, gore, blood, nudity",
+      "scene_description": "Rome judges from above while Carthage is trapped by treaty terms."
+    },
+    {
+      "scene_number": 6,
+      "timestamp_start": 29.17,
+      "timestamp_end": 35.0,
+      "narration_segment": "Around 153 BCE, Cato saw Carthage’s wealth and carried fear home.",
+      "image_prompt": "Exact subject: Cato the Elder visiting Carthage. Exact action: Cato stands at a Carthaginian market, staring at rich trade goods with suspicion. Historical period/location: around 153 BCE, Carthage market district. Visible objects: figs, fruit baskets, silver vessels, dyed cloth, amphorae, merchant stalls, harbor beyond. Clothing/architecture: Roman senator toga, Punic merchants in tunics and cloaks, stone market colonnades. Mood and lighting: ominous wealth, warm market light with dark storm clouds. Camera framing: medium shot centered on Cato, vertical 9:16 composition, dark historical graphic-novel believability. Must show: Cato, Carthaginian wealth, market goods, suspicious expression. Must not show: text, watermark, modern objects, gore, blood, nudity",
+      "scene_description": "Cato sees Carthage’s prosperity and reads it as danger."
+    },
+    {
+      "scene_number": 7,
+      "timestamp_start": 35.0,
+      "timestamp_end": 40.83,
+      "narration_segment": "In Rome, he turned fruit, ships, and silver into a warning.",
+      "image_prompt": "Exact subject: Cato the Elder addressing Roman senators. Exact action: Cato raises a piece of fruit beside silver and ship models as senators listen uneasily. Historical period/location: around 153 BCE, Rome, Senate chamber. Visible objects: fruit, silver bowl, small wooden ship model, scrolls, marble floor, oil lamps. Clothing/architecture: Roman togas, Republican Senate interior, stone columns, shadowed benches. Mood and lighting: political dread, torchlit chamber, stark shadows. Camera framing: medium-wide frontal shot of Cato before senators, vertical 9:16 composition, dark historical graphic-novel believability. Must show: Cato speaking, fruit, ships, silver, worried senators. Must not show: text, watermark, modern objects, gore, blood, nudity",
+      "scene_description": "Cato transforms Carthage’s wealth into a political warning in Rome."
+    },
+    {
+      "scene_number": 8,
+      "timestamp_start": 40.83,
+      "timestamp_end": 46.67,
+      "narration_segment": "In 151 BCE, Carthage finished its payments, then struck Masinissa without permission.",
+      "image_prompt": "Exact subject: Carthaginian leaders after completing payments. Exact action: officials close an empty payment chest while armed citizens prepare to march toward Masinissa. Historical period/location: 151 BCE, Carthage council courtyard. Visible objects: empty coin chest, sealed ledgers, spears, shields, cloaks, city gate. Clothing/architecture: Punic robes, citizen soldiers in simple armor, Carthaginian stone courtyard and gate. Mood and lighting: fatal resolve, cold dawn light, tense shadows. Camera framing: medium-wide shot connecting council officials and armed citizens, vertical 9:16 composition, dark historical graphic-novel believability. Must show: completed payment symbol, Carthaginian decision to fight, armed movement. Must not show: text, watermark, modern objects, gore, blood, nudity",
+      "scene_description": "After paying Rome, Carthage chooses to fight Masinissa."
+    },
+    {
+      "scene_number": 9,
+      "timestamp_start": 46.67,
+      "timestamp_end": 52.5,
+      "narration_segment": "Near Oroscopa, the gamble failed, and Rome received its excuse.",
+      "image_prompt": "Exact subject: defeated Carthaginian force near Oroscopa. Exact action: exhausted Carthaginian soldiers lower their shields while Numidian riders hold the high ground. Historical period/location: 151 BCE, near Oroscopa in North Africa. Visible objects: dusty plain, dropped shields, spears, horses, rocky ridge, torn banners without text. Clothing/architecture: Punic citizen armor, Numidian cavalry clothing, no buildings, battlefield landscape. Mood and lighting: bleak aftermath, pale sun through dust, silent tension. Camera framing: wide ground-level shot with Carthaginians below and Numidians above, vertical 9:16 composition, dark historical graphic-novel believability. Must show: failed Carthaginian gamble, Oroscopa landscape, Numidian advantage. Must not show: text, watermark, modern objects, gore, blood, nudity",
+      "scene_description": "Carthage’s move against Masinissa collapses near Oroscopa."
+    },
+    {
+      "scene_number": 10,
+      "timestamp_start": 52.5,
+      "timestamp_end": 58.33,
+      "narration_segment": "In 149 BCE, the Third Punic War began against a trapped city.",
+      "image_prompt": "Exact subject: Roman fleet approaching Carthage at the start of the Third Punic War. Exact action: Roman warships advance across dark water toward the walled city. Historical period/location: 149 BCE, North African coast outside Carthage. Visible objects: Roman warships, sails, oars, city walls, harbor towers, storm clouds. Clothing/architecture: Roman naval soldiers in helmets, Punic coastal fortifications, ancient stone walls. Mood and lighting: ominous invasion, black clouds, cold sea light. Camera framing: wide cinematic sea-level shot facing Carthage, vertical 9:16 composition, dark historical graphic-novel believability. Must show: Roman fleet, Carthage trapped by sea and walls, war beginning. Must not show: text, watermark, modern objects, gore, blood, nudity",
+      "scene_description": "Rome’s fleet closes in as the Third Punic War begins."
+    },
+    {
+      "scene_number": 11,
+      "timestamp_start": 58.33,
+      "timestamp_end": 64.17,
+      "narration_segment": "Carthage gave hostages and weapons, but Rome demanded the city move inland.",
+      "image_prompt": "Exact subject: Carthaginian surrender delegation before Roman commanders. Exact action: Carthaginians hand over weapons and young hostages while a Roman commander points inland away from the sea. Historical period/location: 149 BCE, outside Carthage on the North African coast. Visible objects: stacked shields, spears, helmets, Roman standards without text, coastline, city walls behind them. Clothing/architecture: Punic robes, Roman armor and cloaks, Carthaginian walls, coastal landscape. Mood and lighting: humiliation and dread, gray daylight, harsh shadows. Camera framing: medium-wide shot with sea behind Carthage and Roman gesture inland, vertical 9:16 composition, dark historical graphic-novel believability. Must show: surrendered weapons, hostages, Roman order to move inland, coastline. Must not show: text, watermark, modern objects, gore, blood, nudity",
+      "scene_description": "Even after surrendering weapons and hostages, Carthage is ordered away from the sea."
+    },
+    {
+      "scene_number": 12,
+      "timestamp_start": 64.17,
+      "timestamp_end": 70,
+      "narration_segment": "Carthage resisted until 146 BCE; its ruins warned empires what fear remembers. Follow for the next dark history story.",
+      "image_prompt": "Exact subject: the fallen ruins of Carthage after resistance. Exact action: smoke drifts over broken walls as surviving figures vanish into shadows and Roman silhouettes stand far away. Historical period/location: 146 BCE, Carthage, North African coast. Visible objects: ruined stone walls, collapsed harbor structures, ash, smoke, distant sea, abandoned shields. Clothing/architecture: Punic civilians in cloaks, distant Roman soldiers in armor, shattered Carthaginian architecture. Mood and lighting: mournful, dark, cinematic twilight, smoky ruins. Camera framing: wide final tableau from inside the ruined city looking toward the coast, vertical 9:16 composition, dark historical graphic-novel believability. Must show: ruined Carthage, smoke, distant Roman presence, warning-like atmosphere. Must not show: text, watermark, modern objects, gore, blood, nudity",
+      "scene_description": "Carthage falls, leaving ruins that become a warning across history."
+    }
+  ],
+  "hashtags": [
+    "Carthage",
+    "Rome",
+    "PunicWars",
+    "AncientHistory",
+    "DarkHistory",
+    "RomanRepublic",
+    "Cato",
+    "Masinissa",
+    "HistoryShorts",
+    "FallOfCarthage"
+  ],
+  "youtube_description": "Part 7 of The Fall of Carthage. After Hannibal’s death, Carthage recovered through trade while still living under Rome’s treaty. But Masinissa pressed its borders, Cato turned its wealth into a warning, and one desperate decision near Oroscopa gave Rome the excuse it wanted. In 149 BCE, the Third Punic War began. Carthage surrendered hostages and weapons, but Rome demanded something deeper: the city must leave the sea. Carthage resisted until 146 BCE, when its fall became a warning about empire, fear, and memory.",
+  "cta": "Follow for the next dark history story.",
+  "topic_id": "1",
+  "series": "The Fall of Carthage",
+  "part": 7,
+  "episode_number": 7,
+  "resolved_episode_count": 7,
+  "episode_count_mode": "dynamic",
+  "timeline_event_ids": [
+    "E37",
+    "E38",
+    "E39",
+    "E40",
+    "E41",
+    "E42"
+  ],
+  "research_hash": "6a66e741fce1b884"
+}

@@ -52,6 +52,11 @@ except ImportError:
     IMAGE_PROMPT_MODEL = "gpt-5.5"
 
 try:
+    from config import IMAGE_PROMPT_REFINEMENT_MODE
+except ImportError:
+    IMAGE_PROMPT_REFINEMENT_MODE = "global_only"
+
+try:
     from config import IMAGE_PROMPT_REFINER_ENABLED
 except ImportError:
     IMAGE_PROMPT_REFINER_ENABLED = True
@@ -104,29 +109,33 @@ STABLE_IMAGE_ULTRA_URL = "https://api.stability.ai/v2beta/stable-image/generate/
 SD3_GENERATE_URL = "https://api.stability.ai/v2beta/stable-image/generate/sd3"
 
 
-VISUAL_STYLE_VERSION = "dark_graphic_novel_v4_global_scene_plan"
+VISUAL_STYLE_VERSION = "dark_graphic_novel_v5_less_realistic"
 MAX_IMAGE_GENERATION_ATTEMPTS = 4
 
 
 STYLE_PREFIX = """
-Dark historical graphic novel panel.
-Cinematic ink shadows, painterly realism, serious ancient Mediterranean atmosphere.
+Cinematic graphic novel illustration, painterly historical artwork.
+Stylized realism, not photorealistic. Broad shapes, highly readable silhouettes, poster-like composition.
 Muted colors, deep blacks, bronze, smoke, parchment tones, and dark red accents.
-Stylized but believable Roman and Carthaginian clothing, ships, buildings, faces, and objects.
-Strong readable silhouette, clear focal subject, dramatic composition.
+Clean composition: 1 main subject, 1 supporting background element, 1 strong mood/light element.
+Simplified faces, broad silhouettes, figures seen from medium or wide distance.
+Believable but stylized ancient Roman / Carthaginian clothing, ships, weapons, and architecture.
+Emphasis on helmets, shadows, silhouettes, side views, back views, and group shapes to avoid individual portrait focus.
+No pores, no wrinkles, no hyperrealistic skin texture, no eyelashes, no photographic close-up faces.
+No excessive linework, no tiny scratches, no dense cross-hatching, no busy armor engraving, no crowded backgrounds.
 Premium illustrated dark-history storytelling style.
 Vertical 9:16 mobile composition.
 """
 
 
 NEGATIVE_PROMPT = """
-photorealistic modern portrait, modern clothing, watches, bracelets, modern jewelry,
+photorealistic portrait, close-up face, photography, photorealism, ultra-real skin texture,
+pores, wrinkles, eyelashes, AI-realistic actor face, crowded battlefield detail,
+too many props, busy background, modern clothing, watches, bracelets, modern jewelry,
 fake readable text, gibberish letters, logos, watermark, subtitles,
-cute cartoon, chibi, childish style, cheerful colors, bright comedy style,
-anime school style, sci-fi, guns, cars, skyscrapers, electricity,
+cute cartoon, childish, bright cheerful colors, bright comedy style, anime,
 generic fantasy armor, medieval knight armor, horned helmets, monsters, dragons,
 deformed anatomy, extra fingers, blurry, low quality,
-random Roman soldiers, unrelated battle, unrelated fire, unrelated ships,
 modern map labels, readable text on maps
 """
 
@@ -169,6 +178,23 @@ def _extract_response_text(payload: dict) -> str:
     return text
 
 
+def _is_billing_or_quota_error(error: Exception | str) -> bool:
+    text = str(error).lower()
+    return any(
+        phrase in text
+        for phrase in [
+            "billing_hard_limit_reached",
+            "insufficient_quota",
+            "quota",
+            "429",
+            "insufficient funds",
+            "balance",
+            "billing",
+            "limit reached",
+        ]
+    )
+
+
 def _openai_text_response(
     *,
     system_prompt: str,
@@ -176,7 +202,12 @@ def _openai_text_response(
     model: str,
     max_output_tokens: int,
     temperature: float = 0.35,
+    reasoning_effort: str | None = None,
 ) -> str:
+    """
+    Calls OpenAI Responses API for text generation.
+    Handles GPT-5 family models (no temperature allowed).
+    """
     if not str(OPENAI_API_KEY or "").strip():
         raise Exception("Set OPENAI_API_KEY for GPT prompt refinement.")
 
@@ -185,31 +216,30 @@ def _openai_text_response(
         "Content-Type": "application/json",
     }
 
+    # Detect GPT-5 family
+    is_gpt5 = "gpt-5" in model.lower() or "5.5" in model.lower()
+
     payload = {
         "model": model,
         "input": [
             {
                 "role": "system",
-                "content": [
-                    {
-                        "type": "input_text",
-                        "text": system_prompt,
-                    }
-                ],
+                "content": [{"type": "input_text", "text": system_prompt}],
             },
             {
                 "role": "user",
-                "content": [
-                    {
-                        "type": "input_text",
-                        "text": user_prompt,
-                    }
-                ],
+                "content": [{"type": "input_text", "text": user_prompt}],
             },
         ],
         "max_output_tokens": max_output_tokens,
-        "temperature": temperature,
     }
+
+    if is_gpt5:
+        # GPT-5 family models do not support temperature but support reasoning_effort
+        if reasoning_effort:
+            payload["reasoning"] = {"effort": reasoning_effort}
+    else:
+        payload["temperature"] = temperature
 
     response = requests.post(
         OPENAI_RESPONSES_URL,
@@ -218,7 +248,7 @@ def _openai_text_response(
         timeout=300,
     )
 
-    if response.status_code == 400 and "temperature" in response.text.lower():
+    if not is_gpt5 and response.status_code == 400 and "temperature" in response.text.lower():
         payload.pop("temperature", None)
         response = requests.post(
             OPENAI_RESPONSES_URL,
@@ -228,8 +258,12 @@ def _openai_text_response(
         )
 
     if response.status_code != 200:
+        err_msg = response.text[:2000]
+        if _is_billing_or_quota_error(err_msg):
+            print(f"  🛑 OpenAI API stop (billing/quota): {err_msg}")
+            raise Exception(f"BILLING_OR_QUOTA_STOP: {err_msg}")
         raise Exception(
-            f"OpenAI text error {response.status_code}: {response.text[:2000]}"
+            f"OpenAI text error {response.status_code}: {err_msg}"
         )
 
     return _extract_response_text(response.json())
@@ -293,19 +327,19 @@ def _hash_scene(scene: dict, script: dict) -> str:
     return hashlib.sha256(raw.encode("utf-8")).hexdigest()[:16]
 
 
-def _prompt_cache_path(topic_id: str) -> str:
-    return os.path.join(TEMP_DIR, f"topic_{topic_id}_enhanced_prompts.json")
+def _prompt_cache_path(prefix: str) -> str:
+    return os.path.join(TEMP_DIR, f"{prefix}enhanced_prompts.json")
 
 
 def _get_cached_enhanced_prompt(
-    topic_id: str,
+    prefix: str,
     scene_number: int,
     scene_hash: str
 ) -> str | None:
     if not IMAGE_PROMPT_CACHE_ENABLED:
         return None
 
-    cache = _load_json(_prompt_cache_path(topic_id), default={}) or {}
+    cache = _load_json(_prompt_cache_path(prefix), default={}) or {}
     item = cache.get(str(scene_number))
 
     if not isinstance(item, dict):
@@ -319,7 +353,7 @@ def _get_cached_enhanced_prompt(
 
 
 def _save_cached_enhanced_prompt(
-    topic_id: str,
+    prefix: str,
     scene_number: int,
     scene_hash: str,
     prompt: str
@@ -327,7 +361,7 @@ def _save_cached_enhanced_prompt(
     if not IMAGE_PROMPT_CACHE_ENABLED:
         return
 
-    path = _prompt_cache_path(topic_id)
+    path = _prompt_cache_path(prefix)
     cache = _load_json(path, default={}) or {}
 
     cache[str(scene_number)] = {
@@ -343,7 +377,7 @@ def _save_cached_enhanced_prompt(
 
 
 def _save_retry_prompt_to_cache(
-    topic_id: str,
+    prefix: str,
     scene_number: int,
     scene_hash: str,
     prompt: str,
@@ -351,7 +385,7 @@ def _save_retry_prompt_to_cache(
     if not IMAGE_PROMPT_CACHE_ENABLED:
         return
 
-    path = _prompt_cache_path(topic_id)
+    path = _prompt_cache_path(prefix)
     cache = _load_json(path, default={}) or {}
 
     cache[str(scene_number)] = {
@@ -444,11 +478,11 @@ def _scene_list_for_visual_plan(script: dict) -> list[dict]:
     return rows
 
 
-def _get_cached_visual_plan(topic_id: str, script: dict) -> dict | None:
+def _get_cached_visual_plan(prefix: str, script: dict) -> dict | None:
     if not IMAGE_PROMPT_CACHE_ENABLED:
         return None
 
-    cache = _load_json(_prompt_cache_path(topic_id), default={}) or {}
+    cache = _load_json(_prompt_cache_path(prefix), default={}) or {}
     plan_hash = _hash_visual_plan(script)
 
     if cache.get("_visual_plan_hash") != plan_hash:
@@ -513,12 +547,12 @@ def _normalise_scene_prompt_plan(payload: Any, script: dict) -> dict[int, str]:
 
 def _save_visual_plan_cache(
     *,
-    topic_id: str,
+    prefix: str,
     script: dict,
     plan_payload: Any,
     prompts_by_scene: dict[int, str],
 ) -> None:
-    path = _prompt_cache_path(topic_id)
+    path = _prompt_cache_path(prefix)
     cache = _load_json(path, default={}) or {}
     plan_hash = _hash_visual_plan(script)
 
@@ -547,20 +581,20 @@ def _save_visual_plan_cache(
 
         debug_path = os.path.join(
             TEMP_DIR,
-            f"topic_{topic_id}_scene_{scene_number:02d}_final_prompt.txt"
+            f"{prefix}scene_{scene_number:02d}_final_prompt.txt"
         )
         with open(debug_path, "w", encoding="utf-8") as f:
             f.write(prompts_by_scene[scene_number])
 
     _save_json(path, cache)
 
-    plan_debug_path = os.path.join(TEMP_DIR, f"topic_{topic_id}_visual_prompt_plan.json")
+    plan_debug_path = os.path.join(TEMP_DIR, f"{prefix}visual_prompt_plan.json")
     _save_json(plan_debug_path, plan_payload)
 
 
 def prepare_scene_image_prompts(
     script: dict,
-    topic_id: str,
+    prefix: str,
     *,
     force: bool = False,
 ) -> None:
@@ -571,12 +605,16 @@ def prepare_scene_image_prompts(
     GPT sees the entire script and creates a coordinated visual storyboard in
     one call, then each scene image uses its locked prompt from that plan.
     """
+    mode = str(IMAGE_PROMPT_REFINEMENT_MODE).lower().strip()
+    if mode == "off":
+        return
+
     if not IMAGE_PROMPT_REFINER_ENABLED or not IMAGE_PROMPT_GLOBAL_PLANNING_ENABLED:
         return
 
     os.makedirs(TEMP_DIR, exist_ok=True)
 
-    if not force and _get_cached_visual_plan(topic_id, script):
+    if not force and _get_cached_visual_plan(prefix, script):
         print("  ⚡ Global visual prompt plan loaded from cache")
         return
 
@@ -612,10 +650,15 @@ Scene list:
 {json.dumps(scenes, indent=2, ensure_ascii=False)}
 
 GLOBAL VISUAL IDENTITY:
-- Premium dark historical graphic novel panel.
-- Cinematic ink shadows, painterly realism, serious ancient Mediterranean atmosphere.
+- Cinematic graphic novel illustration, painterly historical artwork (stylized realism, not photorealism).
+- Broad shapes, highly readable silhouettes, poster-like compositions.
 - Muted bronze, parchment, smoke, deep blacks, dark red accents.
 - Stylized but believable ancient Roman / Carthaginian world.
+- Clean composition: 1 main subject, 1 supporting background element, 1 strong mood/light element.
+- Broad silhouettes, simplified faces, prefer figures seen from a medium/wide distance.
+- Emphasize helmets, shadows, silhouettes, back views, side views, and group shapes instead of front-facing portraits.
+- No pores, wrinkles, eyelashes, or overly detailed human faces; avoid photorealistic actor faces.
+- No excessive linework, no tiny scratches, no dense cross-hatching, no busy armor engraving, no crowded backgrounds.
 - Vertical 9:16 mobile composition.
 - No text, no watermark, no modern objects.
 - No gore, no blood, no nudity, no graphic injury.
@@ -695,13 +738,14 @@ Return ONLY this JSON:
         model=IMAGE_PROMPT_MODEL,
         max_output_tokens=9000,
         temperature=0.25,
+        reasoning_effort="medium",
     ).strip()
 
     payload = _extract_json(raw)
     prompts_by_scene = _normalise_scene_prompt_plan(payload, script)
 
     _save_visual_plan_cache(
-        topic_id=topic_id,
+        prefix=prefix,
         script=script,
         plan_payload=payload,
         prompts_by_scene=prompts_by_scene,
@@ -710,21 +754,38 @@ Return ONLY this JSON:
     print(f"  ✅ Global visual prompt plan saved for {len(prompts_by_scene)} scenes")
 
 
-def enhance_image_prompt(scene: dict, script: dict, topic_id: str) -> str:
+def enhance_image_prompt(scene: dict, script: dict, prefix: str) -> str:
     scene_number = int(scene.get("scene_number", 0))
     scene_hash = _hash_scene(scene, script)
+    mode = str(IMAGE_PROMPT_REFINEMENT_MODE).lower().strip()
 
-    # Preferred permanent behavior:
-    # build/refine ALL scene prompts together, then read the locked prompt for
-    # this scene. This prevents repeated faces, random posters, and prompt drift.
-    if IMAGE_PROMPT_GLOBAL_PLANNING_ENABLED and script and script.get("scenes"):
-        prepare_scene_image_prompts(script, topic_id, force=False)
-        cached = _get_cached_enhanced_prompt(topic_id, scene_number, scene_hash)
+    print(f"  [Image Prompt Mode] Current mode: {mode}")
+
+    # 1. Mode: off — skip global visual planning and per-scene refinement
+    if mode == "off":
+        print(f"  ⚡ Scene {scene_number} prompt mode is 'off' — using script draft prompt directly")
+        return str(scene.get("image_prompt", "")).strip()
+
+    # 2. Mode: global_only — generate visual plan once, use planned final_prompt directly without per-scene refinement
+    if mode == "global_only":
+        if script and script.get("scenes"):
+            prepare_scene_image_prompts(script, prefix, force=False)
+            cached = _get_cached_enhanced_prompt(prefix, scene_number, scene_hash)
+            if cached:
+                print(f"  ⚡ Scene {scene_number} prompt loaded from global plan — no per-scene refinement call")
+                return cached
+        print(f"  ⚠️ Scene {scene_number} not found in global plan cache — using script draft prompt directly (global_only fallback)")
+        return str(scene.get("image_prompt", "")).strip()
+
+    # 3. Mode: per_scene (Current/Old behavior) — global plan, then refine individually if needed
+    if script and script.get("scenes"):
+        prepare_scene_image_prompts(script, prefix, force=False)
+        cached = _get_cached_enhanced_prompt(prefix, scene_number, scene_hash)
         if cached:
             print(f"  ⚡ Scene {scene_number} prompt loaded from global visual plan")
             return cached
 
-    cached = _get_cached_enhanced_prompt(topic_id, scene_number, scene_hash)
+    cached = _get_cached_enhanced_prompt(prefix, scene_number, scene_hash)
     if cached:
         print(f"  ⚡ Scene {scene_number} enhanced prompt loaded from cache")
         return cached
@@ -732,7 +793,7 @@ def enhance_image_prompt(scene: dict, script: dict, topic_id: str) -> str:
     if not IMAGE_PROMPT_REFINER_ENABLED:
         return str(scene.get("image_prompt", "")).strip()
 
-    # Fallback only: used if global planning is disabled.
+    # Fallback only: used if global planning is disabled or needs individual refinement
     video_title = script.get("title", "")
     full_narration = script.get("full_narration", "")
     narration_segment = scene.get("narration_segment", "")
@@ -755,13 +816,17 @@ Create ONE production-ready GPT Image prompt.
 The image must match the exact scene narration, NOT the whole video.
 
 Visual identity:
-Premium dark historical graphic novel panel.
-Cinematic ink shadows.
-Painterly realism.
-Muted colors.
-Serious ancient-world atmosphere.
-Stylized but believable.
-NOT photorealistic.
+Cinematic graphic novel illustration, painterly historical artwork.
+Stylized realism, not photorealistic. Broad shapes, highly readable silhouettes, poster-like composition.
+Muted bronze, parchment, smoke, deep blacks, dark red accents.
+Clean composition: 1 main subject, 1 supporting background element, 1 strong mood/light element.
+Broad silhouettes, simplified faces, prefer figures seen from a medium/wide distance.
+Emphasize helmets, shadows, silhouettes, back views, side views, and group shapes instead of front-facing portraits.
+No pores, wrinkles, eyelashes, or overly detailed human faces; avoid photorealistic actor faces.
+No excessive linework, no tiny scratches, no dense cross-hatching, no busy armor engraving, no crowded backgrounds.
+NOT photorealistic portrait.
+NOT close-up face.
+NOT ultra-real human skin texture.
 NOT cute cartoon.
 NOT anime school style.
 NOT fantasy game concept art.
@@ -838,13 +903,14 @@ Output only the final image prompt.
         model=IMAGE_PROMPT_MODEL,
         max_output_tokens=650,
         temperature=0.25,
+        reasoning_effort="medium",
     ).strip()
 
-    _save_cached_enhanced_prompt(topic_id, scene_number, scene_hash, final_prompt)
+    _save_cached_enhanced_prompt(prefix, scene_number, scene_hash, final_prompt)
 
     debug_path = os.path.join(
         TEMP_DIR,
-        f"topic_{topic_id}_scene_{scene_number:02d}_final_prompt.txt"
+        f"{prefix}scene_{scene_number:02d}_final_prompt.txt"
     )
 
     with open(debug_path, "w", encoding="utf-8") as f:
@@ -858,7 +924,7 @@ def _rewrite_prompt_after_failure(
     original_prompt: str,
     scene: dict,
     script: dict,
-    topic_id: str,
+    prefix: str,
     attempt_number: int,
     error_message: str,
 ) -> str:
@@ -934,11 +1000,12 @@ Output only the rewritten image prompt.
         model=IMAGE_PROMPT_MODEL,
         max_output_tokens=650,
         temperature=0.35,
+        reasoning_effort="medium",
     ).strip()
 
     debug_path = os.path.join(
         TEMP_DIR,
-        f"topic_{topic_id}_scene_{scene_number:02d}_retry_{attempt_number}_prompt.txt",
+        f"{prefix}scene_{scene_number:02d}_retry_{attempt_number}_prompt.txt",
     )
 
     with open(debug_path, "w", encoding="utf-8") as f:
@@ -1249,19 +1316,48 @@ def _attempt_settings(attempt: int, previous_error: Exception | None) -> tuple[b
     return False, 6
 
 
+def _is_billing_or_quota_error(error: Exception | str) -> bool:
+    text = str(error).lower()
+    return any(
+        phrase in text
+        for phrase in [
+            "billing_hard_limit_reached",
+            "insufficient_quota",
+            "quota",
+            "429",
+            "insufficient funds",
+            "balance",
+            "billing",
+            "limit reached",
+        ]
+    )
+
+
 def generate_image(
     scene_or_prompt,
     scene_number: int,
-    topic_id: str,
-    script: dict | None = None
+    prefix: str,
+    script: dict | None = None,
+    *,
+    force: bool = False,
 ) -> str:
     os.makedirs(TEMP_DIR, exist_ok=True)
+
+    output_path = os.path.join(
+        TEMP_DIR,
+        f"{prefix}scene_{scene_number:02d}.jpg"
+    )
+
+    # REUSE-FIRST: check if valid image exists
+    if not force and os.path.isfile(output_path) and os.path.getsize(output_path) > 1000:
+        print(f"  ⚡ Scene {scene_number} image reused from cache.")
+        return output_path
 
     scene_hash = None
 
     if isinstance(scene_or_prompt, dict) and script is not None:
         scene = scene_or_prompt
-        production_prompt = enhance_image_prompt(scene, script, topic_id)
+        production_prompt = enhance_image_prompt(scene, script, prefix)
         scene_hash = _hash_scene(scene, script)
     else:
         scene = {
@@ -1304,11 +1400,6 @@ def generate_image(
                 safety_tolerance=safety_tolerance,
             )
 
-            output_path = os.path.join(
-                TEMP_DIR,
-                f"topic_{topic_id}_scene_{scene_number:02d}.jpg"
-            )
-
             with open(output_path, "wb") as f:
                 f.write(image_bytes)
 
@@ -1331,6 +1422,11 @@ def generate_image(
                 f"{attempt}/{MAX_IMAGE_GENERATION_ATTEMPTS} failed: {e}"
             )
 
+            # COST PROTECTION: Stop immediately on billing/quota errors
+            if _is_billing_or_quota_error(e):
+                print(f"  🛑 Stopping image generation due to billing/quota error: {e}")
+                raise
+
             if attempt >= MAX_IMAGE_GENERATION_ATTEMPTS:
                 break
 
@@ -1338,14 +1434,14 @@ def generate_image(
                 original_prompt=production_prompt,
                 scene=scene,
                 script=script,
-                topic_id=topic_id,
+                prefix=prefix,
                 attempt_number=attempt + 1,
                 error_message=str(e),
             )
 
             if scene_hash is not None:
                 _save_retry_prompt_to_cache(
-                    topic_id=topic_id,
+                    prefix=prefix,
                     scene_number=scene_number,
                     scene_hash=scene_hash,
                     prompt=production_prompt,
@@ -1357,11 +1453,6 @@ def generate_image(
         final_prompt = _build_final_prompt(production_prompt, scene_number)
         image_bytes = _generate_fallback_stability(final_prompt, aspect_ratio="9:16")
 
-        output_path = os.path.join(
-            TEMP_DIR,
-            f"topic_{topic_id}_scene_{scene_number:02d}.jpg"
-        )
-
         with open(output_path, "wb") as f:
             f.write(image_bytes)
 
@@ -1369,6 +1460,9 @@ def generate_image(
         return output_path
 
     except Exception as fallback_error:
+        if _is_billing_or_quota_error(fallback_error):
+             print(f"  🛑 Stopping image generation due to billing/quota error (fallback): {fallback_error}")
+             raise
         raise Exception(
             f"Scene {scene_number} image generation failed after "
             f"{MAX_IMAGE_GENERATION_ATTEMPTS} attempts and Stability fallback. "
@@ -1377,7 +1471,7 @@ def generate_image(
         )
 
 
-def generate_all_images(scenes: list, topic_id: str) -> list:
+def generate_all_images(scenes: list, prefix: str, *, force: bool = False) -> list:
     image_paths = []
 
     pseudo_script = {
@@ -1393,7 +1487,7 @@ def generate_all_images(scenes: list, topic_id: str) -> list:
     for scene in scenes:
         scene_num = int(scene["scene_number"])
 
-        path = generate_image(scene, scene_num, topic_id, pseudo_script)
+        path = generate_image(scene, scene_num, prefix, pseudo_script, force=force)
 
         image_paths.append({
             "scene_number": scene_num,
@@ -1404,11 +1498,11 @@ def generate_all_images(scenes: list, topic_id: str) -> list:
 
         time.sleep(0.5)
 
-    print(f"✅ All images generated: {len(image_paths)} scenes")
+    print(f"✅ All images ready: {len(image_paths)} scenes")
     return image_paths
 
 
-def generate_thumbnail_image(prompt: str, topic_id: str) -> str:
+def generate_thumbnail_image(prompt: str, prefix: str) -> str:
     os.makedirs(TEMP_DIR, exist_ok=True)
 
     final_prompt = f"""
@@ -1434,7 +1528,7 @@ Thumbnail rules:
         safety_tolerance=max(5, _safe_int(REPLICATE_SAFETY_TOLERANCE, 5)),
     )
 
-    output_path = os.path.join(TEMP_DIR, f"topic_{topic_id}_thumbnail.jpg")
+    output_path = os.path.join(TEMP_DIR, f"{prefix}thumbnail.jpg")
 
     with open(output_path, "wb") as f:
         f.write(image_bytes)

@@ -1,0 +1,124 @@
+{
+  "title": "Carthage Falls: The End of an Empire",
+  "hook": "Part 10. Night falls over Carthage, but the city refuses to surrender.",
+  "full_narration": "Part 10. Night falls over Carthage, but the city refuses to surrender. Roman siege towers loom against the battered walls. [[pause:0.4]] Flames crawl across rooftops as defenders fight in the shadows. Scipio Aemilianus watches, silent, as the city breaks beneath his command. [[voice:tense]] The streets become silent—only collapsing stone and smoke remain. Roman legions move through the ruins, searching for signs of resistance. [[pause:0.6]] Carthaginian survivors slip into alleys, faces lit by firelight. The sky glows red as centuries of power vanish in a single night. By dawn, Carthage is erased—146 BCE marks its final breath. [[voice:low]] The city’s ashes belong to Rome, but its legend endures. The world is changed. Rome rises from Carthage’s ruins. The story echoes through the ages. [[pause:0.8]] Follow for the next dark history story.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "timestamp_start": 0.0,
+      "timestamp_end": 5.83,
+      "narration_segment": "Part 10. Night falls over Carthage, but the city refuses to surrender.",
+      "image_prompt": "View of ancient Carthage at night, city walls battered, torches burning on ramparts, Roman siege engines in the distance, tense defenders visible on the walls, Mediterranean setting, dark moody lighting, vertical 9:16, graphic-novel realism. Must show: Carthaginian cityscape, night, siege. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Night descends over battered Carthage, defenders holding the walls as Roman siege towers approach."
+    },
+    {
+      "scene_number": 2,
+      "timestamp_start": 5.83,
+      "timestamp_end": 11.67,
+      "narration_segment": "Roman siege towers loom against the battered walls.",
+      "image_prompt": "Massive Roman siege towers pressed up to crumbling Carthaginian walls, Roman soldiers preparing ladders, torchlight illuminating stone, Mediterranean city, ancient armor, vertical 9:16, dark graphic-novel mood. Must show: siege towers, Roman troops, damaged city wall. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Roman siege towers overshadow the weakened city walls, soldiers ready to breach."
+    },
+    {
+      "scene_number": 3,
+      "timestamp_start": 11.67,
+      "timestamp_end": 17.5,
+      "narration_segment": "Flames crawl across rooftops as defenders fight in the shadows.",
+      "image_prompt": "Ancient Carthaginian rooftops ablaze, silhouettes of defenders clashing in smoky darkness, firelight casting long shadows, Mediterranean setting, vertical 9:16, graphic-novel darkness. Must show: burning rooftops, shadowy figures fighting. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Fires spread across Carthage’s rooftops as defenders battle in the flickering dark."
+    },
+    {
+      "scene_number": 4,
+      "timestamp_start": 17.5,
+      "timestamp_end": 23.33,
+      "narration_segment": "Scipio Aemilianus watches, silent, as the city breaks beneath his command.",
+      "image_prompt": "Roman general Scipio Aemilianus in ornate armor, standing on a hill overlooking Carthage in flames, stern expression, night sky, Roman standards behind, vertical 9:16, graphic-novel style. Must show: Scipio Aemilianus, burning Carthage below. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Scipio Aemilianus stands above the city, his face cold as Carthage burns."
+    },
+    {
+      "scene_number": 5,
+      "timestamp_start": 23.33,
+      "timestamp_end": 29.17,
+      "narration_segment": "The streets become silent—only collapsing stone and smoke remain.",
+      "image_prompt": "Deserted Carthaginian street at night, buildings collapsing, thick smoke drifting, debris scattered, ancient architecture, firelight glowing in haze, vertical 9:16, dark graphic-novel mood. Must show: empty street, ruins, smoke. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Carthage’s streets fall silent as ruins crumble and smoke fills the air."
+    },
+    {
+      "scene_number": 6,
+      "timestamp_start": 29.17,
+      "timestamp_end": 35.0,
+      "narration_segment": "Roman legions move through the ruins, searching for signs of resistance.",
+      "image_prompt": "Lines of Roman soldiers in segmented armor and red cloaks, torches in hand, stepping through shattered Carthaginian ruins, peering into shadows, dark moody lighting, vertical 9:16, graphic-novel realism. Must show: Roman soldiers, ruins, searching. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Roman soldiers advance through the destroyed city, hunting for hidden defenders."
+    },
+    {
+      "scene_number": 7,
+      "timestamp_start": 35.0,
+      "timestamp_end": 40.83,
+      "narration_segment": "Carthaginian survivors slip into alleys, faces lit by firelight.",
+      "image_prompt": "Carthaginian civilians in tattered robes, anxious faces illuminated by orange firelight, slipping into narrow ancient stone alleys, shadows deep, Mediterranean setting, vertical 9:16, graphic-novel mood. Must show: survivors in alleys, firelit faces. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Desperate survivors hide among the alleys, faces flickering with fear and fire."
+    },
+    {
+      "scene_number": 8,
+      "timestamp_start": 40.83,
+      "timestamp_end": 46.67,
+      "narration_segment": "The sky glows red as centuries of power vanish in a single night.",
+      "image_prompt": "Wide shot of Carthage’s skyline at night, buildings burning, sky glowing red and orange, silhouettes of ruined temples and towers, smoke billowing upward, vertical 9:16, cinematic graphic-novel tone. Must show: burning skyline, red sky, ancient ruins. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Carthage’s skyline is swallowed by fire as its legacy ends."
+    },
+    {
+      "scene_number": 9,
+      "timestamp_start": 46.67,
+      "timestamp_end": 52.5,
+      "narration_segment": "By dawn, Carthage is erased—146 BCE marks its final breath.",
+      "image_prompt": "Dawn over smoldering ruins of Carthage, charred remains of buildings, empty streets, pale sunlight breaking through smoke, ancient Mediterranean cityscape, vertical 9:16, dark graphic-novel realism. Must show: ruined city at dawn, smoke, emptiness. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "The sun rises over the smoking ruins—Carthage is gone."
+    },
+    {
+      "scene_number": 10,
+      "timestamp_start": 52.5,
+      "timestamp_end": 58.33,
+      "narration_segment": "The city’s ashes belong to Rome, but its legend endures.",
+      "image_prompt": "Roman standard planted in the ruins of Carthage, ashes and rubble at its base, Roman soldiers standing solemn, Mediterranean ruins, early morning light, vertical 9:16, graphic-novel mood. Must show: Roman standard, ruins, soldiers. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Roman banners stand over the ashes, but Carthage’s memory lingers."
+    },
+    {
+      "scene_number": 11,
+      "timestamp_start": 58.33,
+      "timestamp_end": 64.17,
+      "narration_segment": "The world is changed. Rome rises from Carthage’s ruins.",
+      "image_prompt": "Roman soldiers and officials overlooking the ruins, sunrise on horizon, sense of new power, ancient cityscape, Mediterranean landscape, vertical 9:16, cinematic graphic-novel tone. Must show: Romans, ruins, dawn, new beginning. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Romans look out over the conquered ruins, a new world beginning."
+    },
+    {
+      "scene_number": 12,
+      "timestamp_start": 64.17,
+      "timestamp_end": 70,
+      "narration_segment": "The story echoes through the ages. Follow for the next dark history story.",
+      "image_prompt": "Faded mural of Carthage’s fall blending into shadows, Roman and Carthaginian symbols in the background, ancient stone, moody lighting, sense of lingering legend, vertical 9:16, graphic-novel realism. Must show: mural, shadows, symbolic imagery. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "A shadowy mural hints at Carthage’s end—its story never forgotten."
+    }
+  ],
+  "hashtags": [
+    "Carthage",
+    "Rome",
+    "ancienthistory",
+    "fallofempires",
+    "darkhistory",
+    "thirdpunicwar",
+    "scipio",
+    "legend",
+    "cinematic",
+    "truehistory"
+  ],
+  "youtube_description": "Night falls over Carthage for the last time. Roman siege towers press against battered walls as flames crawl through the city. Under Scipio Aemilianus, Rome’s legions move through the ruins, searching for the last signs of resistance. Survivors flee into shadowy alleys, their faces lit by firelight. By dawn, Carthage is erased—146 BCE marks its final breath. Rome claims the ashes, but Carthage’s legend refuses to die. The world is changed forever. Witness the end of an empire—and the birth of a new power. Follow for the next dark history story.",
+  "cta": "Follow for the next dark history story.",
+  "topic_id": "1",
+  "series": "The Fall of Carthage",
+  "part": 10,
+  "timeline_event_ids": [
+    "E10"
+  ],
+  "research_hash": "92ee38a4bb43972a"
+}

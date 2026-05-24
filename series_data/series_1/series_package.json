@@ -1,0 +1,544 @@
+{
+  "series": "The Fall of Carthage",
+  "master_timeline": [
+    {
+      "event_id": "E01",
+      "date": "241 BCE",
+      "event": "The First Punic War ends with Rome defeating Carthage and taking Sicily.",
+      "why_it_matters": "Carthage loses its first great war with Rome and begins the story in humiliation."
+    },
+    {
+      "event_id": "E02",
+      "date": "241-238 BCE",
+      "event": "Carthage is weakened by the Mercenary War after unpaid soldiers revolt.",
+      "why_it_matters": "The crisis drains Carthage and exposes how fragile its empire has become."
+    },
+    {
+      "event_id": "E03",
+      "date": "238-237 BCE",
+      "event": "Rome seizes Sardinia and Corsica while Carthage is still recovering.",
+      "why_it_matters": "Rome’s pressure deepens Carthaginian resentment and pushes Carthage toward revenge."
+    },
+    {
+      "event_id": "E04",
+      "date": "237 BCE",
+      "event": "Hamilcar Barca sails to Iberia to rebuild Carthaginian power.",
+      "why_it_matters": "Iberia becomes the new engine of Carthage’s wealth, armies, and future war."
+    },
+    {
+      "event_id": "E05",
+      "date": "c. 237 BCE",
+      "event": "Tradition says young Hannibal swears hostility to Rome before leaving for Iberia.",
+      "why_it_matters": "The conflict becomes personal inside the Barca family."
+    },
+    {
+      "event_id": "E06",
+      "date": "229 BCE",
+      "event": "Hamilcar dies, and Hasdrubal the Fair takes command in Iberia.",
+      "why_it_matters": "Barcid power survives Hamilcar and continues growing beyond Rome’s reach."
+    },
+    {
+      "event_id": "E07",
+      "date": "226 BCE",
+      "event": "The Ebro Treaty sets a Roman-Carthaginian boundary in Iberia.",
+      "why_it_matters": "A fragile line is drawn across a land both powers fear losing."
+    },
+    {
+      "event_id": "E08",
+      "date": "221 BCE",
+      "event": "Hannibal becomes commander of Carthaginian forces in Iberia.",
+      "why_it_matters": "The oath becomes command, and Rome’s old enemy gains an army."
+    },
+    {
+      "event_id": "E09",
+      "date": "219 BCE",
+      "event": "Hannibal besieges and captures Saguntum, a city tied to Rome.",
+      "why_it_matters": "The attack gives Rome the spark it needs for war."
+    },
+    {
+      "event_id": "E10",
+      "date": "218 BCE",
+      "event": "Rome and Carthage enter the Second Punic War.",
+      "why_it_matters": "The struggle becomes a direct fight for survival between empires."
+    },
+    {
+      "event_id": "E11",
+      "date": "218 BCE",
+      "event": "Hannibal crosses the Pyrenees, the Rhône, and the Alps into Italy.",
+      "why_it_matters": "He avoids Rome’s expected battlefield and appears where Rome feels safe."
+    },
+    {
+      "event_id": "E12",
+      "date": "218 BCE",
+      "event": "Hannibal defeats Roman forces at Ticinus and then at the Trebbia.",
+      "why_it_matters": "Rome learns that Hannibal is not only daring, but dangerous in battle."
+    },
+    {
+      "event_id": "E13",
+      "date": "217 BCE",
+      "event": "Hannibal leads his army through a brutal march into central Italy.",
+      "why_it_matters": "He keeps moving through hardship to force Rome into another trap."
+    },
+    {
+      "event_id": "E14",
+      "date": "217 BCE",
+      "event": "Hannibal destroys Flaminius’s army at Lake Trasimene.",
+      "why_it_matters": "Rome faces terror on Italian soil and begins fearing total collapse."
+    },
+    {
+      "event_id": "E15",
+      "date": "217 BCE",
+      "event": "Fabius Maximus adopts a delaying strategy against Hannibal.",
+      "why_it_matters": "Rome survives by refusing the kind of battle Hannibal wants."
+    },
+    {
+      "event_id": "E16",
+      "date": "216 BCE",
+      "event": "At Cannae, Hannibal annihilates a massive Roman army.",
+      "why_it_matters": "The victory becomes Carthage’s greatest battlefield triumph."
+    },
+    {
+      "event_id": "E17",
+      "date": "216 BCE",
+      "event": "Hannibal does not besiege Rome after Cannae.",
+      "why_it_matters": "Rome’s walls, Hannibal’s limits, and lack of support keep the capital standing."
+    },
+    {
+      "event_id": "E18",
+      "date": "216-215 BCE",
+      "event": "Capua and several southern communities defect, and Philip V of Macedon aligns with Hannibal.",
+      "why_it_matters": "Hannibal’s victory spreads the war, but Rome still refuses to break."
+    },
+    {
+      "event_id": "E19",
+      "date": "214-212 BCE",
+      "event": "Rome besieges Syracuse after the city shifts toward the Carthaginian side.",
+      "why_it_matters": "Rome answers rebellion by tightening control around Hannibal’s allies."
+    },
+    {
+      "event_id": "E20",
+      "date": "212-211 BCE",
+      "event": "Rome besieges Capua, Hannibal’s most important Italian ally.",
+      "why_it_matters": "Rome targets Hannibal’s support network instead of chasing his army."
+    },
+    {
+      "event_id": "E21",
+      "date": "211 BCE",
+      "event": "Hannibal marches near Rome to pull Roman forces away from Capua.",
+      "why_it_matters": "The war reaches Rome’s doorstep, but the diversion fails to save Capua."
+    },
+    {
+      "event_id": "E22",
+      "date": "211 BCE",
+      "event": "The elder Scipio brothers die fighting Carthaginian forces in Spain.",
+      "why_it_matters": "Rome’s position in Iberia nearly collapses at the same time Italy burns."
+    },
+    {
+      "event_id": "E23",
+      "date": "210 BCE",
+      "event": "Scipio Africanus the Elder receives extraordinary command in Spain.",
+      "why_it_matters": "Rome gives a young commander a desperate mission against Barcid power."
+    },
+    {
+      "event_id": "E24",
+      "date": "209 BCE",
+      "event": "Scipio captures New Carthage, the Barcid stronghold in Iberia.",
+      "why_it_matters": "Rome strikes the heart of Hannibal’s supply base."
+    },
+    {
+      "event_id": "E25",
+      "date": "208 BCE",
+      "event": "Scipio defeats Hasdrubal at Baecula, but Hasdrubal escapes toward Italy.",
+      "why_it_matters": "Hannibal’s brother still has a chance to join him and change the war."
+    },
+    {
+      "event_id": "E26",
+      "date": "207 BCE",
+      "event": "Rome defeats and kills Hasdrubal at the Metaurus.",
+      "why_it_matters": "Hannibal’s best hope for reinforcement dies before reaching him."
+    },
+    {
+      "event_id": "E27",
+      "date": "206 BCE",
+      "event": "Scipio wins at Ilipa and breaks Carthaginian power in Spain.",
+      "why_it_matters": "Rome turns Hannibal’s homeland supply line into Roman opportunity."
+    },
+    {
+      "event_id": "E28",
+      "date": "205 BCE",
+      "event": "Scipio becomes consul and argues for invading Africa.",
+      "why_it_matters": "Rome prepares to force Hannibal out of Italy by threatening Carthage itself."
+    },
+    {
+      "event_id": "E29",
+      "date": "204 BCE",
+      "event": "Scipio invades North Africa.",
+      "why_it_matters": "The war shifts from Italian survival to Carthaginian survival."
+    },
+    {
+      "event_id": "E30",
+      "date": "203 BCE",
+      "event": "Scipio defeats Carthaginian-Numidian forces near Utica and at the Great Plains.",
+      "why_it_matters": "Carthage begins losing the war at home."
+    },
+    {
+      "event_id": "E31",
+      "date": "203 BCE",
+      "event": "Hannibal leaves Italy and returns to Africa.",
+      "why_it_matters": "After years in Italy, he is called home to defend the city that sent him."
+    },
+    {
+      "event_id": "E32",
+      "date": "202 BCE",
+      "event": "Scipio defeats Hannibal at Zama.",
+      "why_it_matters": "Carthage’s greatest general loses the battle that decides the war."
+    },
+    {
+      "event_id": "E33",
+      "date": "201 BCE",
+      "event": "Carthage accepts harsh Roman peace terms.",
+      "why_it_matters": "Carthage survives, but as a restrained power under Rome’s shadow."
+    },
+    {
+      "event_id": "E34",
+      "date": "201 BCE",
+      "event": "Scipio receives honors and the name Africanus.",
+      "why_it_matters": "Rome turns victory over Carthage into political legend."
+    },
+    {
+      "event_id": "E35",
+      "date": "196 BCE",
+      "event": "Hannibal becomes suffete and reforms Carthaginian finances.",
+      "why_it_matters": "Even defeated, Hannibal threatens Roman interests by making Carthage strong again."
+    },
+    {
+      "event_id": "E36",
+      "date": "195-183 BCE",
+      "event": "Hannibal flees Carthage and later dies in Bithynia.",
+      "why_it_matters": "Carthage loses its most feared son, but Rome’s suspicion does not die with him."
+    },
+    {
+      "event_id": "E37",
+      "date": "2nd century BCE",
+      "event": "Carthage economically recovers during the fifty-year gap while paying Rome.",
+      "why_it_matters": "The city proves it can rise without armies, making Rome uneasy again."
+    },
+    {
+      "event_id": "E38",
+      "date": "2nd century BCE",
+      "event": "Masinissa repeatedly pressures Carthaginian territory while Rome limits Carthage’s response.",
+      "why_it_matters": "Carthage is provoked, but the treaty makes self-defense dangerous."
+    },
+    {
+      "event_id": "E39",
+      "date": "c. 153 BCE",
+      "event": "Cato visits Carthage and warns Rome about its revival.",
+      "why_it_matters": "Carthage’s wealth becomes a Roman fear story."
+    },
+    {
+      "event_id": "E40",
+      "date": "151 BCE",
+      "event": "Carthage completes its indemnity, then attacks Masinissa and loses near Oroscopa.",
+      "why_it_matters": "Carthage acts without Rome’s permission, giving Rome its legal excuse."
+    },
+    {
+      "event_id": "E41",
+      "date": "149 BCE",
+      "event": "Rome declares the Third Punic War; Carthage gives hostages and weapons, then is ordered to move inland.",
+      "why_it_matters": "Rome reveals that surrender is not enough; Carthage must abandon its identity."
+    },
+    {
+      "event_id": "E42",
+      "date": "149-146 BCE",
+      "event": "Carthage resists the Roman siege, falls in 146 BCE, and its memory becomes a warning across history.",
+      "why_it_matters": "The story ends with a city erased as a rival, but preserved as a symbol of imperial fear."
+    }
+  ],
+  "episode_plans": [
+    {
+      "episode_number": 1,
+      "episode_title": "The Oath After Defeat",
+      "opening_question": "How does a defeated city raise the boy who nearly breaks Rome?",
+      "episode_summary": "Begin with Carthage wounded after the First Punic War. Show the Mercenary War, Rome taking Sardinia and Corsica, and Hamilcar choosing Iberia as Carthage’s new path. End with Hannibal’s childhood oath and Barcid power surviving Hamilcar through Hasdrubal.",
+      "assigned_timeline_event_ids": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06"
+      ],
+      "factual_anchors_to_include": [
+        "Carthage loses Sicily after the First Punic War",
+        "Mercenary War weakens Carthage",
+        "Rome takes Sardinia and Corsica",
+        "Hamilcar Barca builds power in Iberia",
+        "Hannibal’s traditional oath of hostility to Rome",
+        "Hasdrubal the Fair succeeds Hamilcar"
+      ],
+      "character_introductions": [
+        "Hamilcar Barca",
+        "young Hannibal Barca",
+        "Hasdrubal the Fair",
+        "Rome as Carthage’s looming rival"
+      ],
+      "place_anchors": [
+        "Carthage",
+        "Sicily",
+        "Sardinia",
+        "Corsica",
+        "Iberia"
+      ],
+      "time_gap_to_explain": "Explain that the story moves from 241 BCE to the Barcid rebuilding project in Iberia, where Carthage seeks wealth and soldiers after defeat.",
+      "ending_bridge": "End with Hasdrubal holding Barcid Spain together, setting up the Ebro Treaty and Hannibal’s rise to command.",
+      "must_not_imply": "Do not imply Hannibal commanded the First Punic War or that Carthage immediately planned the Alpine invasion after 241 BCE."
+    },
+    {
+      "episode_number": 2,
+      "episode_title": "The Road Over the Mountains",
+      "opening_question": "What happens when a treaty line becomes the fuse for another war?",
+      "episode_summary": "Continue in Iberia with the Ebro Treaty, then Hannibal taking command. Show Saguntum as the crisis point, Rome and Carthage entering war, and Hannibal choosing the impossible road through Gaul and the Alps before striking Rome at Ticinus and Trebbia.",
+      "assigned_timeline_event_ids": [
+        "E07",
+        "E08",
+        "E09",
+        "E10",
+        "E11",
+        "E12"
+      ],
+      "factual_anchors_to_include": [
+        "Ebro Treaty in 226 BCE",
+        "Hannibal becomes commander in 221 BCE",
+        "Saguntum falls in 219 BCE",
+        "Second Punic War begins in 218 BCE",
+        "Hannibal crosses the Pyrenees, Rhône, and Alps",
+        "Roman defeats at Ticinus and Trebbia"
+      ],
+      "character_introductions": [
+        "adult Hannibal Barca",
+        "Roman Senate",
+        "Roman commanders in northern Italy"
+      ],
+      "place_anchors": [
+        "Iberia",
+        "Saguntum",
+        "Pyrenees",
+        "Rhône River",
+        "Alps",
+        "northern Italy"
+      ],
+      "time_gap_to_explain": "Explain the shift from Hasdrubal’s diplomacy to Hannibal’s command after Hasdrubal’s death, without skipping the treaty boundary.",
+      "ending_bridge": "End with Rome shaken after Trebbia, setting up Hannibal’s deeper march into central Italy.",
+      "must_not_imply": "Do not imply the Alps crossing was easy, or that Rome expected Hannibal to appear in Italy by that route."
+    },
+    {
+      "episode_number": 3,
+      "episode_title": "The Trap at Cannae",
+      "opening_question": "How many victories can one invader win before Rome finally breaks?",
+      "episode_summary": "Begin with Hannibal pushing through central Italy after his first victories. Show the trap at Lake Trasimene, Rome’s attempt to survive through Fabius, and the catastrophic Roman defeat at Cannae. End by explaining why Hannibal still does not take Rome, while allies begin defecting to him.",
+      "assigned_timeline_event_ids": [
+        "E13",
+        "E14",
+        "E15",
+        "E16",
+        "E17",
+        "E18"
+      ],
+      "factual_anchors_to_include": [
+        "Hannibal’s difficult march into central Italy",
+        "Lake Trasimene in 217 BCE",
+        "Fabius Maximus and delay strategy",
+        "Cannae in 216 BCE",
+        "Hannibal does not besiege Rome",
+        "Capua defects and Philip V aligns with Hannibal"
+      ],
+      "character_introductions": [
+        "Fabius Maximus",
+        "Gaius Flaminius",
+        "Philip V of Macedon",
+        "Capua as Hannibal’s major Italian ally"
+      ],
+      "place_anchors": [
+        "central Italy",
+        "Lake Trasimene",
+        "Cannae",
+        "Rome",
+        "Capua",
+        "Macedon"
+      ],
+      "time_gap_to_explain": "Explain the year between Trasimene and Cannae through Rome’s struggle between caution and the desire for a decisive battle.",
+      "ending_bridge": "End with Hannibal surrounded by new allies but still unable to break Rome, setting up Rome’s counterattack against those allies.",
+      "must_not_imply": "Do not imply Hannibal simply chose not to take Rome out of mercy; emphasize walls, logistics, exhaustion, and lack of siege support."
+    },
+    {
+      "episode_number": 4,
+      "episode_title": "Rome Refuses to Die",
+      "opening_question": "If Rome cannot defeat Hannibal directly, what does it destroy instead?",
+      "episode_summary": "Continue from Hannibal’s alliance network. Rome attacks his supporters at Syracuse and Capua, while Hannibal marches near Rome to distract them. At the same time, Rome’s war in Spain nearly collapses when the Scipio brothers die, until young Scipio receives command and captures New Carthage.",
+      "assigned_timeline_event_ids": [
+        "E19",
+        "E20",
+        "E21",
+        "E22",
+        "E23",
+        "E24"
+      ],
+      "factual_anchors_to_include": [
+        "Rome besieges Syracuse",
+        "Rome besieges Capua",
+        "Hannibal marches near Rome as diversion",
+        "Scipio brothers die in Spain",
+        "Scipio Africanus receives extraordinary command",
+        "New Carthage captured in 209 BCE"
+      ],
+      "character_introductions": [
+        "Scipio Africanus the Elder",
+        "the elder Scipio brothers",
+        "Roman forces besieging Capua"
+      ],
+      "place_anchors": [
+        "Syracuse",
+        "Capua",
+        "Rome",
+        "Spain",
+        "New Carthage"
+      ],
+      "time_gap_to_explain": "Explain how Rome survives the post-Cannae crisis by avoiding Hannibal’s preferred battles and attacking his allies and supply lines.",
+      "ending_bridge": "End with New Carthage captured, setting up the fight for all of Iberia and Hasdrubal’s attempt to reach Hannibal.",
+      "must_not_imply": "Do not imply Hannibal captured Rome during his march near the city; he approached as a diversion, and Rome did not surrender."
+    },
+    {
+      "episode_number": 5,
+      "episode_title": "The War Comes Home",
+      "opening_question": "What happens when Hannibal’s rescue dies before it reaches him?",
+      "episode_summary": "Begin with Hasdrubal escaping Baecula and trying to join Hannibal. Rome kills him at Metaurus, then Scipio wins Ilipa and breaks Carthaginian Spain. Scipio becomes consul, argues for invading Africa, lands there, and defeats Carthage’s forces, forcing Hannibal to leave Italy.",
+      "assigned_timeline_event_ids": [
+        "E25",
+        "E26",
+        "E27",
+        "E28",
+        "E29",
+        "E30",
+        "E31"
+      ],
+      "factual_anchors_to_include": [
+        "Baecula in 208 BCE",
+        "Hasdrubal escapes toward Italy",
+        "Metaurus in 207 BCE",
+        "Ilipa in 206 BCE",
+        "Scipio becomes consul in 205 BCE",
+        "Scipio invades North Africa in 204 BCE",
+        "Hannibal is recalled from Italy"
+      ],
+      "character_introductions": [
+        "Hasdrubal Barca",
+        "Scipio as consul",
+        "Carthaginian and Numidian forces in Africa"
+      ],
+      "place_anchors": [
+        "Baecula",
+        "Metaurus River",
+        "Iberia",
+        "Rome",
+        "North Africa",
+        "Utica",
+        "Great Plains"
+      ],
+      "time_gap_to_explain": "Explain the sequence from Spain to Italy to Africa: Rome cuts Hannibal off, wins Iberia, then threatens Carthage directly.",
+      "ending_bridge": "End with Hannibal sailing away from Italy to defend Carthage, setting up his final meeting with Scipio at Zama.",
+      "must_not_imply": "Do not imply Hannibal voluntarily abandoned Italy because he had lost every battle there; he was recalled because Carthage itself was threatened."
+    },
+    {
+      "episode_number": 6,
+      "episode_title": "The Last Victory of Rome",
+      "opening_question": "Can the greatest enemy of Rome still save Carthage at home?",
+      "episode_summary": "Continue with Hannibal returning to Africa after years in Italy. Show Zama as the decisive defeat, Carthage accepting harsh peace, Scipio becoming Africanus, and Hannibal attempting to repair Carthage through financial reforms. End with Hannibal fleeing and dying in exile, while Rome’s fear of Carthage survives.",
+      "assigned_timeline_event_ids": [
+        "E32",
+        "E33",
+        "E34",
+        "E35",
+        "E36"
+      ],
+      "factual_anchors_to_include": [
+        "Battle of Zama in 202 BCE",
+        "Peace terms in 201 BCE",
+        "Scipio receives the name Africanus",
+        "Hannibal becomes suffete",
+        "Hannibal reforms Carthaginian finances",
+        "Hannibal flees and dies in Bithynia"
+      ],
+      "character_introductions": [
+        "Hannibal as statesman",
+        "Scipio Africanus as Roman victor",
+        "Roman political pressure after the war"
+      ],
+      "place_anchors": [
+        "Zama",
+        "Carthage",
+        "Rome",
+        "Bithynia"
+      ],
+      "time_gap_to_explain": "Explain the years after Zama as a defeated Carthage trying to survive through payments, reform, and diplomacy.",
+      "ending_bridge": "End with Hannibal gone, but Carthage recovering economically, setting up Rome’s renewed fear in the fifty-year gap.",
+      "must_not_imply": "Do not imply Carthage was destroyed after Zama; it survived under severe restrictions and later recovered economically."
+    },
+    {
+      "episode_number": 7,
+      "episode_title": "The City Rome Could Not Forgive",
+      "opening_question": "Why did Rome destroy a city it had already defeated?",
+      "episode_summary": "Begin with Carthage recovering without an empire or major army. Show Masinissa’s pressure, Cato turning Carthage’s wealth into a warning, and Carthage’s fatal decision to fight Masinissa after completing payments. Rome declares the Third Punic War, demands surrender, orders the city moved inland, and Carthage resists until its fall in 146 BCE.",
+      "assigned_timeline_event_ids": [
+        "E37",
+        "E38",
+        "E39",
+        "E40",
+        "E41",
+        "E42"
+      ],
+      "factual_anchors_to_include": [
+        "Carthage recovers economically during the fifty-year gap",
+        "Masinissa pressures Carthaginian territory",
+        "Cato warns Rome about Carthage",
+        "Carthage completes indemnity payments",
+        "Carthage loses near Oroscopa",
+        "Third Punic War begins in 149 BCE",
+        "Carthage gives hostages and weapons",
+        "Rome orders Carthage moved inland",
+        "Carthage falls in 146 BCE"
+      ],
+      "character_introductions": [
+        "Masinissa",
+        "Cato the Elder",
+        "late Carthaginian citizens and defenders",
+        "Rome as final judge"
+      ],
+      "place_anchors": [
+        "Carthage",
+        "Numidian frontier",
+        "Rome",
+        "Oroscopa",
+        "North African coast"
+      ],
+      "time_gap_to_explain": "Explain the fifty years after Hannibal as a period of economic recovery, treaty restriction, Numidian pressure, and growing Roman suspicion.",
+      "ending_bridge": "End with Carthage destroyed as a rival but surviving as a warning about empire, fear, and memory.",
+      "must_not_imply": "Do not imply Carthage was destroyed because it was still a major military threat equal to Rome; emphasize fear, politics, treaty violations, and Rome’s decision to remove the rival permanently."
+    }
+  ],
+  "episode_count_mode": "dynamic",
+  "resolved_episode_count": 7,
+  "min_episodes": 6,
+  "max_episodes": 10,
+  "series_scope_plan": {
+    "recommended_episode_count": 7,
+    "reason": "Seven episodes is the smallest structure that covers the full fall arc without padding: Carthage’s postwar humiliation, Hannibal’s rise, the invasion of Italy, Rome’s near-collapse at Cannae, Scipio’s counterattack, Zama, and the long road to Carthage’s final destruction. Each episode has a major turning point and clear conflict.",
+    "too_short_risk": "With fewer than 7 episodes, the story would have to compress either Scipio’s rise, Hannibal’s defeat at Zama, or the crucial fifty-year buildup to the Third Punic War. That would make Carthage’s destruction feel sudden instead of inevitable.",
+    "too_long_risk": "More episodes would likely turn the Iberian buildup, Hannibal’s later exile, or Carthage’s economic recovery into slow background instead of high-stakes drama. The series could start feeling like a chronology rather than a tense fall narrative.",
+    "audience_fit": "Seven parts gives short-form viewers a clean escalation: revenge, invasion, Roman disaster, Roman comeback, final duel, political strangulation, destruction. Every episode ends with momentum and avoids filler.",
+    "episode_count_bounds": {
+      "min": 6,
+      "max": 10
+    }
+  },
+  "research_hash": "6a66e741fce1b884"
+}

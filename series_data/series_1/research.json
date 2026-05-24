@@ -1,0 +1,915 @@
+{
+  "research_schema_version": "1.1",
+  "series": "The Fall of Carthage",
+  "research_generated_by": "OpenAI Responses API web_search",
+  "research_last_updated": "2026-05-16",
+  "source_quality_note": "Coverage combines Britannica overviews, ancient-source translations via LacusCurtius and Livius, UNESCO site material, and focused modern military/logistical analysis. Core dates and treaty terms are strong; speeches, casualty figures, motives, and anecdotes depend on later Greek/Roman literary sources.",
+  "verified_facts": [
+    {
+      "fact": "The Second Punic War followed Roman-Carthaginian rivalry after Carthage lost Sicily, Sardinia-Corsica, sea power, and indemnities after the First Punic War.",
+      "confidence": "high",
+      "source_note_ids": [
+        "SN1",
+        "SN2"
+      ]
+    },
+    {
+      "fact": "Hannibal’s strategy was to invade Italy, defeat Roman armies, and break Rome’s Italian alliance system rather than immediately besiege Rome.",
+      "confidence": "high",
+      "source_note_ids": [
+        "SN2",
+        "SN5"
+      ]
+    },
+    {
+      "fact": "After Cannae, Hannibal did not take Rome because he lacked siege machines and urban-assault enablers, faced Rome’s heavy defenses and walls, and had an exhausted, supply-limited army.",
+      "confidence": "medium",
+      "source_note_ids": [
+        "SN4",
+        "SN5",
+        "SN23"
+      ]
+    },
+    {
+      "fact": "Scipio Africanus the Elder rose during the Second Punic War: extraordinary Spanish command in 210 BCE, capture of New Carthage in 209 BCE, victory at Ilipa in 206 BCE, and victory at Zama in 202 BCE.",
+      "confidence": "high",
+      "source_note_ids": [
+        "SN10",
+        "SN5"
+      ]
+    },
+    {
+      "fact": "Scipio Aemilianus, destroyer of Carthage in 146 BCE, was a later Roman commander distinct from Scipio Africanus the Elder.",
+      "confidence": "high",
+      "source_note_ids": [
+        "SN15"
+      ]
+    },
+    {
+      "fact": "The Battle of Zama was fought in North Africa, in modern Tunisia; Hannibal was defeated but survived and advised Carthage to seek peace.",
+      "confidence": "high",
+      "source_note_ids": [
+        "SN11",
+        "SN24"
+      ]
+    },
+    {
+      "fact": "The 201 BCE peace terms stripped Carthage of overseas possessions, limited its war fleet to ten triremes, required surrender of elephants, imposed a 10,000-talent indemnity over fifty years, and barred war without Rome’s consent.",
+      "confidence": "high",
+      "source_note_ids": [
+        "SN12",
+        "SN5"
+      ]
+    },
+    {
+      "fact": "Carthage recovered economically during the fifty-year gap after 201 BCE, even while its military and foreign policy remained restricted.",
+      "confidence": "high",
+      "source_note_ids": [
+        "SN1",
+        "SN13"
+      ]
+    },
+    {
+      "fact": "Cato the Elder repeatedly pushed the slogan remembered as 'Carthage must be destroyed' and helped normalize Roman hard-line policy.",
+      "confidence": "high",
+      "source_note_ids": [
+        "SN17",
+        "SN13"
+      ]
+    },
+    {
+      "fact": "The Third Punic War began after Carthage fought Masinissa’s Numidians without Roman permission, giving Rome a treaty-violation pretext.",
+      "confidence": "high",
+      "source_note_ids": [
+        "SN13",
+        "SN21"
+      ]
+    },
+    {
+      "fact": "In 149 BCE, Rome demanded Carthage surrender hostages and arms, then demanded relocation inland away from the sea; Carthage chose resistance.",
+      "confidence": "high",
+      "source_note_ids": [
+        "SN13",
+        "SN14"
+      ]
+    },
+    {
+      "fact": "In 146 BCE, Scipio Aemilianus captured and destroyed Carthage; survivors were enslaved and Carthaginian territory became Rome’s province of Africa.",
+      "confidence": "high",
+      "source_note_ids": [
+        "SN13",
+        "SN21",
+        "SN15"
+      ]
+    },
+    {
+      "fact": "Roman Carthage was later rebuilt on the ruins, and the archaeological site is now a UNESCO World Heritage Site.",
+      "confidence": "high",
+      "source_note_ids": [
+        "SN18",
+        "SN19"
+      ]
+    }
+  ],
+  "debated_or_uncertain_facts": [
+    {
+      "fact": "Hannibal’s childhood oath of hatred toward Rome is a famous tradition, but it comes through hostile or later literary sources.",
+      "confidence": "medium",
+      "source_note_ids": [
+        "SN3",
+        "SN5"
+      ]
+    },
+    {
+      "fact": "The exact battlefield location of Zama is debated, though North Africa/modern Tunisia is secure.",
+      "confidence": "medium",
+      "source_note_ids": [
+        "SN11",
+        "SN24"
+      ]
+    },
+    {
+      "fact": "The exact wording and routine use of 'Carthago delenda est' are not preserved in a contemporary source; the sentiment is secure, the formula is later standardized.",
+      "confidence": "medium",
+      "source_note_ids": [
+        "SN17"
+      ]
+    },
+    {
+      "fact": "Roman motives for the Third Punic War included security fears, revenge memory, economic jealousy, land hunger, domestic politics, and Masinissa’s disputes; weighting these motives is debated.",
+      "confidence": "medium",
+      "source_note_ids": [
+        "SN13",
+        "SN21"
+      ]
+    },
+    {
+      "fact": "Ancient casualty numbers at Cannae, Zama, and the final siege vary by source and should be treated as approximate.",
+      "confidence": "medium",
+      "source_note_ids": [
+        "SN4",
+        "SN11",
+        "SN21"
+      ]
+    },
+    {
+      "fact": "Reports that Scipio Aemilianus wept over Carthage’s destruction are ancient literary traditions but hard to verify as literal event footage.",
+      "confidence": "medium",
+      "source_note_ids": [
+        "SN14",
+        "SN15"
+      ]
+    }
+  ],
+  "myths_or_must_not_imply": [
+    {
+      "myth": "Do not state that Rome salted Carthage’s earth as fact; no ancient source supports it, and it is best treated as a later myth.",
+      "confidence": "high",
+      "source_note_ids": [
+        "SN16"
+      ]
+    },
+    {
+      "myth": "Do not imply Hannibal died at Zama; he survived, returned to Carthage, later went into exile, and died years later in the east.",
+      "confidence": "high",
+      "source_note_ids": [
+        "SN3",
+        "SN24"
+      ]
+    },
+    {
+      "myth": "Do not place Zama in Italy; it was in North Africa, in modern Tunisia.",
+      "confidence": "high",
+      "source_note_ids": [
+        "SN11",
+        "SN24"
+      ]
+    },
+    {
+      "myth": "Do not merge Scipio Africanus the Elder with Scipio Aemilianus; they belong to different generations and different Punic Wars.",
+      "confidence": "high",
+      "source_note_ids": [
+        "SN10",
+        "SN15"
+      ]
+    },
+    {
+      "myth": "Do not imply Cannae ended the war; Rome refused to negotiate and shifted to attrition.",
+      "confidence": "high",
+      "source_note_ids": [
+        "SN4",
+        "SN6"
+      ]
+    },
+    {
+      "myth": "Do not imply Carthage in 149 BCE was a Hannibal-era military superpower; it was economically revived but treaty-bound and militarily restricted.",
+      "confidence": "high",
+      "source_note_ids": [
+        "SN12",
+        "SN13"
+      ]
+    },
+    {
+      "myth": "Do not present Archimedes’ burning-mirror weapon at Syracuse as historical fact; Britannica notes it almost certainly did not exist.",
+      "confidence": "high",
+      "source_note_ids": [
+        "SN8"
+      ]
+    }
+  ],
+  "historical_timeline": [
+    {
+      "event_id": "EV001",
+      "date": "241 BCE",
+      "event": "First Punic War ends with Roman victory.",
+      "cause": "Rome and Carthage fought over Sicily and western Mediterranean sea power.",
+      "effect": "Carthage loses Sicily and pays indemnity, creating pressure to rebuild power.",
+      "people": [
+        "Gaius Lutatius Catulus",
+        "Hamilcar Barca"
+      ],
+      "place": "Sicily and Carthage, Italy/Tunisia",
+      "confidence": "high",
+      "source_note_id": "SN1"
+    },
+    {
+      "event_id": "EV002",
+      "date": "241-238 BCE",
+      "event": "Carthage fights the Mercenary War.",
+      "cause": "Unpaid mercenaries and African subjects revolt after the First Punic War.",
+      "effect": "Carthage survives but is weakened and politically humiliated.",
+      "people": [
+        "Hamilcar Barca",
+        "Hanno the Great",
+        "Spendius",
+        "Mathos"
+      ],
+      "place": "Carthaginian North Africa, Tunisia",
+      "confidence": "high",
+      "source_note_id": "SN1"
+    },
+    {
+      "event_id": "EV003",
+      "date": "238 BCE",
+      "event": "Rome takes Sardinia and Corsica from Carthage.",
+      "cause": "Rome exploits Carthage’s postwar weakness and mercenary unrest.",
+      "effect": "Carthaginian resentment deepens; Rome gains more western Mediterranean control.",
+      "people": [
+        "Roman Senate",
+        "Carthaginian Senate"
+      ],
+      "place": "Sardinia and Corsica, Italy/France",
+      "confidence": "high",
+      "source_note_id": "SN1"
+    },
+    {
+      "event_id": "EV004",
+      "date": "237 BCE",
+      "event": "Hamilcar Barca begins rebuilding Carthaginian power in Iberia.",
+      "cause": "Carthage needs new wealth, manpower, and strategic depth after losing islands.",
+      "effect": "The Barcid power base in Spain becomes Hannibal’s launchpad.",
+      "people": [
+        "Hamilcar Barca",
+        "Hannibal Barca"
+      ],
+      "place": "Gades/Cadiz and southern Iberia, Spain",
+      "confidence": "high",
+      "source_note_id": "SN1"
+    },
+    {
+      "event_id": "EV005",
+      "date": "c. 237 BCE",
+      "event": "Tradition says young Hannibal swears hostility to Rome.",
+      "cause": "Hamilcar allegedly binds his son to the Barcid anti-Roman cause.",
+      "effect": "Later writers frame Hannibal’s career as inherited revenge.",
+      "people": [
+        "Hamilcar Barca",
+        "Hannibal Barca"
+      ],
+      "place": "Carthaginian Iberia, Spain",
+      "confidence": "medium",
+      "source_note_id": "SN3"
+    },
+    {
+      "event_id": "EV006",
+      "date": "228 BCE",
+      "event": "Hamilcar dies; Hasdrubal the Fair leads Barcid Spain.",
+      "cause": "Hamilcar is killed during campaigning in Iberia.",
+      "effect": "Hasdrubal consolidates rule through diplomacy and urban foundations.",
+      "people": [
+        "Hamilcar Barca",
+        "Hasdrubal the Fair",
+        "Hannibal Barca"
+      ],
+      "place": "Southeastern Iberia, Spain",
+      "confidence": "high",
+      "source_note_id": "SN1"
+    },
+    {
+      "event_id": "EV007",
+      "date": "226 BCE",
+      "event": "Ebro Treaty sets a Roman-Carthaginian boundary in Iberia.",
+      "cause": "Rome wants to limit Barcid expansion without immediate war.",
+      "effect": "Saguntum’s status south of the Ebro becomes a flashpoint.",
+      "people": [
+        "Hasdrubal the Fair",
+        "Roman Senate"
+      ],
+      "place": "Ebro River, Spain",
+      "confidence": "high",
+      "source_note_id": "SN2"
+    },
+    {
+      "event_id": "EV008",
+      "date": "221 BCE",
+      "event": "Hannibal becomes Carthaginian commander in Iberia.",
+      "cause": "Hasdrubal is assassinated and Barcid troops support Hannibal.",
+      "effect": "Carthage’s Spanish command turns aggressive under Hannibal.",
+      "people": [
+        "Hannibal Barca",
+        "Hasdrubal the Fair",
+        "Carthaginian army"
+      ],
+      "place": "New Carthage/Cartagena, Spain",
+      "confidence": "high",
+      "source_note_id": "SN3"
+    },
+    {
+      "event_id": "EV009",
+      "date": "219 BCE",
+      "event": "Hannibal besieges and captures Saguntum.",
+      "cause": "Saguntum is Roman-aligned and conflicts with Carthaginian interests south of the Ebro.",
+      "effect": "Rome demands redress; war becomes likely.",
+      "people": [
+        "Hannibal Barca",
+        "Saguntines",
+        "Roman envoys"
+      ],
+      "place": "Saguntum/Sagunto, Spain",
+      "confidence": "high",
+      "source_note_id": "SN2"
+    },
+    {
+      "event_id": "EV010",
+      "date": "Spring 218 BCE",
+      "event": "Rome and Carthage enter the Second Punic War.",
+      "cause": "Carthage refuses Roman demands over Saguntum and Hannibal.",
+      "effect": "Rome prepares campaigns in Spain and Africa; Hannibal moves first.",
+      "people": [
+        "Roman Senate",
+        "Carthaginian Senate",
+        "Hannibal Barca"
+      ],
+      "place": "Rome, Italy; Carthage, Tunisia",
+      "confidence": "high",
+      "source_note_id": "SN2"
+    },
+    {
+      "event_id": "EV011",
+      "date": "Summer-Autumn 218 BCE",
+      "event": "Hannibal crosses the Pyrenees, Rhône, and Alps into Italy.",
+      "cause": "He seeks to bypass Roman sea power and attack Rome’s alliance system in Italy.",
+      "effect": "His army suffers losses but shocks Rome by appearing in northern Italy.",
+      "people": [
+        "Hannibal Barca",
+        "Mago Barca",
+        "Gallic allies"
+      ],
+      "place": "Gaul and Alpine passes, France/Italy",
+      "confidence": "high",
+      "source_note_id": "SN3"
+    },
+    {
+      "event_id": "EV012",
+      "date": "Late 218 BCE",
+      "event": "Hannibal wins at Ticinus.",
+      "cause": "Roman cavalry under Publius Cornelius Scipio probes Hannibal’s invading army.",
+      "effect": "Scipio is wounded; Gallic support for Hannibal increases.",
+      "people": [
+        "Hannibal Barca",
+        "Publius Cornelius Scipio"
+      ],
+      "place": "Ticinus/Ticino River, Italy",
+      "confidence": "high",
+      "source_note_id": "SN2"
+    },
+    {
+      "event_id": "EV013",
+      "date": "December 218 BCE",
+      "event": "Hannibal defeats Rome at the Trebbia.",
+      "cause": "Consul Sempronius Longus accepts battle in harsh winter conditions.",
+      "effect": "Hannibal gains momentum and recruits more northern Italians.",
+      "people": [
+        "Hannibal Barca",
+        "Tiberius Sempronius Longus",
+        "Mago Barca"
+      ],
+      "place": "Trebbia River, Italy",
+      "confidence": "high",
+      "source_note_id": "SN2"
+    },
+    {
+      "event_id": "EV014",
+      "date": "Spring 217 BCE",
+      "event": "Hannibal advances through central Italy after a brutal march.",
+      "cause": "He aims to pull Roman armies into terrain of his choosing.",
+      "effect": "The maneuver sets up the ambush at Lake Trasimene.",
+      "people": [
+        "Hannibal Barca",
+        "Gaius Flaminius"
+      ],
+      "place": "Arno marshes and Etruria, Italy",
+      "confidence": "high",
+      "source_note_id": "SN3"
+    },
+    {
+      "event_id": "EV015",
+      "date": "June 217 BCE",
+      "event": "Hannibal destroys Flaminius’s army at Lake Trasimene.",
+      "cause": "Flaminius pursues without adequate scouting; fog and terrain hide Hannibal’s trap.",
+      "effect": "Rome panics and appoints Fabius Maximus dictator.",
+      "people": [
+        "Hannibal Barca",
+        "Gaius Flaminius"
+      ],
+      "place": "Lake Trasimene, Italy",
+      "confidence": "high",
+      "source_note_id": "SN7"
+    },
+    {
+      "event_id": "EV016",
+      "date": "Summer 217 BCE",
+      "event": "Fabius Maximus adopts delaying strategy.",
+      "cause": "Rome needs time and must avoid another direct disaster against Hannibal.",
+      "effect": "Fabian attrition frustrates Hannibal but angers Romans seeking decisive battle.",
+      "people": [
+        "Quintus Fabius Maximus",
+        "Hannibal Barca"
+      ],
+      "place": "Apulia and Campania, Italy",
+      "confidence": "high",
+      "source_note_id": "SN6"
+    },
+    {
+      "event_id": "EV017",
+      "date": "2 August 216 BCE",
+      "event": "Battle of Cannae annihilates a massive Roman army.",
+      "cause": "Rome abandons Fabian caution and seeks decisive battle with superior numbers.",
+      "effect": "Rome suffers catastrophic losses; some allies reconsider loyalty.",
+      "people": [
+        "Hannibal Barca",
+        "Lucius Aemilius Paullus",
+        "Gaius Terentius Varro",
+        "Maharbal"
+      ],
+      "place": "Cannae, Apulia, Italy",
+      "confidence": "high",
+      "source_note_id": "SN4"
+    },
+    {
+      "event_id": "EV018",
+      "date": "After 2 August 216 BCE",
+      "event": "Hannibal does not besiege Rome after Cannae.",
+      "cause": "He lacks siege machines, urban-assault capacity, fresh supplies, and faces Rome’s walls and defenses.",
+      "effect": "He pivots to winning allied defections instead of storming the capital.",
+      "people": [
+        "Hannibal Barca",
+        "Maharbal",
+        "Roman Senate"
+      ],
+      "place": "Cannae to Rome, Italy",
+      "confidence": "medium",
+      "source_note_id": "SN5"
+    },
+    {
+      "event_id": "EV019",
+      "date": "Late 216 BCE",
+      "event": "Capua and several southern communities defect to Hannibal.",
+      "cause": "Cannae makes Hannibal appear unbeatable and promises a new power balance in Italy.",
+      "effect": "Hannibal gains prestige but not enough Latin allies to break Rome.",
+      "people": [
+        "Hannibal Barca",
+        "Capuan elites",
+        "Roman Senate"
+      ],
+      "place": "Capua, Campania, Italy",
+      "confidence": "high",
+      "source_note_id": "SN5"
+    },
+    {
+      "event_id": "EV020",
+      "date": "215 BCE",
+      "event": "Philip V of Macedon aligns with Hannibal.",
+      "cause": "Cannae encourages Rome’s enemies to test Roman weakness.",
+      "effect": "Rome fights a wider Mediterranean war while still containing Hannibal.",
+      "people": [
+        "Philip V of Macedon",
+        "Hannibal Barca",
+        "Roman Senate"
+      ],
+      "place": "Macedonia and southern Italy, Greece/Italy",
+      "confidence": "high",
+      "source_note_id": "SN2"
+    },
+    {
+      "event_id": "EV021",
+      "date": "214-212 BCE",
+      "event": "Rome besieges Syracuse.",
+      "cause": "Syracuse shifts toward the Carthaginian side during Rome’s crisis.",
+      "effect": "Rome captures the city; Archimedes dies; Sicily returns firmly to Roman control.",
+      "people": [
+        "Marcus Claudius Marcellus",
+        "Archimedes",
+        "Syracusan leaders"
+      ],
+      "place": "Syracuse, Sicily, Italy",
+      "confidence": "high",
+      "source_note_id": "SN8"
+    },
+    {
+      "event_id": "EV022",
+      "date": "211 BCE",
+      "event": "Rome besieges Capua; Hannibal marches near Rome as a diversion.",
+      "cause": "Rome targets Hannibal’s most prestigious Italian ally.",
+      "effect": "Romans refuse to abandon Capua; the city surrenders.",
+      "people": [
+        "Hannibal Barca",
+        "Roman consuls",
+        "Capuan elites"
+      ],
+      "place": "Capua and Rome, Italy",
+      "confidence": "high",
+      "source_note_id": "SN2"
+    },
+    {
+      "event_id": "EV023",
+      "date": "211 BCE",
+      "event": "The elder Scipio brothers die in Spain.",
+      "cause": "Carthaginian armies counter Roman pressure in Iberia.",
+      "effect": "Rome needs a new commander; young Scipio’s rise begins.",
+      "people": [
+        "Publius Cornelius Scipio",
+        "Gnaeus Cornelius Scipio",
+        "Hasdrubal Barca"
+      ],
+      "place": "Baetis/Guadalquivir region, Spain",
+      "confidence": "high",
+      "source_note_id": "SN10"
+    },
+    {
+      "event_id": "EV024",
+      "date": "210 BCE",
+      "event": "Scipio Africanus the Elder receives extraordinary Spanish command.",
+      "cause": "Senior Roman commanders are reluctant after defeats; Scipio volunteers despite youth.",
+      "effect": "A new Roman strategic mind enters the war.",
+      "people": [
+        "Publius Cornelius Scipio Africanus",
+        "Roman People",
+        "Roman Senate"
+      ],
+      "place": "Rome, Italy; Hispania, Spain",
+      "confidence": "high",
+      "source_note_id": "SN10"
+    },
+    {
+      "event_id": "EV025",
+      "date": "209 BCE",
+      "event": "Scipio captures New Carthage.",
+      "cause": "He attacks Carthage’s Iberian arsenal, treasury, hostages, and naval base.",
+      "effect": "Rome wins supplies, prestige, and Iberian diplomatic leverage.",
+      "people": [
+        "Scipio Africanus",
+        "Gaius Laelius",
+        "Mago"
+      ],
+      "place": "New Carthage/Cartagena, Spain",
+      "confidence": "high",
+      "source_note_id": "SN10"
+    },
+    {
+      "event_id": "EV026",
+      "date": "208 BCE",
+      "event": "Scipio defeats Hasdrubal at Baecula, but Hasdrubal escapes.",
+      "cause": "Rome tries to destroy Barcid forces before they can aid Hannibal.",
+      "effect": "Hasdrubal marches toward Italy to reinforce Hannibal.",
+      "people": [
+        "Scipio Africanus",
+        "Hasdrubal Barca"
+      ],
+      "place": "Baecula, Spain",
+      "confidence": "high",
+      "source_note_id": "SN10"
+    },
+    {
+      "event_id": "EV027",
+      "date": "207 BCE",
+      "event": "Rome defeats and kills Hasdrubal at the Metaurus.",
+      "cause": "Hasdrubal crosses into Italy to join Hannibal for a direct threat to Rome.",
+      "effect": "Hannibal loses his best chance for major reinforcement.",
+      "people": [
+        "Hasdrubal Barca",
+        "Gaius Claudius Nero",
+        "Marcus Livius Salinator",
+        "Hannibal Barca"
+      ],
+      "place": "Metaurus River, Marche, Italy",
+      "confidence": "high",
+      "source_note_id": "SN9"
+    },
+    {
+      "event_id": "EV028",
+      "date": "206 BCE",
+      "event": "Scipio wins at Ilipa.",
+      "cause": "Rome seeks to finish Carthaginian power in Iberia.",
+      "effect": "Carthage loses Spain’s manpower, silver, and strategic base.",
+      "people": [
+        "Scipio Africanus",
+        "Mago Barca",
+        "Hasdrubal Gisco"
+      ],
+      "place": "Ilipa near Seville, Spain",
+      "confidence": "high",
+      "source_note_id": "SN10"
+    },
+    {
+      "event_id": "EV029",
+      "date": "205 BCE",
+      "event": "Scipio becomes consul and argues for invading Africa.",
+      "cause": "Victories in Spain convince him Carthage can be forced to recall Hannibal.",
+      "effect": "Despite opposition, he prepares an African campaign from Sicily.",
+      "people": [
+        "Scipio Africanus",
+        "Quintus Fabius Maximus",
+        "Roman Senate"
+      ],
+      "place": "Rome and Sicily, Italy",
+      "confidence": "high",
+      "source_note_id": "SN10"
+    },
+    {
+      "event_id": "EV030",
+      "date": "204 BCE",
+      "event": "Scipio invades North Africa.",
+      "cause": "He chooses an indirect strategy: threaten Carthage rather than chase Hannibal in Italy.",
+      "effect": "The war’s center shifts from Italy to Carthage’s homeland.",
+      "people": [
+        "Scipio Africanus",
+        "Gaius Laelius",
+        "Masinissa"
+      ],
+      "place": "Near Utica, Tunisia",
+      "confidence": "high",
+      "source_note_id": "SN5"
+    },
+    {
+      "event_id": "EV031",
+      "date": "203 BCE",
+      "event": "Scipio defeats Carthaginian-Numidian forces near Utica and Great Plains.",
+      "cause": "Carthage and Syphax try to eject Scipio from Africa.",
+      "effect": "Syphax is captured; Masinissa’s position rises; Carthage recalls Hannibal.",
+      "people": [
+        "Scipio Africanus",
+        "Masinissa",
+        "Syphax",
+        "Hasdrubal Gisco"
+      ],
+      "place": "Utica and Great Plains, Tunisia",
+      "confidence": "high",
+      "source_note_id": "SN2"
+    },
+    {
+      "event_id": "EV032",
+      "date": "203-202 BCE",
+      "event": "Hannibal leaves Italy and returns to Africa.",
+      "cause": "Scipio’s invasion puts Carthage itself in danger.",
+      "effect": "The two greatest commanders prepare for final confrontation.",
+      "people": [
+        "Hannibal Barca",
+        "Scipio Africanus",
+        "Carthaginian Senate"
+      ],
+      "place": "From Bruttium, Italy to Hadrumetum/Sousse, Tunisia",
+      "confidence": "high",
+      "source_note_id": "SN3"
+    },
+    {
+      "event_id": "EV033",
+      "date": "202 BCE",
+      "event": "Scipio defeats Hannibal at Zama.",
+      "cause": "Peace talks fail and Carthage risks one final field battle.",
+      "effect": "Hannibal survives but Carthage loses the war and seeks peace.",
+      "people": [
+        "Scipio Africanus",
+        "Hannibal Barca",
+        "Masinissa"
+      ],
+      "place": "Zama region, Tunisia",
+      "confidence": "high",
+      "source_note_id": "SN11"
+    },
+    {
+      "event_id": "EV034",
+      "date": "201 BCE",
+      "event": "Carthage accepts harsh Roman peace terms.",
+      "cause": "Zama leaves Carthage without a viable army.",
+      "effect": "Fleet is surrendered/destroyed except ten ships; indemnity and war restrictions bind Carthage.",
+      "people": [
+        "Scipio Africanus",
+        "Hannibal Barca",
+        "Carthaginian Senate",
+        "Roman Senate"
+      ],
+      "place": "Carthage, Tunisia; Rome, Italy",
+      "confidence": "high",
+      "source_note_id": "SN12"
+    },
+    {
+      "event_id": "EV035",
+      "date": "199 BCE",
+      "event": "Scipio receives honors and the name Africanus.",
+      "cause": "His victory in Africa ends the Second Punic War.",
+      "effect": "Scipio becomes Rome’s model conqueror and a benchmark for later descendants.",
+      "people": [
+        "Scipio Africanus",
+        "Roman Senate"
+      ],
+      "place": "Rome, Italy",
+      "confidence": "high",
+      "source_note_id": "SN10"
+    },
+    {
+      "event_id": "EV036",
+      "date": "196-195 BCE",
+      "event": "Hannibal becomes suffete and reforms Carthaginian finances.",
+      "cause": "Carthage must manage indemnity payments and internal corruption after defeat.",
+      "effect": "Carthaginian enemies and Roman suspicion push Hannibal into exile.",
+      "people": [
+        "Hannibal Barca",
+        "Carthaginian oligarchs",
+        "Roman Senate"
+      ],
+      "place": "Carthage, Tunisia",
+      "confidence": "high",
+      "source_note_id": "SN3"
+    },
+    {
+      "event_id": "EV037",
+      "date": "195 BCE",
+      "event": "Hannibal flees Carthage.",
+      "cause": "Political rivals accuse him of encouraging Antiochus III against Rome.",
+      "effect": "Carthage loses its greatest commander and avoids immediate Roman retaliation.",
+      "people": [
+        "Hannibal Barca",
+        "Antiochus III",
+        "Roman envoys"
+      ],
+      "place": "Carthage, Tunisia; Tyre/Lebanon; Seleucid realm",
+      "confidence": "high",
+      "source_note_id": "SN3"
+    },
+    {
+      "event_id": "EV038",
+      "date": "c. 183-181 BCE",
+      "event": "Hannibal dies in Bithynia.",
+      "cause": "Rome pressures King Prusias to hand him over.",
+      "effect": "The living symbol of Carthaginian resistance disappears.",
+      "people": [
+        "Hannibal Barca",
+        "Prusias I of Bithynia",
+        "Roman envoys"
+      ],
+      "place": "Libyssa near Gebze, Turkey",
+      "confidence": "high",
+      "source_note_id": "SN3"
+    },
+    {
+      "event_id": "EV039",
+      "date": "201-151 BCE",
+      "event": "Carthage economically recovers during the fifty-year gap.",
+      "cause": "Commercial networks, agriculture, and maritime trade continue despite military limits.",
+      "effect": "Rome grows jealous and fearful of a rich but treaty-bound Carthage.",
+      "people": [
+        "Carthaginian merchants",
+        "Roman senators"
+      ],
+      "place": "Carthage and North African hinterland, Tunisia",
+      "confidence": "high",
+      "source_note_id": "SN13"
+    },
+    {
+      "event_id": "EV040",
+      "date": "2nd century BCE",
+      "event": "Masinissa repeatedly pressures Carthaginian territory.",
+      "cause": "The 201 treaty favors Rome’s Numidian ally and restricts Carthage’s military response.",
+      "effect": "Carthage appeals to Rome but cannot stop Numidian encroachment.",
+      "people": [
+        "Masinissa",
+        "Carthaginian Senate",
+        "Roman Senate"
+      ],
+      "place": "Numidia-Carthage frontier, Tunisia/Algeria",
+      "confidence": "high",
+      "source_note_id": "SN13"
+    },
+    {
+      "event_id": "EV041",
+      "date": "c. 153 BCE",
+      "event": "Cato visits Carthage and warns Rome about its revival.",
+      "cause": "Rome sends envoys amid Carthage-Numidia disputes.",
+      "effect": "Cato’s anti-Carthaginian campaign gains force.",
+      "people": [
+        "Cato the Elder",
+        "Masinissa",
+        "Carthaginian leaders"
+      ],
+      "place": "Carthage, Tunisia; Rome, Italy",
+      "confidence": "high",
+      "source_note_id": "SN17"
+    },
+    {
+      "event_id": "EV042",
+      "date": "c. 153-149 BCE",
+      "event": "Cato repeats the demand remembered as 'Carthage must be destroyed.'",
+      "cause": "He sees Carthage as a revived danger close to Italy.",
+      "effect": "Hard-line Roman opinion overwhelms more moderate voices.",
+      "people": [
+        "Cato the Elder",
+        "Roman Senate",
+        "Scipio Nasica"
+      ],
+      "place": "Rome, Italy",
+      "confidence": "high",
+      "source_note_id": "SN17"
+    },
+    {
+      "event_id": "EV043",
+      "date": "151 BCE",
+      "event": "Carthage completes its indemnity payments.",
+      "cause": "The fifty-year payment schedule from the 201 treaty expires.",
+      "effect": "Carthage is financially less constrained, heightening Roman anxiety.",
+      "people": [
+        "Carthaginian Senate",
+        "Roman Senate"
+      ],
+      "place": "Carthage, Tunisia; Rome, Italy",
+      "confidence": "high",
+      "source_note_id": "SN13"
+    },
+    {
+      "event_id": "EV044",
+      "date": "151-150 BCE",
+      "event": "Carthage attacks Masinissa and loses near Oroscopa.",
+      "cause": "Numidian encroachment becomes intolerable and Carthage acts without Roman permission.",
+      "effect": "Rome treats the campaign as a breach of the 201 peace.",
+      "people": [
+        "Hasdrubal the Boeotarch",
+        "Masinissa",
+        "Carthaginian army"
+      ],
+      "place": "Oroscopa region, Tunisia",
+      "confidence": "medium",
+      "source_note_id": "SN13"
+    },
+    {
+      "event_id": "EV045",
+      "date": "149 BCE",
+      "event": "Rome declares the Third Punic War.",
+      "cause": "Carthage’s unauthorized war against Numidia gives Rome a legal pretext.",
+      "effect": "Roman forces sail to Africa; Carthage first seeks surrender terms.",
+      "people": [
+        "Roman Senate",
+        "Cato the Elder",
+        "Carthaginian envoys"
+      ],
+      "place": "Rome, Italy; Utica and Carthage, Tunisia",
+      "confidence": "high",
+      "source_note_id": "SN13"
+    },
+    {
+      "event_id": "EV046",
+      "date": "149 BCE",
+      "event": "Carthage gives hostages and surrenders weapons.",
+      "cause": "Carthage hopes obedience will prevent destruction.",
+      "effect": "Rome escalates demands after disarming the city.",
+      "people": [
+        "Lucius Marcius Censorinus",
+        "Manius Manilius",
+        "Carthaginian envoys"
+      ],
+      "place": "Carthage and Utica, Tunisia",
+      "confidence": "high",
+      "source_note_id": "SN14"
+    },
+    {
+      "event_id": "EV047",
+      "date": "149 BCE",
+      "event": "Rome orders Carthage moved inland away from the sea.",
+      "cause": "Rome wants to break Carthage’s maritime commercial identity permanently.",
+      "effect": "Carthage chooses total resistance and begins emergency rearmament.",
+      "people": [
+        "Lucius Marcius Censorinus",
+        "Carthaginian citizens"
+      ]
+    }
+  ]
+}
