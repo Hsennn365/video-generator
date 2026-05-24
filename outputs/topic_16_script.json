@@ -1,0 +1,104 @@
+{
+  "title": "The Princes Who Vanished in the Tower",
+  "hook": "In 1483, two young princes entered the Tower of London and vanished.",
+  "full_narration": "In 1483, two young princes entered the Tower of London and vanished. The Tower was a royal fortress beside the River Thames in London. [[pause:0.4]] Twelve-year-old Edward V had come to be crowned king of England. His nine-year-old brother Richard joined him under their uncle’s protection. [[voice:tense]] Their uncle, Richard Duke of Gloucester, controlled the boys and the government. Then he claimed their parents’ marriage was invalid, making the princes illegitimate. [[pause:0.6]] Days later, he took the crown as King Richard the Third. If the boys were legitimate, Richard’s new crown could never feel safe. Then the princes were seen less often, until no one saw them again. [[voice:low]] Two years later, Richard died in battle, but the mystery survived him. The Tower kept its secret, and England still asks what happened to the boys. [[pause:0.8]] Follow for more dark history.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "timestamp_start": 0.0,
+      "timestamp_end": 6.5,
+      "narration_segment": "In 1483, two young princes entered the Tower of London and vanished.",
+      "image_prompt": "Two young English princes entering the stone gate of the Tower of London in 1483, escorted by medieval guards with halberds, gray fortress walls and portcullis visible, late medieval clothing, tense dark mood, cold overcast lighting, cinematic low-angle framing, vertical 9:16 composition, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: two young princes, Tower gate, guards, medieval London atmosphere. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Two young princes are led through the Tower gate under armed watch."
+    },
+    {
+      "scene_number": 2,
+      "timestamp_start": 6.5,
+      "timestamp_end": 13.0,
+      "narration_segment": "The Tower was a royal fortress beside the River Thames in London.",
+      "image_prompt": "The Tower of London beside the River Thames in late medieval London, massive stone walls, towers, river boats, mist over dark water, distant wooden buildings, 1480s England, moody dawn lighting, wide establishing shot, vertical 9:16 composition, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: royal fortress, River Thames, medieval London architecture. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "The Tower rises beside the Thames under a cold gray sky."
+    },
+    {
+      "scene_number": 3,
+      "timestamp_start": 13.0,
+      "timestamp_end": 19.5,
+      "narration_segment": "Twelve-year-old Edward V had come to be crowned king of England.",
+      "image_prompt": "Twelve-year-old Edward V in 1483, a young English prince in rich dark velvet clothing, standing near a ceremonial crown on a cushion inside a medieval royal chamber, stone walls, candlelight, anxious expression, cinematic medium shot, vertical 9:16 composition, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: young Edward V, crown on cushion, medieval royal chamber. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Edward V stands near the crown he expects to wear."
+    },
+    {
+      "scene_number": 4,
+      "timestamp_start": 19.5,
+      "timestamp_end": 26.0,
+      "narration_segment": "His nine-year-old brother Richard joined him under their uncle’s protection.",
+      "image_prompt": "Nine-year-old Prince Richard joining Edward V inside the Tower of London in 1483, two young brothers in noble medieval clothing, their uncle Richard Duke of Gloucester nearby in dark noble attire, armed guards behind them, stone corridor, dim torchlight, tense protective but ominous mood, cinematic medium-wide framing, vertical 9:16 composition, dark historical graphic-novel believability. Must show: two young brothers, uncle figure, Tower corridor, guards. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "The younger prince arrives and stands beside his brother under their uncle’s watch."
+    },
+    {
+      "scene_number": 5,
+      "timestamp_start": 26.0,
+      "timestamp_end": 32.5,
+      "narration_segment": "Their uncle, Richard Duke of Gloucester, controlled the boys and the government.",
+      "image_prompt": "Richard Duke of Gloucester in 1483 seated at a dark council table with noble advisers, Tower keys and sealed blank parchments on the table, two young princes visible in the background under guard, late medieval English clothing, stone interior, candlelit shadows, controlled and threatening mood, cinematic over-the-shoulder framing, vertical 9:16 composition, dark historical graphic-novel believability. Must show: Richard Duke of Gloucester, council table, guards, princes in background. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Richard dominates the council while the princes remain guarded behind him."
+    },
+    {
+      "scene_number": 6,
+      "timestamp_start": 32.5,
+      "timestamp_end": 39.0,
+      "narration_segment": "Then he claimed their parents’ marriage was invalid, making the princes illegitimate.",
+      "image_prompt": "Richard Duke of Gloucester presenting a blank parchment before stern nobles and churchmen in a medieval English hall, 1483, candles, stone arches, dark robes, shocked faces, no readable writing, tense legal and political mood, cinematic frontal composition, vertical 9:16 composition, dark historical graphic-novel believability. Must show: Richard presenting parchment, nobles, churchmen, medieval hall. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Richard makes the claim that strips the princes of their right to rule."
+    },
+    {
+      "scene_number": 7,
+      "timestamp_start": 39.0,
+      "timestamp_end": 45.5,
+      "narration_segment": "Days later, he took the crown as King Richard the Third.",
+      "image_prompt": "Richard III in 1483 wearing a crown inside Westminster Abbey, medieval coronation robes, bishops and nobles around him, stone arches, candles, dark solemn atmosphere, crown glinting in low light, cinematic centered shot, vertical 9:16 composition, dark historical graphic-novel believability, no readable banners or inscriptions. Must show: crowned Richard III, coronation setting, nobles and clergy. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Richard is crowned while the princes are no longer in power."
+    },
+    {
+      "scene_number": 8,
+      "timestamp_start": 45.5,
+      "timestamp_end": 52.0,
+      "narration_segment": "If the boys were legitimate, Richard’s new crown could never feel safe.",
+      "image_prompt": "Richard III alone in a dark medieval chamber, crown on his head, two young princes faintly visible as shadowed figures behind a barred Tower window in the background, 1483 England, stone walls, candlelight, anxious royal mood, cinematic close medium framing, vertical 9:16 composition, dark historical graphic-novel believability. Must show: Richard III with crown, shadowed princes behind barred window, medieval chamber. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Richard’s crown feels threatened by the living princes."
+    },
+    {
+      "scene_number": 9,
+      "timestamp_start": 52.0,
+      "timestamp_end": 58.5,
+      "narration_segment": "Then the princes were seen less often, until no one saw them again.",
+      "image_prompt": "Empty barred window in the Tower of London at night, abandoned small velvet cap and wooden toy on a stone sill, dim moonlight, deep shadows, no people visible, late medieval England, quiet ominous mood, cinematic close-up framing, vertical 9:16 composition, dark historical graphic-novel believability. Must show: empty barred Tower window, abandoned child objects, moonlit stone interior. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "The Tower window is empty, with only small traces of the boys left behind."
+    },
+    {
+      "scene_number": 10,
+      "timestamp_start": 58.5,
+      "timestamp_end": 65.0,
+      "narration_segment": "Two years later, Richard died in battle, but the mystery survived him. The Tower kept its secret, and England still asks what happened to the boys. Follow for more dark history.",
+      "image_prompt": "Aftermath of the Battle of Bosworth in 1485, a crown lying in mud beside an abandoned armored helmet, distant medieval soldiers fading into fog, Tower of London faintly imagined in the dark sky behind the scene, no visible injury, no blood, somber cinematic lighting, vertical 9:16 composition, dark historical graphic-novel believability. Must show: crown in mud, abandoned helmet, distant battlefield fog, haunting Tower silhouette. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Richard’s fallen crown leads back to the Tower’s unanswered secret."
+    }
+  ],
+  "hashtags": [
+    "princesinthetower",
+    "toweroflondon",
+    "richardiii",
+    "edwardv",
+    "englishhistory",
+    "darkhistory",
+    "medievalengland",
+    "royalmystery",
+    "plantagenets",
+    "historyshorts"
+  ],
+  "youtube_description": "In 1483, two young princes were placed inside the Tower of London and never seen again. Edward V was supposed to become king, but his uncle, Richard Duke of Gloucester, took control of the boys and the government. After declaring them illegitimate, he claimed the crown as Richard III. The princes faded from public view, leaving behind one of England’s most chilling royal mysteries. Their disappearance haunted Richard’s reign, survived his death in battle, and still has no certain answer centuries later.",
+  "cta": "Follow for more dark history.",
+  "topic_id": "16",
+  "series": "",
+  "part": 0
+}

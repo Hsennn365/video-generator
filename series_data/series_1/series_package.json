@@ -526,7 +526,7 @@
     }
   ],
   "episode_count_mode": "dynamic",
-  "resolved_episode_count": 7,
+  "resolved_episode_count": 10,
   "min_episodes": 6,
   "max_episodes": 10,
   "series_scope_plan": {

@@ -20,6 +20,7 @@ import csv
 import hashlib
 import json
 import os
+import re
 import shutil
 import sys
 import time
@@ -47,12 +48,19 @@ from modules.captions import generate_captions, format_captions_for_creatomate
 from modules.assembly import assemble_video
 from modules.publisher import publish_all
 from modules.tracker import init_logs, log_video, update_performance, print_performance_summary
-from config import TOPICS_FILE, TEMP_DIR, OUTPUT_DIR
+from config import (
+    TOPICS_FILE, TEMP_DIR, OUTPUT_DIR, GENERATE_THUMBNAIL,
+    SCRIPTS_DIR, VIDEOS_DIR, THUMBNAILS_DIR, METADATA_DIR,
+    GENERATE_SOCIAL_CAPTIONS, ENABLE_GOOGLE_DRIVE_UPLOAD, ENABLE_GOOGLE_SHEETS_SYNC,
+)
 
-try:
-    from config import GENERATE_THUMBNAIL
-except ImportError:
-    GENERATE_THUMBNAIL = True
+def _parse_bool(val: Any) -> bool:
+    if val is None:
+        return False
+    if isinstance(val, bool):
+        return val
+    s = str(val).strip().lower()
+    return s not in ("false", "0", "no", "none", "n", "f", "")
 
 
 # -----------------------------
@@ -650,13 +658,28 @@ def _validate_assembly_assets(
         )
 
 
-def _find_latest_video_for_topic(topic_id: str) -> str | None:
-    """Find the newest locally rendered video for --post."""
-    output_dir = Path(OUTPUT_DIR)
-    if not output_dir.exists():
-        return None
+def _find_latest_video_for_topic(topic_id: str, episode_num: int | None = None) -> str | None:
+    """Find the newest locally rendered video for --post or Drive sync."""
+    search_dirs = [Path(OUTPUT_DIR)]
+    videos_singles = Path(VIDEOS_DIR) / "singles"
+    if videos_singles.is_dir():
+        search_dirs.append(videos_singles)
 
-    matches = list(output_dir.glob(f"{prefix}*.mp4"))
+    patterns = [f"topic_{topic_id}_*.mp4", f"single_topic_{topic_id}.mp4"]
+    if episode_num is not None:
+        ep = int(episode_num)
+        patterns.extend([
+            f"series_{topic_id}_episode_{ep:02d}_*.mp4",
+            f"series_topic_{topic_id}_ep_{ep:02d}.mp4",
+        ])
+
+    matches: list[Path] = []
+    for directory in search_dirs:
+        if not directory.exists():
+            continue
+        for pattern in patterns:
+            matches.extend(directory.glob(pattern))
+
     if not matches:
         return None
 
@@ -667,6 +690,295 @@ def _find_latest_video_for_topic(topic_id: str) -> str | None:
 # -----------------------------
 # Main pipeline
 # -----------------------------
+
+def _topic_series_slug(topic: dict) -> str:
+    """Resolve a folder-safe series slug from topic row (new or legacy columns)."""
+    raw = (
+        str(topic.get("series_slug", "") or "").strip()
+        or str(topic.get("series", "") or "").strip()
+    )
+    return re.sub(r"[^a-z0-9]+", "_", raw.lower()).strip("_")
+
+
+def _integration_flags_active(
+    generate_social_captions: bool,
+    sync_drive: bool,
+    sync_sheet: bool,
+) -> bool:
+    return bool(
+        generate_social_captions
+        or sync_drive
+        or sync_sheet
+        or GENERATE_SOCIAL_CAPTIONS
+        or ENABLE_GOOGLE_DRIVE_UPLOAD
+        or ENABLE_GOOGLE_SHEETS_SYNC
+    )
+
+
+def _mirror_outputs_to_organised(
+    *,
+    topic: dict,
+    video_path: str,
+    script_path: str,
+    thumbnail_path: str | None,
+    episode_num: int | None,
+) -> tuple[str, str]:
+    """Copy final assets into outputs/ tree. Returns (content_id, organised_video_path)."""
+    topic_id = str(topic["id"])
+    is_series = _is_series_topic(topic)
+    content_id = _make_content_id(topic_id, episode_num, is_series)
+    series_slug = _topic_series_slug(topic)
+
+    if is_series:
+        video_dest_dir = os.path.join(VIDEOS_DIR, "series", series_slug or f"series_{topic_id}")
+    else:
+        video_dest_dir = os.path.join(VIDEOS_DIR, "singles")
+    organised_video_path = _copy_to_organised(
+        video_path,
+        video_dest_dir,
+        f"{content_id}.mp4",
+    )
+    print(f"   📁 Organised video: {organised_video_path}")
+
+    if os.path.isfile(script_path):
+        if is_series:
+            script_dest_dir = os.path.join(SCRIPTS_DIR, "series", series_slug or f"series_{topic_id}")
+        else:
+            script_dest_dir = os.path.join(SCRIPTS_DIR, "singles")
+        _copy_to_organised(script_path, script_dest_dir)
+
+    if thumbnail_path and os.path.isfile(thumbnail_path):
+        _copy_to_organised(thumbnail_path, THUMBNAILS_DIR)
+
+    return content_id, organised_video_path
+
+
+def _run_post_pipeline_integrations(
+    *,
+    topic: dict,
+    script: dict,
+    video_path: str,
+    organised_video_path: str,
+    content_id: str,
+    script_path: str,
+    thumbnail_path: str | None,
+    episode_num: int | None,
+    generate_social_captions: bool,
+    sync_drive: bool,
+    sync_sheet: bool,
+    mirror_assets: bool = True,
+) -> None:
+    """Optional Google/social integrations; mirrors outputs unless already done."""
+    topic_id = str(topic["id"])
+    is_series = _is_series_topic(topic)
+    series_name = (
+        str(script.get("series", "") or topic.get("series", "") or topic.get("series_slug", "") or "")
+        .strip()
+    )
+    series_slug = _topic_series_slug(topic) or (
+        re.sub(r"[^a-z0-9]+", "_", series_name.lower()).strip("_") if series_name else ""
+    )
+
+    if mirror_assets:
+        content_id, organised_video_path = _mirror_outputs_to_organised(
+            topic=topic,
+            video_path=video_path,
+            script_path=script_path,
+            thumbnail_path=thumbnail_path,
+            episode_num=episode_num,
+        )
+
+    _do_captions = generate_social_captions or GENERATE_SOCIAL_CAPTIONS
+    _do_drive = sync_drive or ENABLE_GOOGLE_DRIVE_UPLOAD
+    _do_sheet = sync_sheet or ENABLE_GOOGLE_SHEETS_SYNC
+
+    caps: dict = {}
+    if _do_captions or _do_sheet:
+        from modules.social_captions import extract_social_captions, print_social_captions
+        caps = extract_social_captions(script, topic=topic)
+        if _do_captions:
+            print_social_captions(script, topic=topic, caps=caps)
+
+    metadata: dict = {
+        "content_id": content_id,
+        "topic_id": topic_id,
+        "episode": str(episode_num or script.get("part") or ""),
+        "type": "series" if is_series else "single",
+        "series": series_name,
+        "title": script.get("title", "") or topic.get("title", ""),
+        "video_path": video_path,
+        "organised_video_path": organised_video_path,
+        "drive_file_id": "",
+        "drive_url": "",
+        "sheet_row_id": "",
+        "generated_at": datetime.now().isoformat(timespec="seconds"),
+    }
+
+    if _do_drive:
+        try:
+            from modules.google_integration import upload_to_drive
+            print("\n☁️  Uploading to Google Drive...")
+            drive_info = upload_to_drive(
+                organised_video_path,
+                content_id,
+                is_series=is_series,
+                series_slug=series_slug or None,
+            )
+            metadata["drive_file_id"] = drive_info.get("drive_file_id", "")
+            metadata["drive_url"] = drive_info.get("drive_url", "")
+        except Exception as drive_err:
+            print(f"\n⚠️  [WARNING] Google Drive upload failed: {drive_err}")
+            print("   Video was generated successfully. Drive sync skipped.")
+
+    if _do_sheet:
+        try:
+            from modules.google_integration import sync_to_sheet
+            print("\n📊 Syncing to Google Sheet...")
+            metadata["sheet_row_id"] = sync_to_sheet(dict(metadata), caps)
+        except Exception as sheet_err:
+            print(f"\n⚠️  [WARNING] Google Sheets sync failed: {sheet_err}")
+            print("   Video was generated successfully. Sheet sync skipped.")
+
+    if _do_drive or _do_sheet or _do_captions:
+        meta_file = _save_metadata_file(metadata, content_id + "_")
+        print(f"   📄 Metadata saved: {meta_file}")
+
+
+def _run_integrations_only(
+    topic: dict,
+    *,
+    episode_num: int | None,
+    generate_social_captions: bool,
+    sync_drive: bool,
+    sync_sheet: bool,
+) -> bool:
+    """
+    Run social/Drive/Sheet steps without regenerating pipeline assets.
+    Returns True if handled (caller should return), False to fall through to full pipeline.
+    """
+    topic_id = str(topic["id"])
+    script_path = get_script_path(topic, episode_num)
+
+    _do_captions = generate_social_captions or GENERATE_SOCIAL_CAPTIONS
+    _do_drive = sync_drive or ENABLE_GOOGLE_DRIVE_UPLOAD
+    _do_sheet = sync_sheet or ENABLE_GOOGLE_SHEETS_SYNC
+
+    if _do_captions or _do_sheet:
+        if not os.path.isfile(script_path):
+            print(f"❌ Script not found: {script_path}")
+            print("   Generate the script first (run without integration-only flags).")
+            return True
+        script = _load_json(script_path)
+        if not script:
+            print(f"❌ Failed to load script: {script_path}")
+            return True
+    else:
+        script = _load_json(script_path) or {}
+
+    if _do_captions and not _do_drive and not _do_sheet:
+        from modules.social_captions import print_social_captions
+        print_social_captions(script, topic=topic)
+        return True
+
+    video_path = _find_latest_video_for_topic(topic_id, episode_num=episode_num)
+    if _do_drive and not video_path:
+        print(f"❌ No rendered video found for topic #{topic_id}. Run generation first.")
+        return True
+
+    if not video_path:
+        # Sheet-only: still sync row from script (no organised copy)
+        if _do_sheet:
+            from modules.social_captions import extract_social_captions
+            from modules.google_integration import sync_to_sheet
+            is_series = _is_series_topic(topic)
+            content_id = _make_content_id(topic_id, episode_num, is_series)
+            caps = extract_social_captions(script, topic=topic)
+            metadata = {
+                "content_id": content_id,
+                "topic_id": topic_id,
+                "episode": str(episode_num or script.get("part") or ""),
+                "type": "series" if is_series else "single",
+                "series": str(script.get("series", "") or topic.get("series_slug", "") or ""),
+                "title": script.get("title", "") or topic.get("title", ""),
+                "drive_url": "",
+                "generated_at": datetime.now().isoformat(timespec="seconds"),
+            }
+            try:
+                sync_to_sheet(metadata, caps)
+            except Exception as sheet_err:
+                print(f"\n⚠️  [WARNING] Google Sheets sync failed: {sheet_err}")
+        return True
+
+    prefix = get_asset_prefix(topic, episode_num)
+    thumbnail_path = os.path.join(TEMP_DIR, f"{prefix}thumbnail.jpg")
+    if not os.path.isfile(thumbnail_path):
+        thumbnail_path = None
+
+    content_id, organised_video_path = _mirror_outputs_to_organised(
+        topic=topic,
+        video_path=video_path,
+        script_path=script_path,
+        thumbnail_path=thumbnail_path,
+        episode_num=episode_num,
+    )
+    _run_post_pipeline_integrations(
+        topic=topic,
+        script=script,
+        video_path=video_path,
+        organised_video_path=organised_video_path,
+        content_id=content_id,
+        script_path=script_path,
+        thumbnail_path=thumbnail_path,
+        episode_num=episode_num,
+        generate_social_captions=generate_social_captions,
+        sync_drive=sync_drive,
+        sync_sheet=sync_sheet,
+        mirror_assets=False,
+    )
+    return True
+
+
+def _make_content_id(topic_id: str, episode_num: int | None, is_series: bool) -> str:
+    """
+    Deterministic human-readable content ID.
+    Examples:
+      single_topic_16
+      series_topic_1_ep_07
+    """
+    if is_series:
+        ep = int(episode_num) if episode_num else 0
+        return f"series_topic_{topic_id}_ep_{ep:02d}"
+    return f"single_topic_{topic_id}"
+
+
+def _copy_to_organised(
+    src: str,
+    dest_dir: str,
+    dest_filename: str | None = None,
+) -> str:
+    """
+    Copy src file into dest_dir. Creates the directory if needed.
+    Returns the destination path.
+    """
+    os.makedirs(dest_dir, exist_ok=True)
+    fname = dest_filename or os.path.basename(src)
+    dest = os.path.join(dest_dir, fname)
+    shutil.copy2(src, dest)
+    return dest
+
+
+def _save_metadata_file(metadata: dict, prefix: str) -> str:
+    """
+    Save a minimal metadata JSON under outputs/metadata/.
+    Only stores technical fields — no captions.
+    Returns the saved file path.
+    """
+    os.makedirs(METADATA_DIR, exist_ok=True)
+    meta_path = os.path.join(METADATA_DIR, f"{prefix}meta.json")
+    with open(meta_path, "w", encoding="utf-8") as f:
+        json.dump(metadata, f, indent=2, ensure_ascii=False)
+    return meta_path
+
 
 def run_pipeline(
     topic: dict,
@@ -684,6 +996,9 @@ def run_pipeline(
     post_only: bool = False,
     build_series: bool = False,
     episode_num: int | None = None,
+    generate_social_captions: bool = False,
+    sync_drive: bool = False,
+    sync_sheet: bool = False,
 ):
     """Run the video generation pipeline for a single topic."""
 
@@ -1036,15 +1351,22 @@ def run_pipeline(
         # ----------------------------------------
         # STEP 5: Generate/load thumbnail
         # ----------------------------------------
-        skip_thumbnail = assembly_only and not GENERATE_THUMBNAIL
-        if skip_thumbnail:
-            print("⚡ Thumbnail skipped (assembly-only, GENERATE_THUMBNAIL=False)")
-        elif os.path.isfile(thumbnail_path) and not rebuild_thumbnail:
-            print("⚡ Thumbnail loaded from cache")
+        if not GENERATE_THUMBNAIL:
+            # Ensure we never attempt to rebuild or load a thumbnail when disabled.
+            rebuild_thumbnail = False
+            print("\n🖼️  STEP 5/6: Skipping thumbnail generation (GENERATE_THUMBNAIL=False in config)")
+            thumbnail_path = None
         else:
-            print("\n🖼️  STEP 5/6: Generating thumbnail...")
-            thumbnail_prompt = generate_thumbnail_prompt(script)
-            thumbnail_path = generate_thumbnail_image(thumbnail_prompt, prefix)
+            try:
+                if os.path.isfile(thumbnail_path) and not rebuild_thumbnail:
+                    print("⚡ Thumbnail loaded from cache")
+                else:
+                    print("\n🖼️  STEP 5/6: Generating thumbnail...")
+                    thumbnail_prompt = generate_thumbnail_prompt(script)
+                    thumbnail_path = generate_thumbnail_image(thumbnail_prompt, prefix)
+            except Exception as e:
+                print(f"⚠️  Warning: Thumbnail generation failed ({e}). Proceeding to video assembly without thumbnail.")
+                thumbnail_path = None
 
         # ----------------------------------------
         # STEP 6: Assemble video
@@ -1071,6 +1393,32 @@ def run_pipeline(
         print(f"   File: {video_path}")
         print(f"   Size: {os.path.getsize(video_path) / 1024 / 1024:.1f} MB")
 
+        # ----------------------------------------
+        # Post-pipeline: organised copy + optional integrations
+        # ----------------------------------------
+        content_id, organised_video_path = _mirror_outputs_to_organised(
+            topic=topic,
+            video_path=video_path,
+            script_path=script_path,
+            thumbnail_path=thumbnail_path,
+            episode_num=episode_num,
+        )
+        if _integration_flags_active(generate_social_captions, sync_drive, sync_sheet):
+            _run_post_pipeline_integrations(
+                topic=topic,
+                script=script,
+                video_path=video_path,
+                organised_video_path=organised_video_path,
+                content_id=content_id,
+                script_path=script_path,
+                thumbnail_path=thumbnail_path,
+                episode_num=episode_num,
+                generate_social_captions=generate_social_captions,
+                sync_drive=sync_drive,
+                sync_sheet=sync_sheet,
+                mirror_assets=False,
+            )
+
         if preview_only:
             print("\n🔍 PREVIEW MODE — video not posted")
             print(f"   Review your video at: {video_path}")
@@ -1087,7 +1435,11 @@ def run_pipeline(
             print("   Skipped. Video saved locally.")
             return
 
-        publish_results = publish_all(video_path, script, thumbnail_path)
+        publish_results = publish_all(
+            video_path,
+            script,
+            thumbnail_path if thumbnail_path and os.path.isfile(thumbnail_path) else None,
+        )
         init_logs()
         log_video(topic, script, publish_results, video_path)
         mark_topic_done(topic_id)
@@ -1113,6 +1465,23 @@ def main():
     parser.add_argument("--analytics", action="store_true", help="Update performance analytics")
     parser.add_argument("--voices", action="store_true", help="List ElevenLabs voices")
     parser.add_argument("--summary", action="store_true", help="Show performance summary")
+
+    # Google integration flags (additive — do not affect existing generation flags)
+    parser.add_argument(
+        "--generate-social-captions",
+        action="store_true",
+        help="Print social media captions to terminal (Instagram, TikTok, YouTube) without saving locally",
+    )
+    parser.add_argument(
+        "--sync-drive",
+        action="store_true",
+        help="Upload the final video to Google Drive after generation",
+    )
+    parser.add_argument(
+        "--sync-sheet",
+        action="store_true",
+        help="Add/update a row in the configured Google Sheet after generation",
+    )
 
     # Cache/testing controls
     parser.add_argument("--rebuild-script", action="store_true", help="Regenerate script and all dependent assets")
@@ -1193,6 +1562,38 @@ def main():
             print(f"   Must-not-imply rules: {len(research.get('must_not_imply_facts', []))}")
         return
 
+    rebuild_requested = any([
+        args.rebuild_script,
+        args.rebuild_series_scripts,
+        args.rebuild_audio,
+        args.rebuild_captions,
+        args.rebuild_images,
+        args.rebuild_thumbnail,
+        args.rebuild_assembly,
+        args.rebuild_all,
+        args.rebuild_research,
+    ])
+    integration_only = (
+        _integration_flags_active(
+            args.generate_social_captions,
+            args.sync_drive,
+            args.sync_sheet,
+        )
+        and not rebuild_requested
+        and not args.preview
+        and not args.post
+        and not args.build_series
+        and not args.research_only
+    )
+    if integration_only and _run_integrations_only(
+        topic,
+        episode_num=args.episode,
+        generate_social_captions=args.generate_social_captions,
+        sync_drive=args.sync_drive,
+        sync_sheet=args.sync_sheet,
+    ):
+        return
+
     run_pipeline(
         topic,
         preview_only=args.preview,
@@ -1209,6 +1610,9 @@ def main():
         post_only=args.post,
         build_series=args.build_series,
         episode_num=args.episode,
+        generate_social_captions=args.generate_social_captions,
+        sync_drive=args.sync_drive,
+        sync_sheet=args.sync_sheet,
     )
 
 

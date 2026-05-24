@@ -1,0 +1,104 @@
+{
+  "title": "The Princes Who Vanished in the Tower",
+  "hook": "In 1483, two young princes entered the Tower of London, a fortress in England’s capital, and vanished.",
+  "full_narration": "In 1483, two young princes entered the Tower of London, a fortress in England’s capital, and vanished. Their father, King Edward the Fourth, died, leaving twelve-year-old Edward as heir. [[pause:0.4]] Edward was brought to the Tower, which was then used as a royal palace. His younger brother, Richard of York, joined him, both waiting for coronation. [[voice:tense]] Their uncle, Richard of Gloucester, the royal guardian, controlled access and the kingdom’s soldiers. Then Richard declared the boys illegitimate, meaning not legal heirs, and took the crown. [[pause:0.6]] If the princes lived, rivals could rally England against Richard’s throne. By late summer 1483, public sightings stopped, and whispers moved through London. In 1485, Henry Tudor defeated Richard, but the princes never returned. [[voice:low]] No proof named their killer; the Tower still keeps their fate. [[pause:0.8]] Follow for more dark history.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "timestamp_start": 0.0,
+      "timestamp_end": 6.5,
+      "narration_segment": "In 1483, two young princes entered the Tower of London, a fortress in England’s capital, and vanished.",
+      "image_prompt": "Two young English princes entering the stone gate of the Tower of London in 1483, London beside the Thames, guarded fortress walls, iron portcullis, torchlight, medieval royal clothing with dark cloaks and caps, tense dusk mood, low angle camera framing, vertical 9:16 composition, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: two young princes walking into the Tower gate with guards nearby. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Two royal boys pass into the Tower’s gate under the eyes of armed guards."
+    },
+    {
+      "scene_number": 2,
+      "timestamp_start": 6.5,
+      "timestamp_end": 13.0,
+      "narration_segment": "Their father, King Edward the Fourth, died, leaving twelve-year-old Edward as heir.",
+      "image_prompt": "Medieval royal chamber in England, 1483, King Edward the Fourth’s covered deathbed in shadow, a twelve-year-old Prince Edward standing nearby in fine mourning clothes, nobles with bowed heads, candles, carved wooden furniture, heavy curtains, somber lighting, medium cinematic framing, vertical 9:16 composition, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: young Edward as heir beside his father’s deathbed. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Young Edward stands in a dark royal chamber after his father’s death."
+    },
+    {
+      "scene_number": 3,
+      "timestamp_start": 13.0,
+      "timestamp_end": 19.5,
+      "narration_segment": "Edward was brought to the Tower, which was then used as a royal palace.",
+      "image_prompt": "Twelve-year-old Edward arriving at the Tower of London royal palace area in 1483, stone courtyards, medieval attendants, horses, banners without readable symbols, royal luggage chests, guards in mail and livery, cold gray daylight, camera following from behind, vertical 9:16 composition, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Edward being escorted into the Tower as a royal residence. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Edward is escorted through the Tower courtyard like a prince awaiting ceremony."
+    },
+    {
+      "scene_number": 4,
+      "timestamp_start": 19.5,
+      "timestamp_end": 26.0,
+      "narration_segment": "His younger brother, Richard of York, joined him, both waiting for coronation.",
+      "image_prompt": "Two young princes, Edward and his younger brother Richard of York, inside a Tower of London chamber in 1483, coronation robes laid on a wooden table, candles, narrow arched window, stone walls, medieval stools and chest, anxious faces, dim golden lighting, medium shot, vertical 9:16 composition, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: both brothers together waiting near coronation clothing. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "The brothers wait in a stone chamber with coronation clothes prepared nearby."
+    },
+    {
+      "scene_number": 5,
+      "timestamp_start": 26.0,
+      "timestamp_end": 32.5,
+      "narration_segment": "Their uncle, Richard of Gloucester, the royal guardian, controlled access and the kingdom’s soldiers.",
+      "image_prompt": "Richard of Gloucester in 1483 England standing at the Tower of London gate as royal guardian, stern middle-aged nobleman in dark medieval clothing and fur-trimmed cloak, armed soldiers behind him, keys hanging from a guard’s belt, closed gate, overcast sky, dramatic side lighting, low medium framing, vertical 9:16 composition, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Richard of Gloucester controlling the gate with soldiers. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Richard of Gloucester stands between the princes and the outside world."
+    },
+    {
+      "scene_number": 6,
+      "timestamp_start": 32.5,
+      "timestamp_end": 39.0,
+      "narration_segment": "Then Richard declared the boys illegitimate, meaning not legal heirs, and took the crown.",
+      "image_prompt": "Richard of Gloucester in a medieval council chamber in London, 1483, reaching toward a royal crown on a table, nobles watching in tense silence, parchment scrolls without readable writing, candles, dark wood, stone arches, rich black and crimson clothing, sharp shadow lighting, centered cinematic framing, vertical 9:16 composition, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Richard taking the crown while nobles witness. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Richard claims power as the crown rests within his reach."
+    },
+    {
+      "scene_number": 7,
+      "timestamp_start": 39.0,
+      "timestamp_end": 45.5,
+      "narration_segment": "If the princes lived, rivals could rally England against Richard’s throne.",
+      "image_prompt": "Shadowed medieval nobles in 1483 England gathering around a map of England by candlelight, one noble gesturing toward a small royal crown marker, armed retainers in the background, stone room, cloaks and mail, suspicious faces, tense low lighting, overhead angled camera framing, vertical 9:16 composition, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: rivals plotting around a map against Richard’s throne. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Nobles gather in secret, showing why the living princes were dangerous to Richard."
+    },
+    {
+      "scene_number": 8,
+      "timestamp_start": 45.5,
+      "timestamp_end": 52.0,
+      "narration_segment": "By late summer 1483, public sightings stopped, and whispers moved through London.",
+      "image_prompt": "Late summer 1483 London street outside the Tower of London, townspeople in medieval wool clothing whispering in small groups, empty high Tower window above them, market stalls dim and quiet, misty evening light, anxious atmosphere, street-level cinematic framing, vertical 9:16 composition, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Londoners whispering beneath an empty Tower window. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Londoners whisper below the Tower as the princes stop appearing in public."
+    },
+    {
+      "scene_number": 9,
+      "timestamp_start": 52.0,
+      "timestamp_end": 58.5,
+      "narration_segment": "In 1485, Henry Tudor defeated Richard, but the princes never returned.",
+      "image_prompt": "England in 1485 after a medieval battle, Henry Tudor in armor and a dark cloak standing beside a raised standard without readable symbols, distant soldiers and smoke over fields, no visible injuries, a lonely road leading toward London, gray dawn light, wide cinematic framing, vertical 9:16 composition, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: Henry Tudor victorious while the road back remains empty. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "Henry Tudor wins the throne, but the missing boys do not come back."
+    },
+    {
+      "scene_number": 10,
+      "timestamp_start": 58.5,
+      "timestamp_end": 65.0,
+      "narration_segment": "No proof named their killer; the Tower still keeps their fate. Follow for more dark history.",
+      "image_prompt": "The Tower of London at night centuries after 1483, dark stone walls, locked gate, empty narrow windows, moonlight through clouds, the Thames barely visible, no people, heavy mystery mood, slow push-in camera framing, vertical 9:16 composition, dark historical graphic-novel believability, no text, no watermark, no subtitles, no logos, no modern objects. Must show: the Tower of London standing silent with locked gates and empty windows. Must not show: text, watermark, modern objects, gore, blood, nudity.",
+      "scene_description": "The Tower stands locked and silent, holding the mystery of the vanished princes."
+    }
+  ],
+  "hashtags": [
+    "TowerOfLondon",
+    "PrincesInTheTower",
+    "RichardIII",
+    "EdwardV",
+    "TudorHistory",
+    "MedievalEngland",
+    "DarkHistory",
+    "EnglishHistory",
+    "RoyalMystery",
+    "HistoryShorts"
+  ],
+  "youtube_description": "In 1483, two royal brothers entered the Tower of London and disappeared from public view. Edward, the young heir to England’s throne, and his brother Richard of York were placed under the control of their uncle, Richard of Gloucester. Soon after, Richard declared them illegitimate and became king himself. Their disappearance threatened his rule, fed rebellion, and left England with a mystery that still has no proven answer. This short cinematic history script follows the fear, power, and silence surrounding the Princes in the Tower.",
+  "cta": "Follow for more dark history.",
+  "topic_id": "16",
+  "series": "",
+  "part": 0
+}
