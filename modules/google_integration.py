@@ -3,11 +3,12 @@ modules/google_integration.py
 ==============================
 Google Drive upload + Google Sheets row upsert.
 
-All functions use a Service Account JSON credential supplied via
-GOOGLE_CREDENTIALS_PATH in config.py / environment.
+Drive: OAuth user credentials when GOOGLE_DRIVE_AUTH_MODE=oauth (your storage quota).
+       Service account when GOOGLE_DRIVE_AUTH_MODE=service_account.
+Sheets: always service account (GOOGLE_CREDENTIALS_PATH).
 
 Requires:
-    pip install google-api-python-client google-auth
+    pip install google-api-python-client google-auth google-auth-oauthlib
 
 Drive folder structure (created automatically if missing):
     Ash & Empires/
@@ -41,11 +42,31 @@ from pathlib import Path
 from typing import Any
 
 # ---------------------------------------------------------------------------
-# Lazy Google API imports so missing package gives a clean error on use,
-# not at module import time.
+# Credentials: Drive (OAuth or service account) vs Sheets (service account only)
 # ---------------------------------------------------------------------------
 
-def _get_credentials():
+DRIVE_SCOPES = ["https://www.googleapis.com/auth/drive"]
+SHEETS_SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
+
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+
+def _config_str(name: str, default: str = "") -> str:
+    try:
+        import config
+        return str(getattr(config, name, default) or default).strip()
+    except ImportError:
+        return str(os.getenv(name, default) or default).strip()
+
+
+def _resolve_project_path(path: str) -> str:
+    p = Path(path)
+    if not p.is_absolute():
+        p = _PROJECT_ROOT / p
+    return str(p.resolve())
+
+
+def _get_service_account_credentials(scopes: list[str]):
     try:
         from google.oauth2 import service_account
     except ImportError:
@@ -53,37 +74,85 @@ def _get_credentials():
             "google-auth is not installed. Run: pip install google-api-python-client google-auth"
         )
 
-    try:
-        from config import GOOGLE_CREDENTIALS_PATH
-    except ImportError:
-        GOOGLE_CREDENTIALS_PATH = os.getenv("GOOGLE_CREDENTIALS_PATH", "")
-
-    cred_path = str(GOOGLE_CREDENTIALS_PATH or "").strip()
+    cred_path = _resolve_project_path(_config_str("GOOGLE_CREDENTIALS_PATH"))
     if not cred_path:
         raise ValueError(
             "GOOGLE_CREDENTIALS_PATH is not set. "
             "Point it to your service-account JSON file in config.py or .env."
         )
     if not os.path.isfile(cred_path):
-        raise FileNotFoundError(
-            f"Service-account credentials not found: {cred_path}"
+        raise FileNotFoundError(f"Service-account credentials not found: {cred_path}")
+
+    return service_account.Credentials.from_service_account_file(cred_path, scopes=scopes)
+
+
+def _get_drive_oauth_credentials():
+    try:
+        from google.auth.transport.requests import Request
+        from google.oauth2.credentials import Credentials
+        from google_auth_oauthlib.flow import InstalledAppFlow
+    except ImportError:
+        raise ImportError(
+            "google-auth-oauthlib is not installed. Run: pip install google-auth-oauthlib"
         )
 
-    SCOPES = [
-        "https://www.googleapis.com/auth/drive",
-        "https://www.googleapis.com/auth/spreadsheets",
-    ]
-    return service_account.Credentials.from_service_account_file(cred_path, scopes=SCOPES)
+    client_secret = _resolve_project_path(_config_str("GOOGLE_DRIVE_OAUTH_CLIENT_SECRET"))
+    token_path = _resolve_project_path(_config_str("GOOGLE_DRIVE_OAUTH_TOKEN"))
+
+    if not client_secret:
+        raise ValueError(
+            "GOOGLE_DRIVE_OAUTH_CLIENT_SECRET is not set. "
+            "Point it to your OAuth client JSON (e.g. credentials/client_secret.json)."
+        )
+    if not os.path.isfile(client_secret):
+        raise FileNotFoundError(f"OAuth client secrets not found: {client_secret}")
+
+    creds = None
+    if os.path.isfile(token_path):
+        creds = Credentials.from_authorized_user_file(token_path, DRIVE_SCOPES)
+
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            print("   🔑 Refreshing Google Drive OAuth token...", flush=True)
+            creds.refresh(Request())
+        else:
+            print("   🌐 Opening browser for Google Drive login (one-time)...", flush=True)
+            flow = InstalledAppFlow.from_client_secrets_file(client_secret, DRIVE_SCOPES)
+            creds = flow.run_local_server(port=0)
+        os.makedirs(os.path.dirname(token_path) or ".", exist_ok=True)
+        with open(token_path, "w", encoding="utf-8") as token_file:
+            token_file.write(creds.to_json())
+        print(f"   ✅ Drive OAuth token saved: {token_path}", flush=True)
+    else:
+        print("   🔑 Using saved Google Drive OAuth token", flush=True)
+
+    return creds
+
+
+def _get_drive_credentials():
+    mode = _config_str("GOOGLE_DRIVE_AUTH_MODE", "service_account").lower()
+    if mode == "oauth":
+        return _get_drive_oauth_credentials()
+    if mode == "service_account":
+        return _get_service_account_credentials(DRIVE_SCOPES)
+    raise ValueError(
+        f"GOOGLE_DRIVE_AUTH_MODE must be 'oauth' or 'service_account', got: {mode!r}"
+    )
 
 
 def _drive_service():
     from googleapiclient.discovery import build
-    return build("drive", "v3", credentials=_get_credentials(), cache_discovery=False)
+    return build("drive", "v3", credentials=_get_drive_credentials(), cache_discovery=False)
 
 
 def _sheets_service():
     from googleapiclient.discovery import build
-    return build("sheets", "v4", credentials=_get_credentials(), cache_discovery=False)
+    return build(
+        "sheets",
+        "v4",
+        credentials=_get_service_account_credentials(SHEETS_SCOPES),
+        cache_discovery=False,
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -211,6 +280,9 @@ def upload_to_drive(
 
     if not os.path.isfile(video_path):
         raise FileNotFoundError(f"Video file not found: {video_path}")
+
+    auth_mode = _config_str("GOOGLE_DRIVE_AUTH_MODE", "service_account")
+    print(f"   Drive auth mode: {auth_mode}", flush=True)
 
     service = _drive_service()
     folder_id = _resolve_drive_folder(service, is_series, series_slug, root_folder_id)

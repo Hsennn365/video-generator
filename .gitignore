@@ -44,3 +44,19 @@ venv/
 .idea/
 .DS_Store
 Thumbs.db
+
+
+# Google credentials / private keys
+credentials/
+credentials/*.json
+
+# Secrets
+.env
+.env.*
+
+# Python cache
+__pycache__/
+*.pyc
+
+credentials/
+credentials/*.json
