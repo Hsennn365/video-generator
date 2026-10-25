@@ -1,5 +1,8 @@
 # 🏛️ Ash & Empires — Video Generator
 
+> **2026-10-25 update:** The pipeline now uses local FFmpeg for assembly (the older Creatomate description below is out of date). It can optionally replace selected static scenes with **real video clips** using `temp/<prefix>motion_clips.json` (see [TikTok hybrid research](docs/TIKTOK_HYBRID_RESEARCH_2026-10-25.md)). This is an opt-in prototype; it does **not** generate videos or spend API credits. The advertised historical cost/video below is **not a verified current cost**. Before running production, audit and rotate any previously committed API keys; this repository is public. **Creator Rewards eligibility is country/account-dependent.**
+
+
 Automated dark history video pipeline. Generates and posts 90-second videos to YouTube Shorts, TikTok, and Instagram Reels daily.
 
 ---
