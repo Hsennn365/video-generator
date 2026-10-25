@@ -85,6 +85,17 @@ TOPICS_FILE = "topics.csv"
 LOGS_FILE = "logs/performance.csv"
 TEMP_DIR = "temp"
 
+# Organised copies written after a successful render (see main.py).
+SCRIPTS_DIR = "outputs/scripts"
+VIDEOS_DIR = "outputs/videos"
+THUMBNAILS_DIR = "outputs/thumbnails"
+METADATA_DIR = "outputs/metadata"
+
+# Off by default so generation does not call Google or print social captions.
+GENERATE_SOCIAL_CAPTIONS = False
+ENABLE_GOOGLE_DRIVE_UPLOAD = False
+ENABLE_GOOGLE_SHEETS_SYNC = False
+
 # ============================================
 # Research / Story Bible Settings
 # ============================================
