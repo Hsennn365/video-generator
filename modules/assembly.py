@@ -7,6 +7,7 @@ import time
 from pathlib import Path
 
 from config import OUTPUT_DIR, TEMP_DIR, VIDEO_HEIGHT, VIDEO_WIDTH
+from modules.motion_clips import load_motion_clips, render_motion_clip
 
 try:
     from config import ENABLE_IMAGE_MOTION
@@ -1215,6 +1216,15 @@ def assemble_video(
     # Sort images by scene number
     sorted_images = sorted(image_paths, key=lambda x: int(x.get("scene_number", 0)))
 
+    # No manifest => original still-image workflow is completely unchanged.
+    motion_clips = load_motion_clips(prefix, TEMP_DIR)
+    if motion_clips:
+        known = {int(x.get("scene_number", 0)) for x in sorted_images}
+        unknown = sorted(set(motion_clips) - known)
+        if unknown:
+            raise ValueError(f"Motion manifest refers to unknown scenes: {unknown}")
+        print(f"   External video motion clips for scenes: {sorted(motion_clips)}")
+
     _reset_video_encoder_cache()
 
     # 1. Render each image into a small video clip
@@ -1301,21 +1311,35 @@ def assemble_video(
             else None
         )
 
-        _render_scene_clip(
-            ffmpeg=ffmpeg,
-            image_path=image_path,
-            duration=encode_duration,
-            output_path=clip_path,
-            scene_number=scene_number,
-            scene_index=scene_idx,
-            total_scenes=total_scenes,
-            apply_motion=apply_motion,
-            key_motion_scenes=key_motion_scenes,
-            encoder_args=encoder_args,
-            fps=motion_fps,
-            motion_budget=motion_budget,
-            simple_motion_type=simple_type,
-        )
+        if scene_number in motion_clips:
+            print(f"   Scene {scene_number}: real video motion ({encode_duration:.2f}s)")
+            render_motion_clip(
+                ffmpeg=ffmpeg,
+                input_path=motion_clips[scene_number],
+                output_path=clip_path,
+                duration=encode_duration,
+                fps=motion_fps,
+                width=VIDEO_WIDTH,
+                height=VIDEO_HEIGHT,
+                encoder_args=encoder_args,
+                runner=_run,
+            )
+        else:
+            _render_scene_clip(
+                ffmpeg=ffmpeg,
+                image_path=image_path,
+                duration=encode_duration,
+                output_path=clip_path,
+                scene_number=scene_number,
+                scene_index=scene_idx,
+                total_scenes=total_scenes,
+                apply_motion=apply_motion,
+                key_motion_scenes=key_motion_scenes,
+                encoder_args=encoder_args,
+                fps=motion_fps,
+                motion_budget=motion_budget,
+                simple_motion_type=simple_type,
+            )
 
         clip_paths.append(clip_path)
         clip_durations.append(encode_duration)
